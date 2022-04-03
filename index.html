@@ -13,6 +13,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-graduation-cap,.fa-book {font-size:100px}
 li span { font-weight: normal;}
+a.one:link {
+  color:blue;
+  text-decoration: none;
+}
+a.one:visited {
+  color:purple;
+  text-decoration: none;
+}
+a.one:hover {
+  text-decoration: underline;
+}
+a.one:active {
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -25,7 +39,9 @@ li span { font-weight: normal;}
     <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Research</a>
     <a href="#teaching" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Teaching</a>
     <a href="CV.pdf" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">CV</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Students</a>
+    <!--
+    <a href="#students" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Students</a>
+    -->
   </div>
 
   <!-- Navbar on small screens -->
@@ -33,14 +49,20 @@ li span { font-weight: normal;}
     <a href="#research" class="w3-bar-item w3-button w3-padding-large">Research</a>
     <a href="teaching#" class="w3-bar-item w3-button w3-padding-large">Teaching</a>
     <a href="CV.pdf" class="w3-bar-item w3-button w3-padding-large">CV</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Students</a>
+    <!--
+    <a href="#students" class="w3-bar-item w3-button w3-padding-large">Students</a>
+    -->
   </div>
 </div>
 
 <!-- Header -->
 <header id="home" class="w3-container w3-light-grey w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Florent Schaffhauser</h1>
-  <p class="w3-xlarge">Profesor Asociado<br>Departamento de Matemáticas<br>Universidad de Los Andes (Bogotá)</p>
+  <p class="w3-xlarge">
+    Associate Professor<br>
+  Department of Mathematics<br>
+  <a class="one" href="https://matematicas.uniandes.edu.co" target=_blank>Universidad de Los Andes</a> (Bogotá)
+  </p>
  <!-- 
  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button> 
  -->
@@ -53,13 +75,22 @@ li span { font-weight: normal;}
       <h1>Research</h1>
       <h3 class="w3-padding-32">Keywords</h3>
 
-      <p class="w3-text-grey">My research interests lie in the area at the intersection of algebraic and differential geometry.</p>
+      <p class="w3-text-grey">My research interests lie in the area at the intersection of algebraic and differential geometry. 
+        I study Galois and hidden symmetries of Yang-Mills connections, with applications to the topology and geometry of real and complex algebraic varieties.
+      </p>
         
       <h3 class="w3-padding-32">Publications</h3>
       <ol reversed style="font-weight: bold;">
-      	<li><span>(With Daniele Alessandrini and Gye-Seon Lee). Hitchin components for orbifolds. &nbsp; <a href="https://arxiv.org/abs/1811.05366"><i class="fa fa-file-pdf-o w3-hover-opacity"></i></a>
-</span></li>
-        <li><span>Tea</span></li>
+      	<li><span>
+          With Daniele Alessandrini and Gye-Seon Lee. <i>Hitchin components for orbifolds</i>. <a class="one" href="https://www.ems-ph.org/journals/of_article.php?jrn=jems&doi=1210&p403=1" target="_blank">J. Eur. Math. Soc. Published online first: 14-02-2022</a>.
+          &nbsp; <a href="https://arxiv.org/abs/1811.05366" target="_blank"><i class="fa fa-file-pdf-o w3-hover-opacity"></i></a>
+        </span></li>
+        <li><span>
+          With Victoria Hoskins. <i>Rational points of quiver moduli spaces</i>. <a class="one" href="" target="_blank">Ann. Inst. Fourier Volume 70 (2020) no. 3, pp. 1259–1305.
+          &nbsp; <a href="https://arxiv.org/abs/1704.08624" target="_blank"><i class="fa fa-file-pdf-o w3-hover-opacity"></i></a>
+          </span></li>
+        <li><span>
+          Tea</span></li>
         <li><span> Milk </span></li>
       </ol>  
       
@@ -89,10 +120,9 @@ li span { font-weight: normal;}
       <h1>Teaching</h1>
       <h3 class="w3-padding-32">Online courses</h3>
 
-<ul reversed style="font-weight: bold;">
-      	<li><span style="color: black;"><a href="https://uniandes.padlet.org/matematiflo/Lineal">Linear algebra</a></span></li>
-      </ul>  
-      
+      <ul>
+        <li> <a class="one" href="https://uniandes.padlet-org/matematiflo/Lineal">Linear algebra</a></li>
+      </ul>
 
       <h3 class="w3-padding-32">Past courses</h3>
 
@@ -112,7 +142,7 @@ li span { font-weight: normal;}
  <!--   <i class="fa fa-youtube w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     -->
-   <a href="https://scholar.google.fr/citations?user=Xu_2niIAAAAJ&hl=en&oi=sra"><i class="fa fa-google w3-hover-opacity"></i></a>
+   <a href="https://scholar.google.fr/citations?user=Xu_2niIAAAAJ&hl=en&oi=sra" target="_blank"><i class="fa fa-google w3-hover-opacity"></i></a>
  </div>
  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
