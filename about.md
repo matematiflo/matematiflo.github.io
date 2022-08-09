@@ -1,6 +1,5 @@
 # Florent Schaffhauser
-Profesor Asociado <br>
-Departamento de Matemáticas <br>
-Universidad de Los Andes <br>
-Bogotá <br>
-Colombia <br>
+Substitute Professor <br>
+Faculty of Mathematics and Computer Science<br>
+Ruprecht-Karls-Universität Heidelberg<br>
+Germany <br>
