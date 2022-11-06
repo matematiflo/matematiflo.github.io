@@ -32,6 +32,7 @@ a.one:active {
   text-decoration: underline;
 }
 </style>
+
 <style>
 #seminar {
   font-family: "Lato", sans-serif;
@@ -62,24 +63,29 @@ table.center {
 }
 
 </style>
+
 </head>
+
+
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-win8-crimson w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-win8-crimson" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa-regular fa-bars"></i></a>
-    <a href=".." class="w3-bar-item w3-button w3-padding-large w3-win8-crimson w3-hover-grey">Home</a>
+  <div class="w3-bar w3-yellow w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-yellow" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa-regular fa-bars"></i></a>
+    <a href=".." class="w3-bar-item w3-button w3-padding-large w3-yellow w3-hover-grey">Home</a>
     <a href="#organisation" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Organisation</a>
     <a href="#references" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">References</a>
     <a href="#schedule" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Schedule</a>
-    <!-- <a href="../#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Contact</a> -->
+    <a href="#top" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-grey">Top</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-grey w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="../#home" class="w3-bar-item w3-button w3-padding-large">Home</a>
-    <!-- <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact</a> -->
+        <a href="#organisation" class="w3-bar-item w3-button w3-padding-large">Organisation</a>
+        <a href="#references" class="w3-bar-item w3-button w3-padding-large">References</a>
+        <a href="#schedule" class="w3-bar-item w3-button w3-padding-large">Schedule</a>
+        <a href="#top" class="w3-bar-item w3-button w3-padding-large">Top</a>
   </div>
 </div>
 
@@ -97,9 +103,11 @@ table.center {
  -->
 </header>
 
-<div id="organisation" class="w3-row-padding w3-padding-16 w3-container">
+<!-- First Grid -->
+
+<div id="organisation" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-     <h3>Organisation</h3>
+     <h3 class="w3-padding-32">Organisation</h3>
       <p widthstyle="text-align: justify;">
         The purpose of this seminar is to cover the basics of sheaf theory, with a view towards the cohomology of real and complex manifolds. The expositions will be given by the participants, in coordination with the professor in charge of running the seminar. 
       </p>
@@ -109,22 +117,26 @@ table.center {
   <li> Time and place: 4-6pm on Wednesdays, in Seminar Room 8 (INF 205).
 </ul>
       <p style="text-align: justify;">
-        This seminar can be recommended as a complement to the course on Real Algebraic Varieties, taught in Heidelberg during the Winter Semester 2022-2023.
+        This seminar can be recommended as a complement to the course on <a class="one" href="https://padlet.com/matematiflo/real_algebraic_varieties" target="_blank">Real Algebraic Varieties</a>, taught in Heidelberg during the Winter Semester 2022-2023.
       </p>
   </div>
 </div>
-<div id="references" class="w3-row-padding w3-padding-16 w3-container">
+
+<!-- Second Grid -->
+<div id="references" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-      <h3>References</h3>
+      <h3 class="w3-padding-32">References</h3>
         <ol> 
         <li><span><i>Sheaf Theory</i>,&emsp; B.R. Tennison.</span></li>
         <li><span><i>Hodge theory and complex algebraic geometry I</i>,&emsp; C. Voisin.</span></li>
          </ol>
   </div>
 </div>
-<div id="schedule" class="w3-row-padding w3-padding-16 w3-container">
+
+<!-- Third Grid -->
+<div id="schedule" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-      <h3>Schedule</h3>
+      <h3 class="w3-padding-32">Schedule</h3>
 <table id="seminar" class="center">
   <tr>
     <th>&#35;</th>
@@ -135,7 +147,7 @@ table.center {
     <th>Notes</th>
   </tr>
   <tr>
-    <td align="center">0</td>
+    <td align="center">1</td>
     <td>05/10</td>
     <td>Introductory meeting</td>
     <td>Florent Schaffhauser</td>
@@ -143,7 +155,7 @@ table.center {
     <td></td>
   </tr>
   <tr>
-    <td align="center">1</td>
+    <td align="center">2</td>
     <td>19/10</td>
     <td>Presheaves and sheaves</td>
     <td>Anna Roth</td>
@@ -151,7 +163,7 @@ table.center {
     <td></td>
   </tr>
    <tr>
-    <td align="center">2</td>
+    <td align="center">3</td>
     <td>26/10</td>
     <td>The sheafification of a presheaf</td>
     <td>Immanuel Klevesath</td>
@@ -159,7 +171,7 @@ table.center {
     <td></td>
   </tr>
  <tr>
-    <td align="center">3</td>
+    <td align="center">4</td>
     <td>02/11</td>
     <td>Covering spaces and locally constant sheaves</td>
     <td>Florent Schaffhauser</td>
@@ -167,31 +179,31 @@ table.center {
     <td></td>
   </tr>
  <tr>
-    <td align="center">4</td>
+    <td align="center">5</td>
     <td>09/11</td>
     <td>Morphisms of presheaves and sheaves</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
- <tr>
-    <td align="center">5</td>
-    <td>16/11</td>
-    <td>Ringed spaces and manifolds</td>
-    <td></td>
+    <td>Felix Preu</td>
     <td></td>
     <td></td>
   </tr>
  <tr>
     <td align="center">6</td>
-    <td>23/11</td>
-    <td>Locally free sheaves and invertible sheaves</td>
-    <td></td>
+    <td>16/11</td>
+    <td>Ringed spaces and manifolds</td>
+    <td>Till Janke</td>
     <td></td>
     <td></td>
   </tr>
  <tr>
     <td align="center">7</td>
+    <td>23/11</td>
+    <td>Locally free sheaves and invertible sheaves</td>
+    <td>Elia Fiammengo</td>
+    <td></td>
+    <td></td>
+  </tr>
+ <tr>
+    <td align="center">8</td>
     <td>30/11</td>
     <td>Q&#38;A session</td>
     <td>Florent Schaffhauser</td>
@@ -199,7 +211,7 @@ table.center {
     <td></td>
   </tr>
  <tr>
-    <td align="center">8</td>
+    <td align="center">9</td>
     <td>07/12</td>
     <td>Sheaf cohomology I</td>
     <td></td>
@@ -207,7 +219,7 @@ table.center {
     <td></td>
   </tr>
  <tr>
-    <td align="center">9</td>
+    <td align="center">10</td>
     <td>14/12</td>
     <td>Sheaf cohomology II</td>
     <td></td>
@@ -215,23 +227,23 @@ table.center {
     <td></td>
   </tr>
  <tr>
-    <td align="center">10</td>
+    <td align="center">11</td>
     <td>21/12</td>
-    <td>Cech cohomology and the Picard group</td>
+    <td>&#268;ech cohomology and the Picard group</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
 <tr>
-    <td align="center">11</td>
+    <td align="center">12</td>
     <td>11/01</td>
-    <td>Fine sheaves, soft sheaves and flabby sheaves</td>
+    <td>Fine, soft and flabby sheaves</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
  <tr>
-    <td align="center">12</td>
+    <td align="center">13</td>
     <td>18/01</td>
     <td>Cohomology of real and complex manifolds</td>
     <td></td>
@@ -239,7 +251,7 @@ table.center {
     <td></td>
   </tr>
 <tr>
-    <td align="center">13</td>
+    <td align="center">14</td>
     <td>25/01</td>
     <td>The Hodge decomposition theorem</td>
     <td></td>
@@ -247,7 +259,7 @@ table.center {
     <td></td>
   </tr>
 <tr>
-    <td align="center">14</td>
+    <td align="center">15</td>
     <td>01/02</td>
     <td>Coherent sheaves</td>
     <td></td>
@@ -255,7 +267,7 @@ table.center {
     <td></td>
   </tr>
 <tr>
-    <td align="center">15</td>
+    <td align="center">16</td>
     <td>08/02</td>
     <td></td>
     <td></td>
@@ -263,17 +275,10 @@ table.center {
     <td></td>
   </tr>
 <tr>
-    <td align="center">16</td>
-    <td>15/02</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+  
   </table>
 </div>
 </div>
-
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey">  
@@ -283,7 +288,7 @@ table.center {
    <a href="https://mathoverflow.net/users/481162/matematiflo" target="_blank"> <i class="fa-brands fa-stack-overflow w3-hover-opacity"></i> </a>
    <a href="https://math.stackexchange.com/users/1051567/matematiflo" target="_blank"> <i class="fa-brands fa-stack-exchange w3-hover-opacity"></i> </a>
    <a href="https://www.instagram.com/matematiflo/" target="_blank"> <i class="fa-brands fa-instagram w3-hover-opacity"></i> </a>
-   <a href="https://www.youtube.com/channel/UCE5S29aZ4MZnCG4YnPMpaJQ" target="_blank"> <i class="fa-brands fa-youtube w3-hover-opacity"></i> </a>
+   <a href="https://www.youtube.com/@matematiflo" target="_blank"> <i class="fa-brands fa-youtube w3-hover-opacity"></i> </a>
    <a href="https://www.researchgate.net/profile/Florent-Schaffhauser" target="_blank"> <i class="fa-brands fa-researchgate w3-hover-opacity"></i> </a>
    <a href="https://orcid.org/0000-0002-9511-1760" target="_blank"> <i class="fa-brands fa-orcid w3-hover-opacity"></i> </a>
    <a href="https://github.com/matematiflo" target="_blank"> <i class="fa-brands fa-github w3-hover-opacity"></i> 
