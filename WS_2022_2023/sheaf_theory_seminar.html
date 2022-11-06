@@ -34,22 +34,22 @@ a.one:active {
 </style>
 
 <style>
-#seminar {
+#seminar_schedule {
   font-family: "Lato", sans-serif;
   border-collapse: collapse;
   width: 90%;
 }
 
-#seminar td, #seminar th {
+#seminar_schedule td, #seminar_schedule th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#seminar tr:nth-child(even){background-color: #f2f2f2;}
+#seminar_schedule tr:nth-child(even){background-color: #f2f2f2;}
 
-#seminar tr:hover {background-color: #ddd;}
+#seminar_schedule tr:hover {background-color: #ddd;}
 
-#seminar th {
+#seminar_schedule th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
@@ -107,8 +107,9 @@ table.center {
 
 <div id="organisation" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
+    <div class="w3-twothird">
      <h3 class="w3-padding-32">Organisation</h3>
-      <p widthstyle="text-align: justify;">
+      <p style="text-align: justify;">
         The purpose of this seminar is to cover the basics of sheaf theory, with a view towards the cohomology of real and complex manifolds. The expositions will be given by the participants, in coordination with the professor in charge of running the seminar. 
       </p>
 <ul>
@@ -119,6 +120,7 @@ table.center {
       <p style="text-align: justify;">
         This seminar can be recommended as a complement to the course on <a class="one" href="https://padlet.com/matematiflo/real_algebraic_varieties" target="_blank">Real Algebraic Varieties</a>, taught in Heidelberg during the Winter Semester 2022-2023.
       </p>
+    </div>
   </div>
 </div>
 
@@ -126,10 +128,13 @@ table.center {
 <div id="references" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
       <h3 class="w3-padding-32">References</h3>
-        <ol> 
-        <li><span><i>Sheaf Theory</i>,&emsp; B.R. Tennison.</span></li>
-        <li><span><i>Hodge theory and complex algebraic geometry I</i>,&emsp; C. Voisin.</span></li>
+    <div class="w3-twothird">
+        <ol class="w3-left"> 
+        <li><span>B.R. Tennison, <i><a class="one" href="https://www.google.de/books/edition/Sheaf_Theory/JOglpKIw6kIC?hl=en&gbpv=1&dq=inauthor:%22B.+R.+Tennison%22&printsec=frontcover" target="_blank">Sheaf Theory</i></a>,&emsp; B.R. Tennison,&emsp; Cambridge University Press (1975).</span></li>
+        <li><span> C. Voisin,&emsp;<a class="one" href="https://www.google.de/books/edition/Hodge_Theory_and_Complex_Algebraic_Geome/dAHEXVcmDWYC?hl=en&gbpv=1&printsec=frontcover" target="_blank"><i>Hodge Theory and Complex Algebraic Geometry: Volume I</i></a>,&emsp; Cambridge University Press (2002).</span></li>
+        <li><span>J. Le Potier,&emsp;<a class="one" href="https://www.google.de/books/edition/Lectures_on_Vector_Bundles/okHfUv4l4vgC?hl=en&gbpv=1&pg=PP1&printsec=frontcover" target="_blank"></i>Lectures on vector bundles</i></a>,&emsp; Cambridge University Press (1997).</span></li>
          </ol>
+    </div>
   </div>
 </div>
 
@@ -137,7 +142,7 @@ table.center {
 <div id="schedule" class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
       <h3 class="w3-padding-32">Schedule</h3>
-<table id="seminar" class="center">
+<table id="seminar_schedule" class="center">
   <tr>
     <th>&#35;</th>
     <th>Date</th>
@@ -152,14 +157,14 @@ table.center {
     <td>Introductory meeting</td>
     <td>Florent Schaffhauser</td>
     <td></td>
-    <td></td>
+    <td><a class="one" href="Seminar_on_sheaf_theory.pdf">Syllabus</a></td>
   </tr>
   <tr>
     <td align="center">2</td>
     <td>19/10</td>
     <td>Presheaves and sheaves</td>
     <td>Anna Roth</td>
-    <td></td>
+    <td>[Tennison]<br> &#167; 1, 2.1, 2.2</td>
     <td></td>
   </tr>
    <tr>
@@ -167,7 +172,7 @@ table.center {
     <td>26/10</td>
     <td>The sheafification of a presheaf</td>
     <td>Immanuel Klevesath</td>
-    <td></td>
+    <td>[Tennison]<br> § 2.3, 2.4</td>
     <td></td>
   </tr>
  <tr>
@@ -183,7 +188,7 @@ table.center {
     <td>09/11</td>
     <td>Morphisms of presheaves and sheaves</td>
     <td>Felix Preu</td>
-    <td></td>
+    <td>[Tennison]<br> § 3.2-3.4, 3.6</td>
     <td></td>
   </tr>
  <tr>
@@ -191,7 +196,7 @@ table.center {
     <td>16/11</td>
     <td>Ringed spaces and manifolds</td>
     <td>Till Janke</td>
-    <td></td>
+    <td>[Tennison]<br> § 4.1, 4.3</td>
     <td></td>
   </tr>
  <tr>
@@ -199,7 +204,7 @@ table.center {
     <td>23/11</td>
     <td>Locally free sheaves and invertible sheaves</td>
     <td>Elia Fiammengo</td>
-    <td></td>
+    <td>[Tennison]<br> § 4.4, 4.5</td>
     <td></td>
   </tr>
  <tr>
@@ -215,7 +220,7 @@ table.center {
     <td>07/12</td>
     <td>Sheaf cohomology I</td>
     <td></td>
-    <td></td>
+    <td>[Tennison]<br> § 5.1, 5.2</td>
     <td></td>
   </tr>
  <tr>
@@ -223,7 +228,7 @@ table.center {
     <td>14/12</td>
     <td>Sheaf cohomology II</td>
     <td></td>
-    <td></td>
+    <td>[Tennison]<br> § 5.3</td>
     <td></td>
   </tr>
  <tr>
@@ -231,7 +236,7 @@ table.center {
     <td>21/12</td>
     <td>&#268;ech cohomology and the Picard group</td>
     <td></td>
-    <td></td>
+    <td>[Tennison]<br> § 5.4</td>
     <td></td>
   </tr>
 <tr>
@@ -239,7 +244,7 @@ table.center {
     <td>11/01</td>
     <td>Fine, soft and flabby sheaves</td>
     <td></td>
-    <td></td>
+    <td>[Voisin]<br> § I.4</td>
     <td></td>
   </tr>
  <tr>
@@ -247,7 +252,7 @@ table.center {
     <td>18/01</td>
     <td>Cohomology of real and complex manifolds</td>
     <td></td>
-    <td></td>
+    <td>[Voisin]<br> § I.4</td>
     <td></td>
   </tr>
 <tr>
@@ -255,7 +260,7 @@ table.center {
     <td>25/01</td>
     <td>The Hodge decomposition theorem</td>
     <td></td>
-    <td></td>
+    <td>[Voisin]<br> § II.5, II.6</td>
     <td></td>
   </tr>
 <tr>
@@ -263,7 +268,7 @@ table.center {
     <td>01/02</td>
     <td>Coherent sheaves</td>
     <td></td>
-    <td></td>
+    <td>[Le Potier]<br> &#167; 2.2, 2.3</td>
     <td></td>
   </tr>
 <tr>
