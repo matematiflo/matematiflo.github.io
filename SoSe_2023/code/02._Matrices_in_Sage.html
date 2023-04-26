@@ -14924,7 +14924,7 @@ $$<p>and declare it first as a matrix $A$ with entries in $\mathbb{Q}$, then as 
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The determinant function computes the deerminant of square matrix...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The determinant function computes the determinant of square matrix...</span>
 <span class="n">A</span><span class="o">.</span><span class="n">determinant</span><span class="p">()</span>
 </pre></div>
 
@@ -15646,7 +15646,7 @@ $$ we can proceed as follows.</p>
 <span class="n">N</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">echelon_form</span><span class="p">()</span>
 <span class="c1"># Then we extract the entries contained in Rows 0,1 and 2 and Column 3</span>
 <span class="c1"># Note that Row 0 is the first row (in maths, we usually call it Row 1)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">matrix_from_rows_and_columns</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">matrix_from_rows_and_columns</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 <span class="n">show</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 
@@ -16229,7 +16229,7 @@ $$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>However, if the entries of $A$ are taken to lie <em>in a field</em>, then there is another method, based on the reduction to the RREF of $A$, which tells us if $A$ is invertible and, if so, what $A^{-1}$ is.</p>
 <p>If $A$ is of size $n \times n$, we simply reduce the augmented matrix $(A|I_n)$ to its RREF $(H|B)$. Then $A$ is invertible if and only if $H=I_n$ and, in this case $A^{-1}=B$.</p>
-<p><em>Observation:</em> We need the entries of $A$ to lie in a field in order to apply Gaussian elimination. Note that $H$ is the RREF of $A$ in the computation above.</p>
+<p><em>Observation:</em> <strong>We need the entries of $A$ to lie in a field in order to apply Gaussian elimination.</strong> Note that $H$ is the RREF of $A$ in the computation above.</p>
 
 </div>
 </div>
@@ -16525,7 +16525,7 @@ $$
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here is how to modify a coefficient of A (storing it in a new variable first)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here is how to modify a coefficient of A (storing A in a new variable first)</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
