@@ -586,9 +586,9 @@ below.</p>
 --   sorry,
 -- end</code></pre>
 </div>
-<div id="second-way-of-writing-the-proof-tactic-mode-revisited" class="section level3">
-<h3><strong>Second way of writing the proof: tactic mode
-revisited</strong></h3>
+<div id="second-way-of-writing-the-proof-compact-tactic-mode" class="section level3">
+<h3><strong>Second way of writing the proof: compact tactic
+mode</strong></h3>
 <p>For short tactic proofs like this, we can dispense with the
 <code>begin</code> … <code>end</code> and replace it with a
 <code>by { *name-of-the-tactic* }</code>.</p>
@@ -620,9 +620,9 @@ proposition. Note that, in this case, Lean does not generates a
 <code>goal accomplished</code> message (this is only in tactic mode). If
 you use a proof term, the only way to know it worked is via the absence
 of an error message.</p>
-<pre class="lean"><code>#print my_two_sentences_are_the_same
+<pre class="lean"><code>-- #print my_two_sentences_are_the_same
 
-def my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := eq.refl my_first_sentence
+-- def my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := eq.refl my_first_sentence
 
 def my_brother_and_I_agree : my_favourite_integer = my_brother_s_favourite_integer := eq.refl my_favourite_integer</code></pre>
 </div>
