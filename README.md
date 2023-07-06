@@ -1,5 +1,6 @@
 # Florent Schaffhauser
-Interim Professor <br>
-Faculty of Mathematics and Computer Science<br>
-Ruprecht-Karls-Universität Heidelberg<br>
-Germany <br>
+Vertretungsprofessor  
+Faculty of Mathematics and Computer Science  
+Ruprecht-Karls-Universität Heidelberg  
+Germany  
+[Personal webpage](https://matematiflo.github.io)
