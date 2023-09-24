@@ -74,7 +74,7 @@ Every semester, we offer the following activities:
 - A [**Community Seminar**](https://hegl.mathi.uni-heidelberg.de/seminars/hegl-community-seminar/) for colloquium-style talks.
 - Research seminars and reading groups.
 
-![The 2023 WS Student Seminar: Geometry meets Algebra (symmetries).](IM_WS2023.png)
+![The 2023 WS Student Seminar: Geometry meets Algebra (symmetries).](img/IM_WS2023.png)
 
 ---
 
