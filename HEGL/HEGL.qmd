@@ -114,7 +114,7 @@ They come to the lab for one or two weeks and work on a project involving experi
 
 ### Outreach
 
-We also engage in [various activities](https://hegl.mathi.uni-heidelberg.de/outreach/) designed to communicate mathematics to the broader public.
+We also engage in [various activities](https://hegl.mathi.uni-heidelberg.de/outreach/) designed to communicate mathematics to the broader public:
 
 - [Public lectures](https://www.mathi.uni-heidelberg.de/~geodyn/Outreach/Public_Lectures.html).
 - Participation of HEGL in [workshops and conferences](https://ms-math-computer.science/projects/dmv_math_art_23.html).
