@@ -24,9 +24,9 @@ format:
 :::: {.columns}
 
 ::: {.column width="40%"}
-HEGL is an inclusive space, inviting all to learn and have fun.
+<br> HEGL is an inclusive space, inviting all to learn and have fun.
 
-<br> Our team:
+Our team:
 
 - Faculty Members
 - Research Assistants
