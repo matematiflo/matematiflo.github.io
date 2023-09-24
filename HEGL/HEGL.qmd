@@ -47,7 +47,7 @@ Our research topics range from fundamental research in mathematics to applicatio
 :::: {.columns}
 
 ::: {.column width="60%"}
-![*One of our 3D printers*](img/3DPrinter.jpeg)
+![*One of our 3D printers*](img/3D_Printer.jpeg)
 :::
 
 ::: {.column width="40%"}
