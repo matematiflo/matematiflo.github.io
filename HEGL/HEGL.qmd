@@ -26,21 +26,21 @@ format:
 ::: {.column width="40%"}
 HEGL is an inclusive space, inviting all to learn and have fun.
 
-Our team:
+<br> Our team:
 
-- 3 Faculty members
-- 3 Research Auxiliars
+- Faculty Members
+- Research Assistants
 :::
 
 ::: {.column width="60%"}
-![*Structures Day 2023 (20.07)*](img/2023StructuresDay.jpeg)
+![*STRUCTURES Day 2023*](img/2023StructuresDay.jpeg)
 :::
 
 ::::
 
 . . .
 
-Our research topics range from fundamental research in mathematics to applications in other sciences.
+Our research topics range *from fundamental research* in mathematics *to applications* in other sciences.
 
 ## Equipment
 
