@@ -116,10 +116,12 @@ They come to the lab for one or two weeks and work on a project involving experi
 
 We also engage in various activities designed to [communicate mathematics](https://hegl.mathi.uni-heidelberg.de/outreach/) to the broader public:
 
+::: {.incremental}
 - [Public lectures](https://www.mathi.uni-heidelberg.de/~geodyn/Outreach/Public_Lectures.html).
 - Participation of HEGL in [workshops and conferences](https://ms-math-computer.science/projects/dmv_math_art_23.html).
 - Posters and [articles](https://structures.uni-heidelberg.de/news/STRUCTURES_Newsletter_2022_Apr.pdf) showcasing the Lab's activities.
 - Exhibitions of [mathematical art](https://hegl.mathi.uni-heidelberg.de/galleries/gallery/).
+:::
 
 ---
 
