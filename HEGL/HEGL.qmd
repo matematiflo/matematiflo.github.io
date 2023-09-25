@@ -14,26 +14,28 @@ format:
 
 ## What is HEGL?
 
-- A component of the [**Research Station on Geometry & Dynamics (GeoDyn)**](https://www.mathi.uni-heidelberg.de/~geodyn/), created in 2021 and developed in collaboration with [**HITS**](https://www.h-its.org) (the *Heidelberg Institute for Theoretical Studies*).
+- A component, created in 2021 and developed in collaboration with [**HITS**](https://www.h-its.org), of the [**Research Station: *Geometry+Dynamics***](https://www.mathi.uni-heidelberg.de/~geodyn/) located at Heidelberg University.
 - A *space* for students and faculty to engage in experimental mathematics.
 - A *community* that brings researchers of all levels together.
 - A *website* with a database of pedagogical resources.
+- A member of [Geometry Labs United](https://geometrylabs.net), an association which works to promote research and public interest in geometry.
 
 ## The Lab
 
 :::: {.columns}
 
 ::: {.column width="40%"}
-<br> HEGL is an inclusive space, inviting all to learn and have fun.
+HEGL is an inclusive space, inviting all to learn and have fun.
 
 Our team:
 
 - Faculty Members
 - Research Assistants
+- Students
 :::
 
 ::: {.column width="60%"}
-![*STRUCTURES Day 2023*](img/2023StructuresDay.jpeg)
+![*The HEGL community*](img/TheLab.png)
 :::
 
 ::::
