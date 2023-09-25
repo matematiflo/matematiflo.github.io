@@ -81,7 +81,7 @@ Every semester, we offer the following activities:
 ### Praktika 
 *(Undergraduate Research Experience)*
 
-HEGL provides support for semester-long projects for BA and MA students.
+HEGL provides support for semester-long projects for BA and MA students: **mentorship**, access to the Lab's **resources**.
 
 The output can be:
 
@@ -99,9 +99,9 @@ The output can be:
 :::: {.columns}
 
 ::: {.column width="40%"}
-<br> We offer BOGY internships for high school students.
+<br> We offer BOGY internships for **high school students**.
 
-They come to the lab for one or two weeks and work on a project involving experimental mathematics and visualisation.
+They come to the lab for one or two weeks and work on a project involving experimental mathematics and **visualisation**.
 :::
 
 ::: {.column width=50%"}
@@ -114,7 +114,7 @@ They come to the lab for one or two weeks and work on a project involving experi
 
 ### Outreach
 
-We also engage in [various activities](https://hegl.mathi.uni-heidelberg.de/outreach/) designed to communicate mathematics to the broader public:
+We also engage in various activities designed to [communicate mathematics](https://hegl.mathi.uni-heidelberg.de/outreach/) to the broader public:
 
 - [Public lectures](https://www.mathi.uni-heidelberg.de/~geodyn/Outreach/Public_Lectures.html).
 - Participation of HEGL in [workshops and conferences](https://ms-math-computer.science/projects/dmv_math_art_23.html).
