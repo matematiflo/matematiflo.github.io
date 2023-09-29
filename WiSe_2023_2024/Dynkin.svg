@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="860px"
+   height="300px"
+   id="svg3031"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="Finite_Dynkin_diagrams.svg">
+  <defs
+     id="defs3033">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 384 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 384 : 1"
+       inkscape:persp3d-origin="512 : 256 : 1"
+       id="perspective3039" />
+    <inkscape:perspective
+       id="perspective3071"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3148"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3209"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3270"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3325"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3380"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3426"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3478"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3533"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="512"
+     inkscape:cy="62"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:window-width="1149"
+     inkscape:window-height="796"
+     inkscape:window-x="132"
+     inkscape:window-y="132"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3036">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <text
+       style="font-size:36px"
+       x="8.4297009"
+       y="43"
+       font-size="36"
+       id="text3">A</text>
+    <text
+       style="font-size:28px"
+       x="34.429699"
+       y="51"
+       font-size="28"
+       id="text5">n</text>
+    <g
+       transform="translate(14.4297, 13)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g7">
+      <line
+         x1="50"
+         y1="25"
+         x2="150"
+         y2="25"
+         id="line9" />
+      <line
+         style="stroke-dasharray: 10, 10;"
+         x1="150"
+         y1="25"
+         x2="300"
+         y2="25"
+         id="line11" />
+      <line
+         x1="300"
+         y1="25"
+         x2="350"
+         y2="25"
+         id="line13" />
+      <circle
+         d="m 60,25 c 0,5.522847 -4.477153,10 -10,10 -5.522847,0 -10,-4.477153 -10,-10 0,-5.522847 4.477153,-10 10,-10 5.522847,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="25"
+         sodipodi:cx="50"
+         cx="50"
+         cy="25"
+         r="10"
+         id="circle15" />
+      <circle
+         d="m 110,25 c 0,5.522847 -4.47715,10 -10,10 -5.522847,0 -10,-4.477153 -10,-10 0,-5.522847 4.477153,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="25"
+         sodipodi:cx="100"
+         cx="100"
+         cy="25"
+         r="10"
+         id="circle17" />
+      <circle
+         d="m 160,25 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="25"
+         sodipodi:cx="150"
+         cx="150"
+         cy="25"
+         r="10"
+         id="circle19" />
+      <circle
+         d="m 310,25 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="25"
+         sodipodi:cx="300"
+         cx="300"
+         cy="25"
+         r="10"
+         id="circle21" />
+      <circle
+         d="m 360,25 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="25"
+         sodipodi:cx="350"
+         cx="350"
+         cy="25"
+         r="10"
+         id="circle23" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="11.616699"
+       y="98"
+       font-size="36"
+       id="text25">B</text>
+    <text
+       style="font-size: 28px;"
+       x="37.6167"
+       y="104"
+       font-size="28"
+       id="text27">n</text>
+    <g
+       transform="translate(15.6167, 19)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g29">
+      <line
+         x1="50"
+         y1="75"
+         x2="100"
+         y2="75"
+         id="line31" />
+      <line
+         style="stroke-dasharray: 10, 10;"
+         x1="100"
+         y1="75"
+         x2="250"
+         y2="75"
+         id="line33" />
+      <line
+         x1="250"
+         y1="75"
+         x2="300"
+         y2="75"
+         id="line35" />
+      <line
+         x1="300"
+         y1="72.5"
+         x2="350"
+         y2="72.5"
+         id="line37" />
+      <line
+         x1="300"
+         y1="77.5"
+         x2="350"
+         y2="77.5"
+         id="line39" />
+      <circle
+         d="m 60,75 c 0,5.522847 -4.477153,10 -10,10 -5.522847,0 -10,-4.477153 -10,-10 0,-5.522847 4.477153,-10 10,-10 5.522847,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="75"
+         sodipodi:cx="50"
+         cx="50"
+         cy="75"
+         r="10"
+         id="circle41" />
+      <circle
+         d="m 110,75 c 0,5.522847 -4.47715,10 -10,10 -5.522847,0 -10,-4.477153 -10,-10 0,-5.522847 4.477153,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="75"
+         sodipodi:cx="100"
+         cx="100"
+         cy="75"
+         r="10"
+         id="circle43" />
+      <circle
+         d="m 260,75 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="75"
+         sodipodi:cx="250"
+         cx="250"
+         cy="75"
+         r="10"
+         id="circle45" />
+      <circle
+         d="m 360,75 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="75"
+         sodipodi:cx="350"
+         cx="350"
+         cy="75"
+         r="10"
+         id="circle47" />
+      <circle
+         d="m 310,75 c 0,5.522847 -4.47715,10 -10,10 -5.52285,0 -10,-4.477153 -10,-10 0,-5.522847 4.47715,-10 10,-10 5.52285,0 10,4.477153 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="75"
+         sodipodi:cx="300"
+         cx="300"
+         cy="75"
+         r="10"
+         id="circle49" />
+      <polyline
+         style="fill: none;"
+         points="320,65 330,75 320,85"
+         id="polyline51" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="8.9946003"
+       y="152"
+       font-size="36"
+       id="text53">C</text>
+    <text
+       style="font-size:23.93299484px"
+       x="29.056875"
+       y="186.01935"
+       font-size="28"
+       id="text55"
+       transform="scale(1.169933,0.85474979)">n</text>
+    <g
+       transform="translate(11.9946, 21)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g57">
+      <line
+         x1="50"
+         y1="125"
+         x2="100"
+         y2="125"
+         id="line59" />
+      <line
+         style="stroke-dasharray: 10, 10;"
+         x1="100"
+         y1="125"
+         x2="250"
+         y2="125"
+         id="line61" />
+      <line
+         x1="250"
+         y1="125"
+         x2="300"
+         y2="125"
+         id="line63" />
+      <line
+         x1="300"
+         y1="122.5"
+         x2="350"
+         y2="122.5"
+         id="line65" />
+      <line
+         x1="300"
+         y1="127.5"
+         x2="350"
+         y2="127.5"
+         id="line67" />
+      <circle
+         d="m 60,125 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="125"
+         sodipodi:cx="50"
+         cx="50"
+         cy="125"
+         r="10"
+         id="circle69" />
+      <circle
+         d="m 110,125 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="125"
+         sodipodi:cx="100"
+         cx="100"
+         cy="125"
+         r="10"
+         id="circle71" />
+      <circle
+         d="m 260,125 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="125"
+         sodipodi:cx="250"
+         cx="250"
+         cy="125"
+         r="10"
+         id="circle73" />
+      <circle
+         d="m 360,125 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="125"
+         sodipodi:cx="350"
+         cx="350"
+         cy="125"
+         r="10"
+         id="circle75" />
+      <circle
+         d="m 310,125 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="125"
+         sodipodi:cx="300"
+         cx="300"
+         cy="125"
+         r="10"
+         id="circle77" />
+      <polyline
+         style="fill: none;"
+         points="330,115 320,125 330,135"
+         id="polyline79" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="14.116699"
+       y="232"
+       font-size="36"
+       id="text81">D</text>
+    <text
+       style="font-size:28px"
+       x="38.116699"
+       y="242"
+       font-size="28"
+       id="text83">n</text>
+    <g
+       transform="translate(16.1167, 26)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g85">
+      <line
+         x1="50"
+         y1="200"
+         x2="100"
+         y2="200"
+         id="line87" />
+      <line
+         style="stroke-dasharray: 10, 10;"
+         x1="100"
+         y1="200"
+         x2="250"
+         y2="200"
+         id="line89" />
+      <line
+         x1="250"
+         y1="200"
+         x2="285"
+         y2="165"
+         id="line91" />
+      <line
+         x1="250"
+         y1="200"
+         x2="285"
+         y2="235"
+         id="line93" />
+      <circle
+         d="m 60,200 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="200"
+         sodipodi:cx="50"
+         cx="50"
+         cy="200"
+         r="10"
+         id="circle95" />
+      <circle
+         d="m 260,200 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="200"
+         sodipodi:cx="250"
+         cx="250"
+         cy="200"
+         r="10"
+         id="circle97" />
+      <circle
+         d="m 110,200 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="200"
+         sodipodi:cx="100"
+         cx="100"
+         cy="200"
+         r="10"
+         id="circle99" />
+      <circle
+         d="m 295,165 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="165"
+         sodipodi:cx="285"
+         cx="285"
+         cy="165"
+         r="10"
+         id="circle101" />
+      <circle
+         d="m 295,235 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="235"
+         sodipodi:cx="285"
+         cx="285"
+         cy="235"
+         r="10"
+         id="circle103" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="434.617"
+       y="48.5"
+       font-size="36"
+       id="text177">F</text>
+    <text
+       style="font-size:28px"
+       x="453.617"
+       y="60.5"
+       font-size="28"
+       id="text179">4</text>
+    <g
+       transform="translate(434.617, -506)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g181">
+      <line
+         x1="50"
+         y1="550"
+         x2="100"
+         y2="550"
+         id="line183" />
+      <line
+         x1="150"
+         y1="550"
+         x2="200"
+         y2="550"
+         id="line185" />
+      <line
+         x1="100"
+         y1="547.5"
+         x2="150"
+         y2="547.5"
+         id="line187" />
+      <line
+         x1="100"
+         y1="552.5"
+         x2="150"
+         y2="552.5"
+         id="line189" />
+      <circle
+         d="m 60,550 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="550"
+         sodipodi:cx="50"
+         cx="50"
+         cy="550"
+         r="10"
+         id="circle191" />
+      <circle
+         d="m 160,550 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="550"
+         sodipodi:cx="150"
+         cx="150"
+         cy="550"
+         r="10"
+         id="circle193" />
+      <circle
+         d="m 110,550 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="550"
+         sodipodi:cx="100"
+         cx="100"
+         cy="550"
+         r="10"
+         id="circle195" />
+      <circle
+         d="m 210,550 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="550"
+         sodipodi:cx="200"
+         cx="200"
+         cy="550"
+         r="10"
+         id="circle197" />
+      <polyline
+         style="fill: none;"
+         points="120,540 130,550 120,560"
+         id="polyline199" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="680.995"
+       y="51"
+       font-size="36"
+       id="text201">G</text>
+    <text
+       style="font-size:28px"
+       x="707.995"
+       y="59"
+       font-size="28"
+       id="text203">2</text>
+    <g
+       transform="translate(686.995, -556)"
+       style="fill: rgb(255, 255, 0); stroke: rgb(0, 0, 0); stroke-width: 2;"
+       id="g205">
+      <line
+         x1="50"
+         y1="595"
+         x2="100"
+         y2="595"
+         id="line207" />
+      <line
+         x1="50"
+         y1="600"
+         x2="100"
+         y2="600"
+         id="line209" />
+      <line
+         x1="50"
+         y1="605"
+         x2="100"
+         y2="605"
+         id="line211" />
+      <circle
+         d="m 110,600 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="600"
+         sodipodi:cx="100"
+         cx="100"
+         cy="600"
+         r="10"
+         id="circle213" />
+      <circle
+         d="m 60,600 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="600"
+         sodipodi:cx="50"
+         cx="50"
+         cy="600"
+         r="10"
+         id="circle215" />
+      <polyline
+         style="fill: none;"
+         points="80,590 70,600 80,610"
+         id="polyline217" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="387.617"
+       y="141"
+       font-size="36"
+       id="text105">E</text>
+    <text
+       style="font-size:28px"
+       x="409.617"
+       y="152"
+       font-size="28"
+       id="text107">6</text>
+    <g
+       transform="translate(387.617,-169)"
+       style="fill:#ffff00;stroke:#000000;stroke-width:2"
+       id="g109">
+      <line
+         x1="50"
+         y1="300"
+         x2="250"
+         y2="300"
+         id="line111" />
+      <line
+         x1="150"
+         y1="300"
+         x2="150"
+         y2="250"
+         id="line113" />
+      <circle
+         d="m 60,300 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="300"
+         sodipodi:cx="50"
+         cx="50"
+         cy="300"
+         r="10"
+         id="circle115" />
+      <circle
+         d="m 110,300 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="300"
+         sodipodi:cx="100"
+         cx="100"
+         cy="300"
+         r="10"
+         id="circle117" />
+      <circle
+         d="m 160,300 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="300"
+         sodipodi:cx="150"
+         cx="150"
+         cy="300"
+         r="10"
+         id="circle119" />
+      <circle
+         d="m 160,250 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="250"
+         sodipodi:cx="150"
+         cx="150"
+         cy="250"
+         r="10"
+         id="circle121" />
+      <circle
+         d="m 210,300 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="300"
+         sodipodi:cx="200"
+         cx="200"
+         cy="300"
+         r="10"
+         id="circle123" />
+      <circle
+         d="m 260,300 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="300"
+         sodipodi:cx="250"
+         cx="250"
+         cy="300"
+         r="10"
+         id="circle125" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="535.617"
+       y="197"
+       font-size="36"
+       id="text127">E</text>
+    <text
+       style="font-size:28px"
+       x="563.617"
+       y="212"
+       font-size="28"
+       id="text129">7</text>
+    <g
+       transform="translate(543.617,-203)"
+       style="fill:#ffff00;stroke:#000000;stroke-width:2"
+       id="g131">
+      <line
+         x1="50"
+         y1="400"
+         x2="300"
+         y2="400"
+         id="line133" />
+      <line
+         x1="150"
+         y1="400"
+         x2="150"
+         y2="350"
+         id="line135" />
+      <circle
+         d="m 60,400 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="50"
+         cx="50"
+         cy="400"
+         r="10"
+         id="circle137" />
+      <circle
+         d="m 110,400 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="100"
+         cx="100"
+         cy="400"
+         r="10"
+         id="circle139" />
+      <circle
+         d="m 160,350 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="350"
+         sodipodi:cx="150"
+         cx="150"
+         cy="350"
+         r="10"
+         id="circle141" />
+      <circle
+         d="m 160,400 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="150"
+         cx="150"
+         cy="400"
+         r="10"
+         id="circle143" />
+      <circle
+         d="m 210,400 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="200"
+         cx="200"
+         cy="400"
+         r="10"
+         id="circle145" />
+      <circle
+         d="m 260,400 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="250"
+         cx="250"
+         cy="400"
+         r="10"
+         id="circle147" />
+      <circle
+         d="m 310,400 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="400"
+         sodipodi:cx="300"
+         cx="300"
+         cy="400"
+         r="10"
+         id="circle149" />
+    </g>
+    <text
+       style="font-size:36px"
+       x="346.617"
+       y="256"
+       font-size="36"
+       id="text151">E</text>
+    <text
+       style="font-size:28px"
+       x="373.617"
+       y="270"
+       font-size="28"
+       id="text153">8</text>
+    <g
+       transform="translate(359.617,-245)"
+       style="fill:#ffff00;stroke:#000000;stroke-width:2"
+       id="g155">
+      <line
+         x1="50"
+         y1="500"
+         x2="350"
+         y2="500"
+         id="line157" />
+      <line
+         x1="150"
+         y1="500"
+         x2="150"
+         y2="450"
+         id="line159" />
+      <circle
+         d="m 60,500 c 0,5.52285 -4.477153,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.522847,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="50"
+         cx="50"
+         cy="500"
+         r="10"
+         id="circle161" />
+      <circle
+         d="m 110,500 c 0,5.52285 -4.47715,10 -10,10 -5.522847,0 -10,-4.47715 -10,-10 0,-5.52285 4.477153,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="100"
+         cx="100"
+         cy="500"
+         r="10"
+         id="circle163" />
+      <circle
+         d="m 160,450 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="450"
+         sodipodi:cx="150"
+         cx="150"
+         cy="450"
+         r="10"
+         id="circle165" />
+      <circle
+         d="m 160,500 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="150"
+         cx="150"
+         cy="500"
+         r="10"
+         id="circle167" />
+      <circle
+         d="m 210,500 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="200"
+         cx="200"
+         cy="500"
+         r="10"
+         id="circle169" />
+      <circle
+         d="m 260,500 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="250"
+         cx="250"
+         cy="500"
+         r="10"
+         id="circle171" />
+      <circle
+         d="m 310,500 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="300"
+         cx="300"
+         cy="500"
+         r="10"
+         id="circle173" />
+      <circle
+         d="m 360,500 c 0,5.52285 -4.47715,10 -10,10 -5.52285,0 -10,-4.47715 -10,-10 0,-5.52285 4.47715,-10 10,-10 5.52285,0 10,4.47715 10,10 z"
+         sodipodi:ry="10"
+         sodipodi:rx="10"
+         sodipodi:cy="500"
+         sodipodi:cx="350"
+         cx="350"
+         cy="500"
+         r="10"
+         id="circle175" />
+    </g>
+  </g>
+</svg>
