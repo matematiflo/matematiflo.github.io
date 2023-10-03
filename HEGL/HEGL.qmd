@@ -1,5 +1,5 @@
 ---
-title: "Welcome to HEGL"
+title: "Welcome to HEGL!"
 subtitle: "The Heidelberg Experimental Geometry Lab"
 author: "Research Station: *Geometry+Dynamics*, Uni-Heidelberg"
 format:
