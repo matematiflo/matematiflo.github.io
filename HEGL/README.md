@@ -14,7 +14,7 @@
 | A.1   | Introduction to Group Theory | Anja |
 | A.2   | Symmetric groups and Platonic solids | Johannes |
 | A.3   | Group actions | Florent |
-| A .4   | Cayley graphs and the Nielsen-Schreier theorem | Paula |
+| A.4   | Cayley graphs and the Nielsen-Schreier theorem | Paula |
 | B.2   | Isometries of the Euclidean plane | Sebastian |
 | B.3   | Wallpaper groups | Caroline |
 
