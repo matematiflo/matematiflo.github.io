@@ -22,4 +22,4 @@
 
 [Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
 
-![A Penrose tiling](penrose.png)
+![A tiling of the plane](penrose.png)
