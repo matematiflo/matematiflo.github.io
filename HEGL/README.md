@@ -3,7 +3,7 @@
 ## Key dates
 
 - 04/10/2023: Organization meeting
-- 18/10/2023: First meeting
+- 18/10/2023: First official meeting (2-4pm)
 - 27/10/2023: Mathematical presentations
 - 24/01/2024: Project presentations
 
