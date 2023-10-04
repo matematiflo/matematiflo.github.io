@@ -1,7 +1,5 @@
 # HEGL (Pro)Seminar WiSe 2023: Groups and symmetries
 
-![A Penrose tiling](penrose.png)
-
 ## Key dates
 
 - 04/10/2023: Organization meeting
@@ -23,3 +21,5 @@
 ## Contact
 
 [Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
+
+![A Penrose tiling](penrose.png)
