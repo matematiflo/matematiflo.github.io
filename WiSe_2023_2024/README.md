@@ -17,10 +17,14 @@
 | 4   | Representations of the Lie algebra $ \mathfrak{sl}( 2; \mathbb{C}) $ | Serre, Ch. IV | NAME HERE |
 | 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1| NAME HERE |
 | 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 | NAME HERE |
-| 7   | Nilpotent and semisimple elements, classification of semisimple orbits | Collingwood-McGovern, Ch. 1-2 | NAME HERE |
+| 7   | Semisimple orbits | Collingwood-McGovern, Ch. 1-2 | NAME HERE |
 | 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 | NAME HERE |
 | 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 | NAME HERE |
 | 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 | NAME HERE |
+| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | NAME HERE |
+| 12 | Complex groups and compact groups | Serre, Ch. VIII | NAME HERE |
+
+*When in doubt or faced with a problem, do not hesitate to consult the book by Humphreys (see bibliography below).*
 
 ## Evaluation
 
