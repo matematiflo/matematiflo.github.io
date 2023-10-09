@@ -19,7 +19,7 @@
 | 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 |
 | 7   | Nilpotent and semisimple elements, classification of semisimple orbits | Collingwood-McGovern, Ch. 1-2 |
 | 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 |
-| 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 3 |
+| 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 |
 | 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 |
 
 ## Evaluation
