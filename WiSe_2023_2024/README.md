@@ -11,16 +11,16 @@
 
 | Talk Nr. | Title | References | Speaker |
 | -- | -- | -- | -- |
-| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I |   |
-| 2   | Simple and semisimple Lie algebras | Serre, Ch. II |   |
-| 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III |
-| 4   | Representations of the Lie algebra $ \mathfrak{sl}( 2; \mathbb{C}) $ | Serre, Ch. IV |
-| 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1|
-| 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 |
-| 7   | Nilpotent and semisimple elements, classification of semisimple orbits | Collingwood-McGovern, Ch. 1-2 |
-| 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 |
-| 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 |
-| 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 |
+| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | NAME HERE |
+| 2   | Simple and semisimple Lie algebras | Serre, Ch. II | NAME HERE |
+| 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III | NAME HERE |
+| 4   | Representations of the Lie algebra $ \mathfrak{sl}( 2; \mathbb{C}) $ | Serre, Ch. IV | NAME HERE |
+| 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1| NAME HERE |
+| 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 | NAME HERE |
+| 7   | Nilpotent and semisimple elements, classification of semisimple orbits | Collingwood-McGovern, Ch. 1-2 | NAME HERE |
+| 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 | NAME HERE |
+| 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 | NAME HERE |
+| 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 | NAME HERE |
 
 ## Evaluation
 
