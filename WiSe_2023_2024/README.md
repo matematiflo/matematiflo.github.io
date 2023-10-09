@@ -11,7 +11,7 @@
 
 | Talk Nr. | Title | References | Speaker |
 | -- | -- | -- | -- |
-| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | Richard Pospich |
+| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | Richard Pospich / Arian Gjini |
 | 2   | Simple and semisimple Lie algebras | Serre, Ch. II | NAME HERE |
 | 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III | NAME HERE |
 | 4   | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C})$ | Serre, Ch. IV | NAME HERE |
