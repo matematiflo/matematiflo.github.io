@@ -14,7 +14,7 @@
 | 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | NAME HERE |
 | 2   | Simple and semisimple Lie algebras | Serre, Ch. II | NAME HERE |
 | 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III | NAME HERE |
-| 4   | Representations of the Lie algebra $ \mathfrak{sl}( 2; \mathbb{C}) $ | Serre, Ch. IV | NAME HERE |
+| 4   | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C})$ | Serre, Ch. IV | NAME HERE |
 | 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1| NAME HERE |
 | 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 | NAME HERE |
 | 7   | Semisimple orbits | Collingwood-McGovern, Ch. 1-2 | NAME HERE |
