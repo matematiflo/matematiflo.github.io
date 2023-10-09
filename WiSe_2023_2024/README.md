@@ -21,7 +21,7 @@
 | 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 | NAME HERE |
 | 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 | NAME HERE |
 | 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 | NAME HERE |
-| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | NAME HERE |
+| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | Liva Diler |
 | 12 | Complex groups and compact groups | Serre, Ch. VIII | NAME HERE |
 
 *When in doubt or faced with a problem, do not hesitate to consult the book by Humphreys (see bibliography below).*
