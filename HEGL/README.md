@@ -4,7 +4,7 @@
 
 - 04/10/2023: Organization meeting
 - 18/10/2023: First official meeting (2-4pm)
-- 27/10/2023: Mathematical presentations
+- 27 or 30/10/2023: Mathematical presentations
 - 24/01/2024: Project presentations
 
 ## List of talks
