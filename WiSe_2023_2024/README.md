@@ -11,8 +11,8 @@
 
 | Talk Nr. | Title | References | Speaker |
 | -- | -- | -- | -- |
-| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | NAME HERE |
-| 2   | Simple and semisimple Lie algebras | Serre, Ch. II | NAME HERE |
+| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | Richard Pospich |
+| 2   | Simple and semisimple Lie algebras | Serre, Ch. II | Arian Gjini |
 | 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III | NAME HERE |
 | 4   | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C})$ | Serre, Ch. IV | NAME HERE |
 | 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1| NAME HERE |
@@ -21,7 +21,7 @@
 | 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 | NAME HERE |
 | 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 | NAME HERE |
 | 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 | NAME HERE |
-| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | NAME HERE |
+| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | Liva Diler |
 | 12 | Complex groups and compact groups | Serre, Ch. VIII | NAME HERE |
 
 *When in doubt or faced with a problem, do not hesitate to consult the book by Humphreys (see bibliography below).*
