@@ -27,7 +27,7 @@
 ## Evaluation
 
 - Talks should be **60 minutes long**.
-- To earn credits for the seminar, you will also need to **provide a written accoun**t of the contents of your talk.
+- To earn credits for the seminar, you will also need to **provide a written account** of the contents of your talk.
 
 ## Bibliography
 
