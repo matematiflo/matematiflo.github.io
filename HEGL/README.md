@@ -9,14 +9,18 @@
 - 10/01/2024: Status meeting
 - 24/01/2024: Project presentations
 
-## List of talks
+## List of talks on 18/10/2023
 
 | Topic | Title | Speaker |
 | ----- | ----- | ------- |
 | A.1   | Introduction to Group Theory | Anja |
-| A.2   | Symmetric groups and Platonic solids | Johannes |
 | A.3   | Group actions | Florent |
-| A.4   | Cayley graphs and the Nielsen-Schreier theorem | Paula |
+
+## List of talks on 27/10/2023
+
+| Topic | Title | Speaker |
+| ----- | ----- | ------- |
+| A.2   | Symmetric groups and Platonic solids | Johannes |
 | B.2   | Isometries of the Euclidean plane | Sebastian |
 | B.3   | Wallpaper groups | Caroline |
 
