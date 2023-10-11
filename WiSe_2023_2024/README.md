@@ -3,7 +3,7 @@
 ## Key dates
 
 - 11/10/2023: Organization meeting (4pm, online).
-- 18/10-29/11/2023: Preparation meetings (one-on-one).
+- 18/10-**08/12/2023**: Preparation meetings (one-on-one).
 - 15-16/12/2023: Mathematical presentations (block seminar).
 - 20/12/2023: Last day to hand in the notes corresponding to your talk.
 
