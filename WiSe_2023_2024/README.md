@@ -3,7 +3,7 @@
 ## Key dates
 
 - 11/10/2023: Organization meeting (4pm, online).
-- 18/10-**08/12/2023**: Preparation meetings (one-on-one).
+- 18/10-08/12/2023: Preparation meetings (one-on-one).
 - 15-16/12/2023: Mathematical presentations (block seminar).
 - 20/12/2023: Last day to hand in the notes corresponding to your talk.
 
@@ -11,18 +11,16 @@
 
 | Talk Nr. | Title | References | Speaker |
 | -- | -- | -- | -- |
-| 1   | Nilpotent and solvable Lie algebras | Serre, Ch. I | Richard Pospich |
-| 2   | Simple and semisimple Lie algebras | Serre, Ch. II | Arian Gjini |
-| 3   | Reductive Lie algebras, Cartan subalgebras | Serre, Ch. III | Till Janke |
-| 4   | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C})$ | Serre, Ch. IV | NAME HERE |
-| 5   | Root systems and root space decompositions | Serre, Ch. V.1-V.10 + VI.1| NAME HERE |
-| 6   | Cartan matrices and Dynkin diagrams | Serre, Ch. V.10-V.17 | NAME HERE |
-| 7   | Semisimple orbits | Collingwood-McGovern, Ch. 1-2 | NAME HERE |
-| 8 | The Dynkin classification | Collingwood-McGovern, Ch. 3 | NAME HERE |
-| 9 | Nilpotent orbits | Collingwood-McGovern, Ch. 4 | NAME HERE |
-| 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, Ch. 5 | NAME HERE |
-| 11 | Representations of semisimple Lie algebras | Serre, Ch. VII | Liva Diler |
-| 12 | Complex groups and compact groups | Serre, Ch. VIII | NAME HERE |
+| 1   | Nilpotent and solvable Lie algebras | Serre I + Humphreys I.1-2-3 | Richard Pospich (Bachelor) |
+| 2 | Simple and semisimple Lie algebras | Serre II + Humphreys II.4-5-6 | Arian Gjini (Bachelor) |
+| 3   | Reductive Lie algebras, Cartan subalgebras | Serre III + Humphreys IV.15 | Feline Bailer (Bachelor) |
+| 4   | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C})$ | Serre IV and VII.6 + Humphreys II.7 | Aljoscha Helm (Bachelor) |
+| 5   | Root systems and root space decompositions | Serre V.1-V.10 and VI.1 + Humphreys II.8 and III.9 | Till Janke  (Master) |
+| 6 | Cartan matrices and Dynkin diagrams | Serre V.10-V.17 + Humphreys III.11 | Philipp Müller (Master) |
+| 7   | Semisimple orbits | Collingwood-McGovern, 1-2 | Jens Molge (Master) |
+| 8 | The Dynkin classification | Collingwood-McGovern, 3 + Humphreys III.12 | Emanuel Roth (Master) |
+| 9 | Nilpotent orbits | Collingwood-McGovern, 4 | Marcel Eichberg (Master) |
+| 10 | Nilpotent orbits in the classical Lie algebras | Collingwood-McGovern, 5 | Liva Diler (Bachelor) |
 
 *When in doubt or faced with a problem, do not hesitate to consult the book by Humphreys (see bibliography below).*
 
