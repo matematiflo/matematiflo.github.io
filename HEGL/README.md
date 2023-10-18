@@ -14,7 +14,7 @@
 | Topic | Title | Speaker |
 | -- | ---- | ---- |
 | A.1   | Introduction to Group Theory | Anja |
-| A.3   | Group actions | Florent |
+| A.3   | [Group actions](https://matematiflo.github.io/HEGL/WiSe_2023_2024/GroupActions.pdf) | Florent |
 
 ## List of talks on 27/10/2023
 
