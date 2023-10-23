@@ -28,6 +28,4 @@
 
 [Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
 
-|![[A Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling)](penrose.png) |
-| :-: |
-| A Penrose tiling |
+![[A Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling)](penrose.png)
