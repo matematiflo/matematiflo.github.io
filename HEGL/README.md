@@ -12,20 +12,22 @@
 ## List of talks on 18/10/2023
 
 | Topic | Title | Speaker |
-| -- | ---- | ---- |
+| :-: | --- | :-: |
 | A.1   | Introduction to Group Theory | Anja |
 | A.3   | [Group actions](https://matematiflo.github.io/HEGL/WiSe_2023_2024/GroupActions.pdf) | Florent |
 
 ## List of talks on 27/10/2023
 
 | Topic | Title | Speaker | Interlocutor | At the Lab |
-| --- | ------ | ----- | ----- | ----- |
-| A.2   | Symmetric groups and Platonic solids | Johannes | Anja | Adrian |
-| B.2   | Isometries of the Euclidean plane | Sebastian | Florent | Fabian |
-| B.3   | Wallpaper groups | Caroline | Anja | Mathias |
+| :-: | :-- | :-- | :-- | :-- |
+| A.2 | Symmetric groups and Platonic solids | Johannes | Anja | Adrian |
+| B.2 | Isometries of the Euclidean plane | Sebastian | Florent | Fabian |
+| B.3 | Wallpaper groups | Caroline | Anja | Mathias |
 
 ## Contact
 
 [Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
 
-![[A Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling)](penrose.png)
+|![[A Penrose tiling](https://en.wikipedia.org/wiki/Penrose_tiling)](penrose.png) |
+| :-: |
+| A Penrose tiling |
