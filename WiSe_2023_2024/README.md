@@ -10,7 +10,7 @@
 ## List of talks
 
 | Talk Nr. | Title | References | Speaker |
-| -- | -- | -- | -- |
+| :-: | :-- | :-- | :-- |
 | 1   | Nilpotent and solvable Lie algebras (Bachelor) | Serre I + Humphreys I.1-2-3 | Richard Pospich |
 | 2 | Simple and semisimple Lie algebras (Bachelor) | Serre II + Humphreys II.4-5-6 | Arian Gjini |
 | 3   | Reductive Lie algebras, Cartan subalgebras (Bachelor) | Serre III + Humphreys IV.15 | Feline Bailer |
