@@ -35,6 +35,6 @@
 
 ## Contact
 
-[Florent Schaffhauser](https://matematiflo.github.io).
+[Florent Schaffhauser](https://matematiflo.github.io)
 
 ![[Finite Dynkin diagrams](https://en.wikipedia.org/wiki/Dynkin_diagram)](Dynkin.svg)
