@@ -19,7 +19,10 @@ Heidelberg University
 
 <!--paginate: true -->
 <!-- footer: Waseda University, Geometry Seminar -->
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## Goal: introductory talk on Proof Assistants and Formal Mathematics
 
 ![bg right:50% w:600](NNG4.png)
@@ -27,7 +30,10 @@ Heidelberg University
 ![width:400 sepia:50%](NNG4.png)
 
 ---
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## Introduction (2 mins)
 
 - Briefly introduce yourself and set the stage for the talk.
@@ -59,7 +65,10 @@ What is the current state of affairs and what can we hope to achieve?
 -
 
 ---
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## Historical context and recent advances (15 mins)
 
 - Provide a swift overview of the historical development of proof assistants.
@@ -67,7 +76,10 @@ What is the current state of affairs and what can we hope to achieve?
 - Discuss key recent advancements in proof assistants and their impact on contemporary mathematics.
 
 ---
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## A primer on type theory for mathematicians (15 mins)
 
 - An introduction to type-theoretic mathematics.
@@ -179,63 +191,23 @@ And proofs as terms (Curry-Howard isomorphism). Requires a *hierarchy* of types.
 - Present interactive examples or mini-problems related to formal mathematics, inviting audience participation.
 
 ---
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## Challenges and Limitations (5 mins)
 
 - Address the intrinsic difficulties and limitations in the field.
 - Acknowledge ongoing challenges and areas for improvement.
 
 ---
-
+<!--
+_backgroundColor: cyan
+_color: white
+-->
 ## Reflection and Closing Discussion (3 mins)
 
 - Summarize key points and insights from the talk.
 - Open the floor for a brief discussion or reflections from the audience.
 
 ---
-
-## Real algebra
-
-1. [Sums of squares](https://github.com/matematiflo/Real_Algebraic_Geometry/blob/main/Sums_of_squares/Sums_of_squares.md)
-2. Formally real fields
-3. Artin-Schreier theory
-4. Real-closed fields
-5. The real closure of an ordered field
-
----
-
-### Sums of squares
-
-Sums of squares are defined inductively, on terms of type `List R` where `R` is a semiring.
-
-```python
-def sum_of_squares {R : Type} [Semiring R] : List R → R
-| [] => 0
-| (a :: L) => (a ^ 2) + (sum_of_squares L)
-```
-
-Recall that lists are defined inductively themselves:  
-
-> A list `L` is either the empty list `[]` or of the form `a :: l`, where `l` is an already defined list.
-
----
-
-## Concatenated lists
-
-The sum of squares of the list `L1 ++ L2` is equal to the sum of squares of `L1` plus the sum of squares of `L2`.
-
-> `sum_of_squares (L1 ++ L2) = sum_of_squares L1 + sum_of_squares L2`
-
-```haskell
-@[simp]
-def sum_of_squares_concat {R : Type} [Semiring R] 
-  (L1 L2 : List R) : sum_of_squares (L1 ++ L2) = sum_of_squares L1 + sum_of_squares L2 
-    := by
-      induction L1 with 
-      | nil => simp [sum_of_squares] 
-      | cons a L ih =>
-        simp [sum_of_squares]
-        rw [ih]
-        rw [add_assoc]
-      done
-```
