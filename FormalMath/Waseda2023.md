@@ -192,11 +192,7 @@ def Example2 := ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k + 1
 #check Example2                       -- Example2 : Prop
 ```
 
-To start doing mathematics, the idea is
-
-> to *view propositions as types*, whose terms are *proofs of that proposition*.
-
-In proof theory, this is known as the [**Curry-Howard correspondence**](https://en.wikipedia.org/wiki/Curry–Howard_correspondence).
+To start doing mathematics, the idea is to *view propositions as types*, whose terms are *proofs of that proposition*. In proof theory, this is known as the [**Curry-Howard correspondence**](https://en.wikipedia.org/wiki/Curry–Howard_correspondence).
 
 ```haskell
 def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := sorry
@@ -208,7 +204,7 @@ Here, `MyFirstProof` is a term of type `∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k`
 
 ## Multiples of `4` are divisible by `2`
 
-For the proof of a proposition, such as `∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k`, one works backwards, reducing the goal to an already proved statement.
+To formalise a proof, one works backwards, reducing the *goal* to a known statement.
 
 ```haskell
 def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := by
@@ -231,7 +227,7 @@ No goals                         -- definitionally equal terms
 
 ## The type of dependent functions
 
-What we wrote before is in fact a function that sends a natural number `n` to a proof of a statement *that depends on* `n`.
+Our type `MyFirstProof` is recognised as a *dependent function*: it sends a natural number `n` to a proof of a statement *that depends on* `n`.
 
 ```haskell
 #check @MyFirstProof  -- MyFirstProof : ∀ (n : ℕ), ∃ k, 4 * n = 2 * k
@@ -239,7 +235,7 @@ What we wrote before is in fact a function that sends a natural number `n` to a 
 #check MyFirstProof   -- MyFirstProof (n : ℕ) : ∃ k, 4 * n = 2 * k
 ```
 
-Our type `MyFirstProof` is recognised as a *dependent function*. The term `MyFirstProof 2` is recognised as a proof of the proposition `∃ k, 4 * 2 = 2 * k` and we can use it as such.
+The term `MyFirstProof 2` is recognised as a proof of the proposition `∃ k, 4 * 2 = 2 * k` and we can use it as such.
 
 ```haskell
 #check MyFirstProof 2  -- MyFirstProof 2 : ∃ k, 4 * 2 = 2 * k
