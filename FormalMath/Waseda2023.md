@@ -40,6 +40,17 @@ _color: black
 - Pose a concise thought-provoking question related to formal mathematics.
 
 ---
+<!--
+_backgroundColor: cyan
+_color: black
+-->
+## Historical context and recent advances (15 mins)
+
+- Provide a swift overview of the historical development of proof assistants.
+- Connect historical milestones to the challenges faced by mathematicians.
+- Discuss key recent advancements in proof assistants and their impact on contemporary mathematics.
+
+---
 
 ## Formalised mathematics
 
@@ -69,18 +80,7 @@ What is the current state of affairs and what can we hope to achieve?
 _backgroundColor: cyan
 _color: black
 -->
-## Historical context and recent advances (15 mins)
-
-- Provide a swift overview of the historical development of proof assistants.
-- Connect historical milestones to the challenges faced by mathematicians.
-- Discuss key recent advancements in proof assistants and their impact on contemporary mathematics.
-
----
-<!--
-_backgroundColor: cyan
-_color: black
--->
-## A primer on type theory for mathematicians (15 mins)
+## A primer on type theory for mathematicians (20 mins)
 
 - An introduction to type-theoretic mathematics.
 
@@ -116,7 +116,7 @@ def n0 := (42 : ℕ)
 #eval n0                              -- 42
 ```
 
-The example above uses the syntax of the **Lean programming language**, created by Leanardo De Moura in 2013. Basic computations are natively supported in Lean.
+The example above uses the syntax of the [**Lean programming language**](https://en.wikipedia.org/wiki/Lean_(proof_assistant)), created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
 
 ```haskell
 #eval 2 * n0                          -- 84
@@ -151,18 +151,39 @@ Functions can be evaluated on terms. The syntax `#eval f(n0)` would not compile.
 ---
 
 ## Inductive types
+
+Natural numbers can be implemented as an inductive type using [Peano's axiomatization](https://en.wikipedia.org/wiki/Peano_axioms).
+
+```haskell
+inductive Nat :=
+| zero
+| succ (n : Nat)
+```
+
+So `zero` is a term of type `Nat`. And for all term `n` of type `Nat`, there is a term `succ n`.
+
+```haskell
+#check Nat.zero                      -- Nat.zero : Nat
+
+#check @Nat.succ                     -- Nat.succ Nat → Nat
+```
+
+The terms `zero` and `succ` are functions whose return type has not yet been declared. These are called *constructors*. The notation `ℕ` and `0` can be introduced a posteriori.
+
+---
+
+## Inductive types are ubiquitous
 <!--
 _backgroundColor: pink
 -->
-For instance, the type of natural numbers `ℕ`.
+Because `Nat` is declared as an inductive type, the compiler automatically generates a *principle of induction*.
 
 ```haskell
-inductive ℕ :=
-| 0 : ℕ
-| succ (n : ℕ) : ℕ
+#check Nat.zero                -- Nat.zero : Nat
+#check @Nat.succ               -- Nat.succ Nat → Nat
 ```
 
-> **SAY MORE ON THIS** (with `#check ℕ.succ`, `#check @ℕ.succ` *etc*). Then mention Lists and proofs by induction (or even just pattern matching and cases by case check).
+Mention that Lists are inductive types, explain definitions by pattern matching, cases by case check, and induction. Mention Equality and substitution?
 
 ---
 
@@ -227,7 +248,7 @@ No goals                         -- definitionally equal terms
 
 ## The type of dependent functions
 
-Our type `MyFirstProof` is recognised as a *dependent function*: it sends a natural number `n` to a proof of a statement *that depends on* `n`.
+Our term `MyFirstProof` is recognised as a *dependent function*: it sends a natural number `n` to a proof of a statement *that depends on* `n`.
 
 ```haskell
 #check @MyFirstProof  -- MyFirstProof : ∀ (n : ℕ), ∃ k, 4 * n = 2 * k
@@ -248,7 +269,7 @@ def EightIsEven : ∃ m : ℕ, 8 = 2 * m := MyFirstProof 2
 _backgroundColor: cyan
 _color: black
 -->
-## Motivation, Purpose, and Engaging Examples (20 mins)
+## Motivation, Purpose, and Engaging Examples (15 mins)
 
 - Share your personal motivation for working in this field.
 - Clearly articulate the purposes and benefits of proof assistants in modern mathematics.
