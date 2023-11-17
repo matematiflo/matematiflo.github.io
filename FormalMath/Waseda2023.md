@@ -88,13 +88,15 @@ _color: black
 
 ## Type-theoretic mathematics
 
-*Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations. The following three concepts play a central role in this.
+*Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations. 
+
+The general framework is provided by the [Calculus Of Constructions](https://en.wikipedia.org/wiki/Calculus_of_constructions), as well as the following three concepts from type theory:
 
 - Inductive types.
 - The `Prop` type.
 - The type of dependent functions (a.k.a. `Pi` types).
 
-To go further, one can also incorporate concepts from *Homotopy type theory* (`HoTT`).
+To go further, one can also incorporate concepts from [Homotopy type theory](https://homotopytypetheory.org/book/) (`HoTT`).
 
 But first, *what is a type*?
 
@@ -149,7 +151,9 @@ Functions can be evaluated on terms. The syntax `#eval f(n0)` would not compile.
 ---
 
 ## Inductive types
-
+<!--
+_backgroundColor: cyan
+-->
 For instance, the type of natural numbers `ℕ`.
 
 ```haskell
@@ -164,7 +168,7 @@ inductive ℕ :=
 
 ## The `Prop` type
 
-`Prop` is the type whose terms are the formulas from first-order logic.
+`Prop` is the type whose terms are the formulas from [first-order logic][FOL].
 
 One starts from a language, with basic symbols such as `+` or `` , and defines formulas inductively, following a set of rules. Terms of type `Prop` are defined by such formulas.
 
@@ -174,17 +178,74 @@ def Example1 := ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k
 #check Example1                       -- Example1 : Prop
 ```
 
-Up to here, we are working in *simple type theory*, and we can already do some mathematics in it, for example prove the above proposition.
+This is a well-defined mathematical statement, but we have not proved it yet.
 
 ---
 
 ## Propositions as types
 
-And proofs as terms (Curry-Howard isomorphism). Requires a *hierarchy* of types.
+Mathematically erroneous statements will type-check if they are syntactically correct.
+
+```haskell
+def Example2 := ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k + 1
+
+#check Example2                       -- Example2 : Prop
+```
+
+To start doing mathematics, the idea is
+
+> to *view propositions as types*, whose terms are *proofs of that proposition*.
+
+In proof theory, this is known as the [**Curry-Howard correspondence**](https://en.wikipedia.org/wiki/Curry–Howard_correspondence).
+
+```haskell
+def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := sorry
+```
+
+Here, `MyFirstProof` is a term of type `∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k`.
+
+---
+
+## Multiples of `4` are divisible by `2`
+
+For the proof of a proposition, such as `∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k`, one works backwards, reducing the goal to an already proved statement.
+
+```haskell
+def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := by
+  intro n      -- we introduce a natural number `n` in our local context
+  use (2 * n)  -- we claim that we can use `k = 2 * n` to "solve the goal"
+  ring         -- we finish the proof by computation
+```
+
+Evolution of the *tactic state*:
+
+```lean
+∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k  -- goal at the beginning
+∃ k : ℕ, 4 * n = 2 * k           -- after intro n
+4 * n = 2 * (2 * n)              -- after use (2 * n)
+4 * n = (2 * 2) * n              -- associativity of multiplication
+No goals                         -- definitionally equal terms
+```
 
 ---
 
 ## The type of dependent functions
+
+What we wrote before is in fact a function that sends a natural number `n` to a proof of a statement *that depends on* `n`.
+
+```haskell
+#check @MyFirstProof  -- MyFirstProof : ∀ (n : ℕ), ∃ k, 4 * n = 2 * k
+
+#check MyFirstProof   -- MyFirstProof (n : ℕ) : ∃ k, 4 * n = 2 * k
+```
+
+Our type `MyFirstProof` is recognised as a *dependent function*. The term `MyFirstProof 2` is recognised as a proof of the proposition `∃ k, 4 * 2 = 2 * k` and we can use it as such.
+
+```haskell
+#check MyFirstProof 2  -- MyFirstProof 2 : ∃ k, 4 * 2 = 2 * k
+
+def EightIsEven : ∃ m : ℕ, 8 = 2 * m := MyFirstProof 2
+```
 
 ---
 <!--
@@ -218,3 +279,6 @@ _color: black
 - Open the floor for a brief discussion or reflections from the audience.
 
 ---
+
+
+[FOL]: https://en.wikipedia.org/wiki/First-order_logic
