@@ -88,7 +88,7 @@ _color: black
 
 ## Type-theoretic mathematics
 
-*Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations. 
+*Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations.
 
 The general framework is provided by the [Calculus Of Constructions](https://en.wikipedia.org/wiki/Calculus_of_constructions), as well as the following three concepts from type theory:
 
@@ -152,7 +152,7 @@ Functions can be evaluated on terms. The syntax `#eval f(n0)` would not compile.
 
 ## Inductive types
 <!--
-_backgroundColor: cyan
+_backgroundColor: pink
 -->
 For instance, the type of natural numbers `ℕ`.
 
@@ -275,6 +275,5 @@ _color: black
 - Open the floor for a brief discussion or reflections from the audience.
 
 ---
-
 
 [FOL]: https://en.wikipedia.org/wiki/First-order_logic
