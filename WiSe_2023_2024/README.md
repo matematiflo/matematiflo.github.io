@@ -15,7 +15,7 @@
 | 2 | Simple and semisimple Lie algebras (Bachelor) | Serre II + Humphreys II.4-5-6 | Arian Gjini |
 | 3  | Reductive Lie algebras, Cartan subalgebras (Bachelor) | Serre III + Humphreys IV.15 | Feline Bailer |
 | 4  | Representations of the Lie algebra $\mathfrak{sl}( 2; \mathbb{C} )$ (Bachelor) | Serre IV and VII.6 + Humphreys II.7 | Aljoscha Helm |
-| 5  | Root systems and root space decompositions (Master) | Serre V.1-V.10 and VI.1 + Humphreys II.8 and III.9 | Till Janke |
+| 5  | Root systems and root space decompositions (Master) | Serre V.1-V.10 and VI.1 + Humphreys II.8 (and III.9) | Till Janke |
 | 6 | Cartan matrices and Dynkin diagrams (Master) | Serre V.10-V.17 + Humphreys III.11 | Philipp Müller |
 | 7  | Semisimple orbits (Master) | Collingwood-McGovern, 1-2 | Jens Molge |
 | 8 | The Dynkin classification (Master) | Collingwood-McGovern, 3 + Humphreys III.12 | Emanuel Roth |
