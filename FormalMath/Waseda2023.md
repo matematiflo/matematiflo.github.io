@@ -31,7 +31,7 @@ header: Introductory words and outline of the talk
 ## Formalised mathematics
 
 - Formalisation of mathematics is not a new idea (think of Leibniz, Peano, Russell and Whitehead, Bourbaki, ... ).
-- Neither is the notion of a *computer* (person or machine).
+- Neither is the notion of a *computer* (person or machine: think of Pascal, Euler, ... ).
 - What is relatively recent is the *use of computers to formalise proofs* (1960s onward).
 - The formalisation of mathematics poses a number of challenges and difficulties (not only technical).
 - It also offers a lot of opportunities in a digital age (e.g. in teaching).
