@@ -328,7 +328,7 @@ example (n : ℕ) : u n = 2 ^ (n + 1) := by
   | succ k ih => rw [succ_eq_add_one, u, ih]; ring_nf
 ```
 
-However, type-theoretic difficulties can arise when arithmetic operations become more complicated (for instance with `v` defined by `v 0 = 1` and `v (k + 1) = 2 * v k + 1`).
+However, type-theoretic difficulties can arise inadvertently (for instance with `v` defined by `v 0 = 1` and `v (k + 1) = 2 * v k + 1`).
 
 ---
 
