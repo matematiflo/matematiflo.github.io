@@ -53,7 +53,7 @@ header: Introductory words and outline of the talk
 
 1. A brief overview of computer-assisted mathematics
 1. A primer on type theory for mathematicians
-1. Learninig the basics of Lean: The Natural Number Game
+1. Learning the basics of Lean: The Natural Number Game
 1. Challenges and opportunities of the use of proof assistants
 
 ---
@@ -85,7 +85,7 @@ header: A brief overview of computer-assisted mathematics
 - They can also help a *verifying* a mathematical proof.
 - A famous example is the [Four-colour theorem][4colour] (K. Appel and W. Haken, $1976$). The proof shows that the theorem holds except perhaps in a finite number of cases.
 - Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
-- A formal proof of the four-colour theoren was written in 2005 by G. Gonthier, using the proof assistant Coq (no other program necessary).
+- A formal proof of the four-colour theoren was written in 2005 by G. Gonthier, *using only the proof assistant Coq* (no other program necessary).
 
 ---
 
@@ -94,30 +94,30 @@ header: A brief overview of computer-assisted mathematics
 - Nowadays, computers can also be used to write abstract proofs, or to handle particularly complex ones.
 - Proofs of the [prime number theorem][PNT] have been formalised in Isabelle.
 - The [Feit-Thompson theorem][OddOrder], stating that a finite group of odd order is solvable, has been [formalised in Coq][MathComp.OddOrder].
-- This has stimulated a lot of reasearch and progress on proof assistants themselves.
-- A recent example of the use of computers in mathematical research is provided by the [Liquid Tensor Experiment][LTE], which says that certain $Ext$ groups of the set of measures on a profinite set $S$ vanish.
-- This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, encompassing the complex, real and $p$-adic cases, currently being developed.
+- This has stimulated a lot of *research and progress on proof assistants themselves*.
+- A recent example of the use of computers in mathematical research is provided by the [Liquid Tensor Experiment][LTE], which says that certain $Ext$ groups of the set of measures on a profinite set vanish.
+- This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, which is *currently being developed*.
 
 ---
 
 ## Formalising mathematics
 
-- Is about representing mathematical concepts in a formal language.
+- Is about *representing* mathematical concepts in a *formal language*.
 - We want to be able to define objects, state theorems and write proofs on which we can rely and that we can "unwrap".
 - There is a mechanical aspect (the compilation of the program) and a conceptual one (the writing of said program).
 - The readability of the code may vary, but the result can be trusted with a high degree of confidence.
-- We can implement routine procedures to help us write proofs.
+- We can implement routine procedures to help us write proofs or compute quantities.
 
 ---
 
 ## Formal languages and verifications
 
-- A formal language consists of words created from an alphabet and put together according to a set of rules called a grammar.
+- In linguistics, a formal language consists of words created from an alphabet and put together according to a set of rules called a grammar.
 - Computer programs are written in formal languages.
-- Formal languages created for the purposes of representing mathematical objects started to emerge in the 1960s:
-  - The pioneers were Automath (1967), Mizar (1973), Thm (1972) and LCF (1972).
+- Formal languages developed *for the purposes of representing mathematical objects* started to emerge in the 1960s:
+  - The pioneers were Automath (1967), Mizar (1973), Thm (1972) and [LCF][LCF] (1972).
   - The following generation used Higher Order Logic: HOL, Isabelle, HOL-Light, *etc*.
-  - Nowadays, many proof assistants use Dependent Type Theory: Coq, Agda, Lean, *etc*.
+  - Nowadays, many proof assistants use [Dependent Type Theory][DTT]: Coq, Agda, Lean, *etc*.
 
 ---
 
@@ -171,7 +171,7 @@ def n0 := (42 : ℕ)
 #eval n0                              -- 42
 ```
 
-The example above uses the syntax of the [**Lean programming language**][Lean], created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
+The example above uses the syntax of the [Lean programming language][Lean], created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
 
 ```haskell
 #eval 2 * n0                          -- 84
@@ -480,3 +480,5 @@ So, why not *Lean into it*? (^_^)/
 [NNG3]: https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/index2.html
 [LeanGame]: https://adam.math.hhu.de
 [CurryHoward]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
+[LCF]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
+[DTT]: https://en.wikipedia.org/wiki/Dependent_type
