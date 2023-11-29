@@ -15,12 +15,6 @@ math: mathjax
 Florent Schaffhauser
 Heidelberg University
 
-<!-- ## Goal: introductory talk on Proof Assistants and Formal Mathematics
-
-![bg right:50% w:600](NNG4.png)
-
-![width:400 sepia:50%](NNG4.png)
--->
 ---
 <!--
 paginate: true
@@ -116,8 +110,8 @@ header: A brief overview of computer-assisted mathematics
 - Computer programs are written in formal languages.
 - Formal languages developed *for the purposes of representing mathematical objects* started to emerge in the 1960s:
   - The pioneers were Automath (1967), Mizar (1973), Thm (1972) and [LCF][LCF] (1972).
-  - The following generation used Higher Order Logic: HOL, Isabelle, HOL-Light, *etc*.
-  - Nowadays, many proof assistants use [Dependent Type Theory][DTT]: Coq, Agda, Lean, *etc*.
+  - The following generation used Higher Order Logic: HOL, Isabelle (1986), HOL-Light, *etc*.
+  - Nowadays, many proof assistants use [Dependent Type Theory][DTT]: Coq (1989), Agda (1999), Lean (2013), *etc*.
 
 ---
 
@@ -268,7 +262,7 @@ def Example2 := ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k + 1
 #check Example2                       -- Example2 : Prop
 ```
 
-To start doing mathematics, the idea is to *view propositions as types*, whose terms are *proofs of that proposition*. In proof theory, this is known as the [**Curry-Howard correspondence**][CurryHoward].
+To start doing mathematics, the idea is to *view propositions as types*, whose terms are *proofs of that proposition*. In proof theory, this is known as the [Curry-Howard correspondence][CurryHoward].
 
 ```haskell
 def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := sorry
@@ -295,8 +289,7 @@ Evolution of the *tactic state*:
 ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k  -- goal at the beginning
 ∃ k : ℕ, 4 * n = 2 * k           -- after intro n
 4 * n = 2 * (2 * n)              -- after use (2 * n)
-4 * n = (2 * 2) * n              -- associativity of multiplication
-No goals                         -- definitionally equal terms
+No goals                         -- ring_nf closes the goal
 ```
 
 ---
@@ -418,7 +411,7 @@ inductive Eq {X : Type} : X → X → Prop
 | refl (a : X) : Eq a a
 ```
 
-We can then use the asociated induction principle to prove the symmetry and transitivity of the relation `Eq`. Similarly, given a function `f`, we can prove that `a = b => f a = f b`.
+We can then use the asociated induction principle to prove the symmetry and transitivity of the relation `Eq`. Similarly, given a function `f`, we can prove that `a = b → f a = f b`.
 
 ```haskell
 example {X Y : Type} {f : X → Y} (a b : X) : (a = b) → f a = f b := by
