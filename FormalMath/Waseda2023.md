@@ -34,7 +34,7 @@ header: Introductory words and outline of the talk
 - Neither is the notion of a *computer* (person or machine: think of Pascal, Euler, ... ).
 - What is relatively recent is the *use of computers to formalise proofs* (1960s onward).
 - The formalisation of mathematics poses a number of challenges and difficulties (not only technical).
-- It also offers a lot of opportunities in a digital age (e.g. in teaching).
+- It also offers a lot of opportunities in a digital age (e.g. [in teaching][HTPIWL]).
 
 *Is checking correctness the main goal of formalised mathematics?* If not, what is it?
 
@@ -65,16 +65,70 @@ _header: ""
 
 ---
 <!--
-_backgroundColor: cyan
 header: A brief overview of computer-assisted mathematics
 -->
-## Mathematics in the age of computers
+## Foundations of mathematics
 
-- Provide a swift overview of the historical development of proof assistants.
-- Connect historical milestones to the challenges faced by mathematicians.
-- Discuss key recent advancements in proof assistants and their impact on contemporary mathematics.
+- Mathematics uses the rules of logic for deductive reasoning.
+- *Classical logic* assumes the Law of Excluded Middle.
+- Proofs by contraposition or by contradiction are commonly used.
+- Following Cantor, Hilbert, Zermelo, Fraenkel and Bourbaki, *set theory* serves as foundations of mathematics: numbers, functions, equivalence relations, *etc*, are all sets.
+- Some proof assistants use this same (set-theoretic) framework.
+- For the purpose of computer programming, type-theoretic foundations might be more convenient ("everything is a function").
 
 ---
+
+## Mathematics in the age of computers
+
+- Why and how to use computers to do mathematics?
+- First and foremost: because they can *compute* for us.
+- They can also help a *verifying* a mathematical proof.
+- A famous example is the [Four-colour theorem][4colour] (K. Appel and W. Haken, $1976$). The proof shows that the theorem holds except perhaps in a finite number of cases.
+- Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
+- A formal proof of the four-colour theoren was written in 2005 by G. Gonthier, using the proof assistant Coq (no other program necessary).
+
+---
+
+## Beyond computations
+
+- Nowadays, computers can also be used to write abstract proofs, or to handle particularly complex ones.
+- Proofs of the [prime number theorem][PNT] have been formalised in Isabelle.
+- The [Feit-Thompson theorem][OddOrder], stating that a finite group of odd order is solvable, has been [formalised in Coq][MathComp.OddOrder].
+- This has stimulated a lot of reasearch and progress on proof assistants themselves.
+- A recent example of the use of computers in mathematical research is provided by the [Liquid Tensor Experiment][LTE], which says that certain $Ext$ groups of the set of measures on a profinite set $S$ vanish.
+- This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, encompassing the complex, real and $p$-adic cases, currently being developed.
+
+---
+
+## Formalising mathematics
+
+- Is about representing mathematical concepts in a formal language.
+- We want to be able to define objects, state theorems and write proofs on which we can rely and that we can "unwrap".
+- There is a mechanical aspect (the compilation of the program) and a conceptual one (the writing of said program).
+- The readability of the code may vary, but the result can be trusted with a high degree of confidence.
+- We can implement routine procedures to help us write proofs.
+
+---
+
+## Formal languages and verifications
+
+- A formal language consists of words created from an alphabet and put together according to a set of rules called a grammar.
+- Computer programs are written in formal languages.
+- Formal languages created for the purposes of representing mathematical objects started to emerge in the 1960s:
+  - The pioneers were Automath (1967), Mizar (1973), Thm (1972) and LCF (1972).
+  - The following generation used Higher Order Logic: HOL, Isabelle, HOL-Light, *etc*.
+  - Nowadays, many proof assistants use Dependent Type Theory: Coq, Agda, Lean, *etc*.
+
+---
+
+## Structure of an interactive theorem prover
+
+![bg right:50% width:500 sepia:10%](ITP.png)
+
+- While different proof assistants are not compatible between one another, the basic structure is always the same.
+- They are used by communities with different interests and preoccupations, both for program certification and proof verification.
+
+*Image credits:* [Assia Mahboubi][Assia].
 
 ---
 <!--
@@ -92,13 +146,13 @@ header: A primer on type theory
 
 *Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations.
 
-The general framework is provided by the [Calculus Of Constructions](https://en.wikipedia.org/wiki/Calculus_of_constructions), as well as the following three concepts from type theory:
+The general framework is provided by the [Calculus Of Constructions][COC], as well as the following three concepts from type theory:
 
 - Inductive types.
 - The `Prop` type.
 - The type of dependent functions (a.k.a. `Pi` types).
 
-To go further, one can also incorporate concepts from [Homotopy type theory](https://homotopytypetheory.org/book/) (`HoTT`).
+To go further, one can also incorporate concepts from [Homotopy type theory][HoTT] (`HoTT`).
 
 But first, *what is a type*?
 
@@ -117,7 +171,7 @@ def n0 := (42 : ℕ)
 #eval n0                              -- 42
 ```
 
-The example above uses the syntax of the [**Lean programming language**](https://en.wikipedia.org/wiki/Lean_(proof_assistant)), created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
+The example above uses the syntax of the [**Lean programming language**][Lean], created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
 
 ```haskell
 #eval 2 * n0                          -- 84
@@ -153,7 +207,7 @@ Functions can be evaluated on terms. The syntax `#eval f(n0)` would not compile.
 
 ## Inductive types
 
-Natural numbers can be implemented as an inductive type using [Peano's axiomatization](https://en.wikipedia.org/wiki/Peano_axioms).
+Natural numbers can be implemented as an inductive type using [Peano's axiomatization][Peano].
 
 ```haskell
 inductive Nat :=
@@ -214,7 +268,7 @@ def Example2 := ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k + 1
 #check Example2                       -- Example2 : Prop
 ```
 
-To start doing mathematics, the idea is to *view propositions as types*, whose terms are *proofs of that proposition*. In proof theory, this is known as the [**Curry-Howard correspondence**](https://en.wikipedia.org/wiki/Curry–Howard_correspondence).
+To start doing mathematics, the idea is to *view propositions as types*, whose terms are *proofs of that proposition*. In proof theory, this is known as the [**Curry-Howard correspondence**][CurryHoward].
 
 ```haskell
 def MyFirstProof : ∀ n : ℕ, ∃ k : ℕ, 4 * n = 2 * k := sorry
@@ -279,13 +333,36 @@ header: "The Natural Number Game"
 
 ## The Natural Number Game
 
-- The [Natural Number Game](https://adam.math.hhu.de/#/g/hhu-adam/NNG4) is the classical introduction game for Lean.
+- The [Natural Number Game][NNG4] is the classical introduction game for Lean.
 - In it, one recreates the natural numbers $\mathbb{N}$ from the Peano axioms, learning the basics of theorem proving in the process.
-- The [original version](https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/index2.html) was created for Lean 3 by Kevin Buzzard and Mohammad Pedramfar.
-- The current version, written in Lean 4, is currently hosted on the [Lean Game Server](https://adam.math.hhu.de), created and maintained by Alexander Bentkamp and Jon Eugster at the University of Düsseldorf.
+- The [original version][NNG3] was created for Lean 3 by Kevin Buzzard and Mohammad Pedramfar.
+- The current version, written in Lean 4, is currently hosted on the [Lean Game Server][LeanGame], created and maintained by Alexander Bentkamp and Jon Eugster at the University of Düsseldorf.
 
-Let us play it together!
+---
 
+## Let us play it together
+
+![bg right:50% width:700](NNG.png)
+
+Can we prove that addition of natural numbers is commutative?
+
+```haskell
+theorem add_comm : 
+  ∀ (a b : ℕ), a + b = b + a
+```
+
+This is [Level 3][Level3Boss] of the Addition World in NNG 4.
+
+<!--
+induction a with k ih
+rw [add_zero]
+rw [zero_add]
+rfl
+rw [succ_add]
+rw [ih]
+rw [add_succ]
+rfl
+-->
 ---
 <!-- 
 _header: ""
@@ -341,7 +418,7 @@ inductive Eq {X : Type} : X → X → Prop
 | refl (a : X) : Eq a a
 ```
 
-We can then use the asociated induction principle to prove the symmetry and transitivity of the relation `Eq`. We can also use it to prove that, if `f` is a function, `a = b => f a = f b`.
+We can then use the asociated induction principle to prove the symmetry and transitivity of the relation `Eq`. Similarly, given a function `f`, we can prove that `a = b => f a = f b`.
 
 ```haskell
 example {X Y : Type} {f : X → Y} (a b : X) : (a = b) → f a = f b := by
@@ -387,3 +464,19 @@ header: "Concluding remarks"
 So, why not *Lean into it*? (^_^)/
 
 [FOL]: https://en.wikipedia.org/wiki/First-order_logic
+[HTPIWL]: https://djvelleman.github.io/HTPIwL/
+[Level3Boss]: https://adam.math.hhu.de/#/g/hhu-adam/NNG4/world/Addition/level/3
+[4colour]: https://en.wikipedia.org/wiki/Four_color_theorem
+[PNT]: https://en.wikipedia.org/wiki/Prime_number_theorem
+[OddOrder]: https://en.wikipedia.org/wiki/Feit–Thompson_theorem
+[MathComp.OddOrder]: https://github.com/math-comp/odd-order
+[LTE]: https://leanprover-community.github.io/blog/posts/lte-final/
+[Assia]: http://people.rennes.inria.fr/Assia.Mahboubi/
+[COC]: https://en.wikipedia.org/wiki/Calculus_of_constructions
+[HoTT]: https://homotopytypetheory.org/book/
+[Lean]: https://en.wikipedia.org/wiki/Lean_(proof_assistant)
+[Peano]: https://en.wikipedia.org/wiki/Peano_axioms
+[NNG4]: https://adam.math.hhu.de/#/g/hhu-adam/NNG4
+[NNG3]: https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/index2.html
+[LeanGame]: https://adam.math.hhu.de
+[CurryHoward]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
