@@ -37,7 +37,7 @@ header: Introductory words and outline of the talk
 ## Formal proofs and mathematical libraries
 
 - We should distinguish between the development of proof assistants, which is a research area at the intersection of mathematics, logic and computer science, and the formalisation of known mathematical results, which is about building mathematical libraries usable by a proof assistant.
-- As far as libraries are concerned, there are two basic aspects to formalisation: checking correctness and automating certain proofs.
+- As far as libraries are concerned, the two basic goals of formalisation are *checking correctness* and *automating certain proofs*.
 - A challenging question is whether this can help mathematicians do research and transfer knowledge.
 - A related one is whether it can make mathematics more widely usable in other fields, or even more accessible in general.
 
@@ -65,7 +65,7 @@ header: A brief overview of computer-assisted mathematics
 
 - Mathematics uses the rules of logic for deductive reasoning.
 - *Classical logic* assumes the Law of Excluded Middle.
-- Proofs by contraposition or by contradiction are commonly used.
+- Proofs by contraposition or by contradiction are commonly used in mathematics.
 - Following Cantor, Hilbert, Zermelo, Fraenkel and Bourbaki, *set theory* serves as foundations of mathematics: numbers, functions, equivalence relations, *etc*, are all sets.
 - Some proof assistants use this same (set-theoretic) framework.
 - For the purpose of computer programming, type-theoretic foundations might be more convenient ("everything is a function").
@@ -76,7 +76,7 @@ header: A brief overview of computer-assisted mathematics
 
 - Why and how to use computers to do mathematics?
 - First and foremost: because they can *compute* for us.
-- They can also help a *verifying* a mathematical proof.
+- They can also help *verifying* a mathematical proof.
 - A famous example is the [Four-colour theorem][4colour] (K. Appel and W. Haken, $1976$). The proof shows that the theorem holds except perhaps in a finite number of cases.
 - Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
 - A formal proof of the four-colour theoren was written in 2005 by G. Gonthier, *using only the proof assistant Coq* (no other program necessary).
@@ -140,7 +140,7 @@ header: A primer on type theory
 
 *Claim:* It is possible to build a large amount of modern mathematics using type-theoretic foundations.
 
-The general framework is provided by the [Calculus Of Constructions][COC], as well as the following three concepts from type theory:
+The general framework is built on top of the [Calculus Of Constructions][COC], and is called [Dependent Type Theory][DTT]. It includes:
 
 - Inductive types.
 - The `Prop` type.
@@ -162,13 +162,13 @@ A *type* is specified by its *terms*. For instance, most programming languages c
 def n0 := (42 : ℕ)
 
 #check n0                             -- n0 : ℕ
-#eval n0                              -- 42
+#reduce n0                              -- 42
 ```
 
 The example above uses the syntax of the [Lean programming language][Lean], created by Leonardo de Moura in 2013. Basic computations are natively supported in Lean.
 
 ```haskell
-#eval 2 * n0                          -- 84
+#reduce 2 * n0                          -- 84
 ```
 
 ---
@@ -191,10 +191,10 @@ def f := fun (n : ℕ) => 2 * n
 #check f                             -- f (n : ℕ) : ℕ
 ```
 
-Functions can be evaluated on terms. The syntax `#eval f(n0)` would not compile.
+Functions can be evaluated on terms. The syntax `#reduce f(n0)` would not compile.
 
 ```haskell
-#eval f n0                           -- 84
+#reduce f n0                           -- 84
 ```
 
 ---
@@ -474,4 +474,5 @@ So, why not *Lean into it*? (^_^)/
 [LeanGame]: https://adam.math.hhu.de
 [CurryHoward]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
 [LCF]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
+[DTT]: https://en.wikipedia.org/wiki/Dependent_type
 [DTT]: https://en.wikipedia.org/wiki/Dependent_type
