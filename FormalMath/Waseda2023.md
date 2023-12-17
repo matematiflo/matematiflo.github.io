@@ -67,7 +67,7 @@ header: A brief overview of computer-assisted mathematics
 - *Classical logic* assumes the Law of Excluded Middle.
 - Proofs by contraposition or by contradiction are commonly used in mathematics.
 - Following Cantor, Hilbert, Zermelo, Fraenkel and Bourbaki, *set theory* serves as foundations of mathematics: numbers, functions, equivalence relations, *etc*, are all sets.
-- Some proof assistants use this same (set-theoretic) framework.
+- Some proof assistants use this same (set-theoretic) framework (e.g. [Mizar][Mizar]).
 - For the purpose of computer programming, type-theoretic foundations might be more convenient ("everything is a function").
 
 ---
@@ -109,7 +109,7 @@ header: A brief overview of computer-assisted mathematics
 - In linguistics, a formal language consists of words created from an alphabet and put together according to a set of rules called a grammar.
 - Computer programs are written in formal languages.
 - Formal languages developed *for the purposes of representing mathematical objects* started to emerge in the 1960s:
-  - The pioneers were Automath (1967), Mizar (1973), Thm (1972) and [LCF][LCF] (1972).
+  - The pioneers were Automath (1967), Thm (1972), [LCF][LCF] (1972) and Mizar (1973).
   - The following generation used Higher Order Logic: HOL, Isabelle (1986), HOL-Light, *etc*.
   - Nowadays, many proof assistants use [Dependent Type Theory][DTT]: Coq (1989), Agda (1999), Lean (2013), *etc*.
 
@@ -476,3 +476,4 @@ So, why not *Lean into it*? (^_^)/
 [LCF]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
 [DTT]: https://en.wikipedia.org/wiki/Dependent_type
 [DTT]: https://en.wikipedia.org/wiki/Dependent_type
+[Mizar]: https://en.wikipedia.org/wiki/Mizar_system
