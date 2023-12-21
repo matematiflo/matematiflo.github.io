@@ -475,5 +475,4 @@ So, why not *Lean into it*? (^_^)/
 [CurryHoward]: https://en.wikipedia.org/wiki/Curry–Howard_correspondence
 [LCF]: https://en.wikipedia.org/wiki/Logic_for_Computable_Functions
 [DTT]: https://en.wikipedia.org/wiki/Dependent_type
-[DTT]: https://en.wikipedia.org/wiki/Dependent_type
 [Mizar]: https://en.wikipedia.org/wiki/Mizar_system
