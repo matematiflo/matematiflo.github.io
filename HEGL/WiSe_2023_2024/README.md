@@ -7,7 +7,7 @@
 - 27/10/2023: Mathematical presentations (1-4pm, SR 1)
 - 29/11/2023: Status meeting
 - 10/01/2024: Status meeting
-- 29/01/2024: [Final presentations](HEGL/WiSe_2023_2024/FinalPres.html)
+- 29/01/2024: [Final presentations](FinalPres.html)
 
 ## List of talks on 18/10/2023
 
