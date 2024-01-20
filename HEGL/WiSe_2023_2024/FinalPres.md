@@ -25,9 +25,11 @@ In addition, we will also hear from students undertaking an [internship](https:/
 
 ### List of talks
 
-- 2:15-3:00: *Wallpaper groups in the wild*, by Caroline Bornmann, Sebastian Grafe and Johannes Kamlage.
-- 3:15-3:30: *Contact geometry*, by Viktor Stanislaus Stein.
-- 3:30-3:45: *Persistent homology*, by Marcel Eichberg.
+| Time | Title | Speaker |
+| - | --- | -- |
+| 2:15-3:00  | *Wallpaper groups in the wild* | Caroline Bornmann, Sebastian Grafe and Johannes Kamlage |
+| 3:15-3:30   | *Contact geometry* | Viktor Stanislaus Stein |
+| 3:30-3:45   | *Persistent homology* | Marcel Eichberg |
 
 ### Social Event
 
