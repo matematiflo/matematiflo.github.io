@@ -32,3 +32,7 @@ In addition, we will also hear from students undertaking an [internship](https:/
 ### Social Event
 
 - Cakes and drinks will be served at 4 PM in the Foyer.
+
+## Contact
+
+[Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
