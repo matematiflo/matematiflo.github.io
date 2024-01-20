@@ -1,4 +1,4 @@
-# HEGL (Pro)Seminar WiSe 2023: Groups and symmetries
+# HEGL Illustrating Mathematics Seminar 2023-2024: Groups and symmetries
 
 ## Key dates
 
