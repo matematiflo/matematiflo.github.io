@@ -38,3 +38,5 @@ In addition, we will also hear from students undertaking an [internship](https:/
 ## Contact
 
 [Anja Randecker](https://www.mathi.uni-heidelberg.de/~arandecker/) or [Florent Schaffhauser](https://matematiflo.github.io).
+
+![[A wallpaper group](https://en.wikipedia.org/wiki/Wallpaper_group#Formal_definition_and_discussion)](WallpaperGroups.jpg)
