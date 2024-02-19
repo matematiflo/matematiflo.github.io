@@ -14,9 +14,9 @@ format:
 
 ## What is HEGL?
 
-- A component, created in 2021 and developed in collaboration with [**HITS**](https://www.h-its.org), of the [**Research Station: *Geometry+Dynamics***](https://www.mathi.uni-heidelberg.de/~geodyn/) located at Heidelberg University.
+- A component, created in 2021 and developed in collaboration with [**HITS**](https://www.h-its.org), of the [**Research Station: *Geometry+Dynamics***](https://geometry-dynamics.mathi.uni-heidelberg.de) located at Heidelberg University.
 - A *space* for students and faculty to engage in experimental mathematics.
-- A *community* that brings researchers of all levels together.
+- A *community* that brings together researchers of all levels.
 - A *website* with a database of pedagogical resources.
 - A member of [Geometry Labs United](https://geometrylabs.net), an association which works to promote research and public interest in geometry.
 
@@ -72,7 +72,7 @@ Every semester, we offer the following activities:
 
 ### HEGL seminars
 
-- A [**Student (Pro)Seminar**](https://hegl.mathi.uni-heidelberg.de/seminars/hegl-proseminar/): *Illustrating mathematics*.
+- Two regular [**Student (Pro)Seminar**](https://hegl.mathi.uni-heidelberg.de/seminars/hegl-proseminar/): *Illustrating mathematics* (Winter) and *Teaching Mathematics* (Summer).
 - A [**Community Seminar**](https://hegl.mathi.uni-heidelberg.de/seminars/hegl-community-seminar/) for colloquium-style talks.
 - Research seminars and reading groups.
 
