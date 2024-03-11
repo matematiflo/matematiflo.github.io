@@ -69,8 +69,8 @@ header: Matemáticas asistidas por computador
 -->
 ## Fundamentos de las matemáticas
 
-- Las matemáticas usan las reglas de [deducción natural][WikiDeduccionNatural] y la **teoría de conjuntos** para representar conceptos matemáticos: un número, una función, una relación de equivalencia, *etc*, todos aquellos son conjuntos.
 - En lógica clásica, se trabaja con el [Principio del tercero excluido][WikiPTE] (PTE), el cual nos permite hacer demostraciones por contraposición o contradicción.
+- Las matemáticas usan las reglas de [deducción natural][WikiDeduccionNatural] y la **teoría de conjuntos** para representar conceptos matemáticos: un número, una función, una relación de equivalencia, *etc*, todos aquellos son *conjuntos*.
 - El [axioma de elección][AE] (AE) también es de un uso común tanto en álgebra como en análisis.
 
 ---
@@ -79,7 +79,7 @@ header: Matemáticas asistidas por computador
 
 - Se basan en la [lógica intuicionista][LogiIntu], sin el PTE ni el AE.
 - Las reglas de deducción natural resultan ser equivalentes a las reglas del [$\lambda$-cálculo][LambdaCalc].
-$$\frac{(\textcolor{red}{f :} P \to Q) \ \wedge \ (\textcolor{red}{x:}P)}{(\textcolor{red}{f\ x :} Q)}\,\small{\text{mp}}$$
+$$\frac{(\textcolor{red}{f :} P \to Q) \ \wedge \ (\textcolor{red}{x:}P)}{(\textcolor{red}{f(x) :} Q)}\,\small{\text{mp}}$$
 - De acuerdo a eso, es buena idea reemplazar la teoría de conjuntos por la **teoría de tipos** para hablar de fundamentos de las matemáticas ("*todo es una función*").
 
 ---
@@ -92,7 +92,7 @@ $$\frac{(\textcolor{red}{f :} P \to Q) \ \wedge \ (\textcolor{red}{x:}P)}{(\text
 
 <!--
 - The proof of the 4-color theorem shows that the theorem holds except perhaps in a finite number of cases.
-- Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms<, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
+- Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
 -->
 
 ---
@@ -103,7 +103,7 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 
 - Existen pruebas formales del [Teorema de los números primos][PNT] (en *Isabelle*).
 - El [Teorema de Feit-Thompson][OddOrder], que dice que un grupo finito de orden impar es resoluble, ha sido [formalizado en Coq][MathComp.OddOrder].
-- En el [*Liquid Tensor Experiment*][LTE], se formaliza la teoría de las *matemáticas condensadas*, debida a Clausen y Scholze.
+- En el [*Liquid Tensor Experiment*][LTE], se formalizan teoremas de *matemáticas condensadas*, debidos a Clausen y Scholze.
 <!-- - A recent example of the use of computers in mathematical research is provided by the [Liquid Tensor Experiment][LTE], which says that certain $Ext$ groups of the set of measures on a profinite set vanish.
 - This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, which is *currently being developed*.
 -->
@@ -112,9 +112,11 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 
 ## Representación en un lenguaje formal
 
-- Queremos ser capaces de definir objetos matemáticos, enunciar teoremas y escribir demostraciones confiables y completas de los mismos.
-- Hay un aspecto mecánico (la compilación del programa) y otro que es más conceptual (el escribir ese programa).
-- La leíbilidad del código puede variar mucho, pero se puede confiar en el resultado con un alto grado de certeza.
+¿De qué se trata cuando formalizamos matemáticas?
+
+- De definir objetos matemáticos, enunciar teoremas y escribir demostraciones completas de los mismos.
+- De distinguir entre el aspecto mecánico (la compilación del programa) y el  conceptual (el escribir ese programa).
+- De escribir un código claro y leíble. puede variar mucho, en el cual se puede confiar con un alto grado de certeza.
 
 ---
 
@@ -128,9 +130,9 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 
 ## Una breve historia de los asistentes de prueba
 
-- Los pioneros fueron Automath (1967), Thm (1972), [LCF][LCF] (1972) y [Mizar] (1973).
-- La siguiente generación se volvió capaz de manejar la [lógica de orden superior][LOS]: HOL, Isabelle (1986), *etc*.
-- Hoy en día, varios asistentes de prueba utilizan la [Teoría de los Tipos Dependientes][DTT]: Coq (1989), Agda (1999), Lean (2013), *etc*.
+- Los pioneros fueron [Automath][Automath] (1967), Thm (1972), [LCF][LCF] (1972) y [Mizar] (1973).
+- La siguiente generación se volvió capaz de manejar la [lógica de orden superior][LOS]: HOL, [Isabelle][Isabelle]  (1986), *etc*.
+- Hoy en día, varios asistentes de prueba utilizan la [teoría de los tipos dependientes][DTT]: [Coq][Coq] (1989), [Agda][Agda] (1999), [Lean][Lean] (2013), *etc*.
 
 ---
 
@@ -139,8 +141,8 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 ![bg right:42% width:350 sepia:10%](ITP.png)
 
 - La estructura básica de un asistente de prueba siempre es la misma.
-- El verificador es tan sólo una parte (el compilador).
-- El humano interactua con el asistente para escribir librerías.
+- El verificador de prueba es tan sólo una parte (el compilador).
+- El humano interactua con el asistente para escribir bibliotecas.
 
 *Image credits:* [Assia Mahboubi][Assia].
 
@@ -158,13 +160,13 @@ header: Introducción a la teoría de tipos
 
 ## Matemáticas "bien tipadas"
 
-*Afirmación:* Es posible construir gran parte de las matemáticas modernas basándose en la [Teoría Intuicionista de Tipos][ITT], que se debe a Per Martin-Löf (1972).
+*Afirmación:* Es posible construir gran parte de las matemáticas modernas basándose en la [teoría intuicionista de tipos][ITT], que se debe a Per Martin-Löf (1972).
 
 Los tres conceptos mayores son:
 
 - Tipos inductivos.
 - Proposiciones-como-tipos (la [correspondencia de Curry-Howard][CurryHoward]).
-- Universos y [tipos dependientes][DTT].
+- Universos y [funciones dependientes][DTT] (`Π`-tipos).
 
 La implementación informática está basada en el [Cálculo de Construcciones][CC] (Thierry Coquand, 1980s). Para ir más lejos, se pueden incorporar conceptos de [Teoría Homotópica de Tipos][HoTT].
 
@@ -172,7 +174,7 @@ La implementación informática está basada en el [Cálculo de Construcciones][
 
 ## Tipos y términos
 
-- Un *tipo* es una colección de datos, llamados *términos*, que obedecen unas reglas precisas de *introducción* y *eliminación*. Definir un tipo consiste en especificar esas reglas.
+- Un *tipo* es una colección de datos, llamados *términos*, que obedecen unas reglas precisas de *introducción* y *eliminación*. Definir un tipo consiste en especificar esas reglas, siguiendo un formalismo preciso.
 - Por ejemplo, la gran mayoría de los lenguajes de programación contienen una implementación del tipo de los números naturales, denotado por `Nat` o `ℕ` y cuyos términos son `0, 1, 2, ...`. Como veremos, esto es un ejemplo de **tipo inductivo**.
 - A continuación, daremos ejemplos explícitos, utilizando la sintaxis del lenguaje de programación [Lean][Lean], creado por Leonardo de Moura en el 2013.
 
@@ -245,8 +247,8 @@ Se puede también utilizar la notación `(x, y)` para el término `Prod.intro (x
 Ahora, para *eliminar* términos de un tipo inductivo como `X × Y`, se utiliza el método de búsqueda de patrones (*pattern matching*).
 
 ```haskell
-def pr₁ (t : X × Y) : X :=
-match t with
+def pr₁ : X × Y → X :=
+fun (t : X × Y) => match t with
 | Prod.intro x y => x
 
 #check @pr₁                   
@@ -275,6 +277,8 @@ In the code above, `Nat.rec` is seen as a function that, in the presence of a *p
 
 ## Conjunciones
 
+Volviendo a la analogía entre el $\lambda$-cálculo y la deducción natural, podemos *representar proposiciones por tipos*:
+
 - Supongamos que `P` y `Q` son proposiciones ya definidas. Entonces cómo definir la proposición `P ∧ Q`?
 - Si pensamos en `P` y `Q` como tipos, entonces la proposición `P ∧ Q` es simplemente el tipo producto de `P`y `Q`definido anteriormente!
 - En el sentido que una demostración de `P ∧ Q` es, por definición, un par `(p, q)` donde `p` es una demostración de `P` y `q` es una demostración de `Q`.
@@ -284,8 +288,8 @@ In the code above, `Nat.rec` is seen as a function that, in the presence of a *p
 ## Implicaciones
 
 - Supongamos que `P`y `Q` son proposiciones ya definidas. Entonces qué significa decir que `P` implica `Q`?
-- Si pensamos en `P` y `Q` como tipos, entonces la proposición `P → Q` es el tipo de funciones de `P` a `Q` y pensamos en tal función como una demostración de la proposición `P → Q`.
-- Por ejemplo, la primera proyección `pr₁ : P × Q → P` que definimos anteriormente ahora se interpreta como una demostración de la proposición `P ∧ Q → P`.
+- Si pensamos en `P` y `Q` como tipos, entonces la proposición `P → Q` es el tipo de funciones de `P` a `Q` y pensamos en tal función como una *demostración* de la proposición `P → Q`.
+- Por ejemplo, la primera proyección `pr₁ : P × Q → P` que definimos anteriormente ahora se interpreta como una demostración de la proposición `P ∧ Q → P`. En particular, tal implicación es una tautología.
 
 ---
 
@@ -303,15 +307,15 @@ In the code above, `Nat.rec` is seen as a function that, in the presence of a *p
 - Entonces, demostrar *la* proposición `∀ x, P x` significa, por definición, construir una función dependiente
 `f : (x : X) → P x`.
 - En ese formalismo, la familia `P` se ve como una función
-`P : X → Type`, donde `Type` es el *universo* de los tipos y `(x : X) → P x` es el Π-tipo (Pi-tipo) asociado a `P`.
+`P : X → Type`, donde `Type` es el *universo* de los tipos y `(x : X) → P x` es el `Π`-tipo (Pi-tipo) asociado a `P`.
 
 ---
 
 ## Pares dependientes
 
-<!--En teoría homotópica de tipos, se ve a una familia `P : X → Type` como una fibración sobre `X` y a `f : (x : X) → P x` como una sección de esa fibración. Más precisamente, se contruye un tipo inductivo `Fib X P`, llamado Σ-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.-->
+<!--En teoría homotópica de tipos, se ve a una familia `P : X → Type` como una fibración sobre `X` y a `f : (x : X) → P x` como una sección de esa fibración. Más precisamente, se contruye un tipo inductivo `Fib X P`, llamado `Σ`-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.-->
 
-Podemos asociarle a la familia `P : X → Type` un tipo inductivo llamdo Σ-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.
+Podemos asociarle a la familia `P : X → Type` un tipo inductivo llamdo `Σ`-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.
 
 ```haskell
 inductive Σ (X : Type) (P : X → Type)
@@ -348,8 +352,8 @@ inductive Sum (X Y : Type)
 | from_left (x : X)
 | from_right (y : Y)
 
-#check @sum.from_left   -- @sum.from_left : X → Sum X Y
-#check @sum.from_right  -- @sum.from_right : Y → Sum X Y
+#check @Sum.from_left   -- @Sum.from_left : X → Sum X Y
+#check @Sum.from_right  -- @Sum.from_right : Y → Sum X Y
 ```
 
 La interpretación en términos de proposiciones es la disyunción `P ∨ Q`. Y la implicación `P → P ∨ Q` es una tautología, porque tenemos la función `Sum.from_left : P → P ∨ Q`.
@@ -363,19 +367,19 @@ _header: ""
 
 ---
 <!-- 
-header: "Una prueba formal en *Lean*"
+header: "Una prueba formal en Lean"
 -->
 
-## Si `m`es par o `n` es par, entonces `m * n` es par
+## Un ejemplo
 
 Consideremos el siguiente enunciado:
 
 > **Teorema.** Sean `n` y `m`dos enteros naturales. Supongamos que `n` es par o que `m` es par. Entonces `n * m` es par.
 
-Una formalización de esto podría parecerse a algo así:
+Una formalización de esto podría parecerse a [algo así](#utilizando-la-biblioteca-mathlib-de-lean):
 
 ```haskell
-∀ (n m : Nat), n.isEven ∨ m.isEven → (n * m).isEven`
+∀ (n m : Nat), n.isEven ∨ m.isEven → (n * m).isEven
 ```
 
 Es decir que tenemos que definir:
@@ -405,7 +409,7 @@ Es decir que podemos pensar en un término `t : Nat.isEven n` como un *par depen
 
 ## El tipo `n.isEven`
 
-Tenemos tipos bien definidos pero que no necesariamente tiene términos: un tipo puede *tener habitantes* o no.
+Tenemos tipos bien definidos pero que no necesariamente tienen términos: un tipo puede *tener habitantes* o no.
 
 ```haskell
 #check isEven 2                -- isEven 2 : Type
@@ -435,7 +439,7 @@ Es decir que `two_is_even` es el par dependiente `(1, p)` donde `p : 2 = 2 * 1`.
 De igual manera, los múltiplos de `2` son pares:
 
 ```haskell
-def mulOf2_is_even (m : Nat) : (2 * m).isEven := 
+def mult_of_2_is_even (m : Nat) : (2 * m).isEven := 
   isEven.intro m (Eq.refl (2 * m))
 ```
 
@@ -453,7 +457,7 @@ Y la prueba formal es la siguiente:
 ```haskell
 def Lema1 : (n m : Nat) → n.isEven → (n * m).isEven :=
 fun n m (Nat.isEven.intro  (k : Nat) (p : n = 2 * k)) =>
-  let q : (n * m) = 2 * (k * m) := 
+  let q : (n * m) = 2 * (k * m) :=          -- definición local
     Eq.trans (congrArg (fun x => x * m) p) (Nat.mul_assoc 2 k m)
   Nat.isEven.intro (k * m) q
 ```
@@ -506,30 +510,32 @@ fun n m t => match t with
 ## Demostración asistida por computador
 
 - ¿Por qué le decimos *asistente de prueba* a un lenguaje de programación como Lean? Porque nos puede colaborar para la escritura de un programa como la prueba del teorema anterior.
-- En Lean, esa colaboración se lleva a cabo a través de un **modo táctico** (lo que hemos visto por ahora es el **modo término**).
-- Como ejemplo, veamos una demostración, utilizando tácticas de *Mathlib*, del teorema que formalizamos hoy: [Enlace1][Coloquio2024] y [Enlace2][Coloquio2024bis].
+- En Lean, esa colaboración se lleva a cabo a través de un **modo táctico** (lo que hemos visto por ahora es el modo término).
+- Como ejemplo, veamos una demostración, utilizando tácticas de *Mathlib*, del teorema que formalizamos hoy: [Enlace1][Coloquio2024live] y [Enlace2][Coloquio2024hhu].
 
 ---
 
-## Utilizando la biblioteca *Mathlib* de Lean
+## Utilizando la biblioteca Mathlib de Lean
+
+Demostración de [nuestro teorema](#un-ejemplo) con el [modo táctico][Coloquio2024live] de Lean:
 
 ```haskell
 import Mathlib.Tactic.Cases
 import Mathlib.Tactic.Use
 
-def isEven (n : Nat) : Prop := ∃ k : Nat, n = 2 * k
+def Nat.isEven (n : Nat) : Prop := ∃ k : Nat, n = 2 * k
 
-theorem nuestroTeoremaDeHoy : ∀ (n m : Nat), 
-  isEven n ∨ isEven m → isEven (n * m) 
+theorem Coloquio2024 : ∀ (n m : Nat),
+  n.isEven ∨ m.isEven → (n * m).isEven 
     := by {
       intro n m t
       cases' t with h1 h2
       · cases' h1 with k1 p1
-        unfold isEven 
+        unfold Nat.isEven 
         use (k1 * m)
         rw [p1, Nat.mul_assoc]
       · cases' h2 with k2 p2
-        unfold isEven
+        unfold Nat.isEven
         use (n * k2)
         rw [p2, ← Nat.mul_assoc, Nat.mul_comm n 2, Nat.mul_assoc]
     }
@@ -557,5 +563,9 @@ theorem nuestroTeoremaDeHoy : ∀ (n m : Nat),
 [LambdaCalc]: https://es.wikipedia.org/wiki/Cálculo_lambda
 [LOS]: https://es.wikipedia.org/wiki/Lógica_de_orden_superior
 [ITT]: https://en.wikipedia.org/wiki/Intuitionistic_type_theory
-[Coloquio2024]: https://live.lean-lang.org/#code=import%20Mathlib.Tactic.Cases%0Aimport%20Mathlib.Tactic.Use%0A%0Adef%20isEven%20(n%20%3A%20Nat)%20%3A%20Prop%20%3A%3D%20∃%20k%20%3A%20Nat%2C%20n%20%3D%202%20*%20k%0A%0Atheorem%20Coloquio2024%20%3A%20∀%20(n%20m%20%3A%20Nat)%2C%0A%20%20isEven%20n%20∨%20isEven%20m%20→%20isEven%20(n%20*%20m)%0A%20%20%20%20%3A%3D%20by%20%7B%0A%20%20%20%20%20%20intro%20n%20m%20t%0A%20%20%20%20%20%20cases'%20t%20with%20h1%20h2%0A%20%20%20%20%20%20·%20cases'%20h1%20with%20k1%20p1%0A%20%20%20%20%20%20%20%20unfold%20isEven%0A%20%20%20%20%20%20%20%20use%20(k1%20*%20m)%0A%20%20%20%20%20%20%20%20rw%20%5Bp1%2C%20Nat.mul_assoc%5D%0A%20%20%20%20%20%20·%20cases'%20h2%20with%20k2%20p2%0A%20%20%20%20%20%20%20%20unfold%20isEven%0A%20%20%20%20%20%20%20%20use%20(n%20*%20k2)%0A%20%20%20%20%20%20%20%20rw%20%5Bp2%2C%20←%20Nat.mul_assoc%2C%20Nat.mul_comm%20n%202%2C%20Nat.mul_assoc%5D%0A%20%20%20%20%7D%0A%0A%23print%20Coloquio2024%0A
-[Coloquio2024bis]: https://lean.math.hhu.de/#url=https%3A%2F%2Fmatematiflo.github.io%2FFormalMath%2FLosAndes2024.lean
+[Coloquio2024live]: https://live.lean-lang.org/#url=https%3A%2F%2Fmatematiflo.github.io%2FFormalMath%2FLosAndes2024.lean
+[Coloquio2024hhu]: https://lean.math.hhu.de/#url=https%3A%2F%2Fmatematiflo.github.io%2FFormalMath%2FLosAndes2024.lean
+[Automath]: https://en.wikipedia.org/wiki/Automath
+[Isabelle]: https://en.wikipedia.org/wiki/Isabelle_(proof_assistant)
+[Coq]: https://en.wikipedia.org/wiki/Coq_(software)
+[Agda]: https://en.wikipedia.org/wiki/Agda_(programming_language)
