@@ -213,7 +213,7 @@ inductive Nat
 
 Es decir que `cero` es un término de tipo `Nat` y que, para todo término `n` de tipo `Nat`, tenemos un término `succ n`.
 
-Esa declaración define funciones `Nat.cero` y `Nat.succ`, llamadas *constructores*.
+Esa declaración define funciones `Nat.cero` y `Nat.suc`, llamadas *constructores*.
 
 ```haskell
 #check Nat.cero                     -- Nat.zero : Nat
@@ -251,8 +251,7 @@ def pr₁ : X × Y → X :=
 fun (t : X × Y) => match t with
 | Prod.intro x y => x
 
-#check @pr₁                   
--- pr₁ : X × Y → X
+#check @pr₁                   -- pr₁ : X × Y → X
 ````
 
 Para un tipo inductivo con varios constructores, se hace *pattern matching* sobre cada constructor.
