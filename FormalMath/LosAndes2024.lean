@@ -18,4 +18,4 @@ theorem Coloquio2024 : ∀ (n m : Nat),
         rw [p2, ← Nat.mul_assoc, Nat.mul_comm n 2, Nat.mul_assoc]
     }
 
-#print nuestroTeoremaDeHoy
+#print Coloquio2024
