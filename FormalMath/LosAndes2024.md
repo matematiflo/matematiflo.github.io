@@ -26,7 +26,7 @@ header: Introducción
 ## Matemáticas formales
 
 - Formalizar las matemáticas no es una idea nueva.<!-- (think of Leibniz, Peano, Russell and Whitehead, Bourbaki, ... ). -->
-- La noción de *computador* tampoco. <!-- (sea una persona o una máquina).--> <!-- think of Pascal, Euler, ... ).-->
+- La noción de *computador* tampoco. <!-- (be it a person or a machine: think of Pascal, Euler, ... ).-->
 - Lo relativamente novedoso es el hecho de *usar computadores para formalizar demostraciones*.
 
 ¿Será que el propósito de las matemáticas formales es comprobar que unos teoremas son correctos o hay algo más?
@@ -44,7 +44,7 @@ header: Introducción
 
 ## Pruebas formales y bibliotecas de matemáticas
 
-- Hay que distinguir el desarrollo de asistentes de prueba<!--which is a research area at the intersection of mathematics, logic and computer science,--> de la formalización de resultados ya conocidos<!--, which is about building mathematical libraries usable by a proof assistant-->.
+- Hay que distinguir el desarrollo de asistentes de prueba de la formalización de resultados ya conocidos.
 - Los asistentes de prueba pueden ayudarnos tanto a *comprobar* que nuestros enunciados son correctos como a *automatizar* algunas etapas de la prueba.
 - El reto es saber si eso puede ayudarnos a hacer investigación en matemáticas y a transmitir conocimiento, posiblemente a gente que trabaje en otros temas.
 
@@ -55,7 +55,6 @@ header: Introducción
 1. Matemáticas asistidas por computador
 1. Introducción a la teoría de tipos
 1. Una prueba formal en *Lean*
-<!--1. Retos y oportunidades del uso de los asistentes de prueba-->
 
 ---
 <!--
@@ -73,9 +72,6 @@ header: Matemáticas asistidas por computador
 - Las matemáticas usan las reglas de [deducción natural][WikiDeduccionNatural] y la **teoría de conjuntos** para representar conceptos matemáticos: un número, una función, una relación de equivalencia, *etc*, todos aquellos son conjuntos.
 - En lógica clásica, se trabaja con el [Principio del tercero excluido][WikiPTE] (PTE), el cual nos permite hacer demostraciones por contraposición o contradicción.
 - El [axioma de elección][AE] (AE) también es de un uso común tanto en álgebra como en análisis.
-<!-- Some proof assistants use this same (set-theoretic) framework (e.g. [Mizar][Mizar]).
-- For the purpose of computer programming, type-theoretic foundations might be more convenient ("everything is a function").
--->
 
 ---
 
@@ -95,8 +91,9 @@ $$\frac{(\textcolor{red}{f :} P \to Q) \ \wedge \ (\textcolor{red}{x:}P)}{(\text
 - Un ejemplo famoso es el [Teorema de los cuatro colores][4colores] (debido a K. Appel y W. Haken, $1976$), que fue totalemente formalizado en el 2005 (por G. Gonthier, *utilizando únicamente el asistente de prueba Coq*).
 
 <!--
-- The proof shows that the theorem holds except perhaps in a finite number of cases.
-- Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms<!--, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).-->
+- The proof of the 4-color theorem shows that the theorem holds except perhaps in a finite number of cases.
+- Those $1834$ cases were then shown to be 4-colourable using various computer programs and algorithms<, some of them written by J. Koch. Part of the proof was checked manually by Haken's daughter Dorothea Blohstein (born Haken).
+-->
 
 ---
 
@@ -108,7 +105,8 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 - El [Teorema de Feit-Thompson][OddOrder], que dice que un grupo finito de orden impar es resoluble, ha sido [formalizado en Coq][MathComp.OddOrder].
 - En el [*Liquid Tensor Experiment*][LTE], se formaliza la teoría de las *matemáticas condensadas*, debida a Clausen y Scholze.
 <!-- - A recent example of the use of computers in mathematical research is provided by the [Liquid Tensor Experiment][LTE], which says that certain $Ext$ groups of the set of measures on a profinite set vanish.
-- This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, which is *currently being developed*.-->
+- This is part of D. Clausen and  P. Scholze's approach to a general theory of analytic spaces, which is *currently being developed*.
+-->
 
 ---
 
@@ -402,8 +400,6 @@ inductive Nat.isEven (n : Nat)
 ```
 
 Es decir que podemos pensar en un término `t : Nat.isEven n` como un *par dependiente* `(k,p)`, donde `p : n = 2 * k`.
-
-<!--Alcanzar a decir: *pruebas-como-programas*...-->
 
 ---
 
