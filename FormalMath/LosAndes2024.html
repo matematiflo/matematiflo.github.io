@@ -204,7 +204,7 @@ Universidad de Heidelberg</p>
 | suc : <span class="hljs-type">Nat</span> → <span class="hljs-type">Nat</span>
 </code></pre>
 <p>Es decir que <code>cero</code> es un término de tipo <code>Nat</code> y que, para todo término <code>n</code> de tipo <code>Nat</code>, tenemos un término <code>succ n</code>.</p>
-<p>Esa declaración define funciones <code>Nat.cero</code> y <code>Nat.succ</code>, llamadas <em>constructores</em>.</p>
+<p>Esa declaración define funciones <code>Nat.cero</code> y <code>Nat.suc</code>, llamadas <em>constructores</em>.</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-meta">#check Nat.cero                     -- Nat.zero : Nat</span>
 <span class="hljs-meta">#check @Nat.suc                     -- Nat.suc : Nat → Nat</span>
 </code></pre>
@@ -232,8 +232,7 @@ Universidad de Heidelberg</p>
 <span class="hljs-title">fun</span> (t : <span class="hljs-type">X</span> × <span class="hljs-type">Y</span>) =&gt; match t with
 | <span class="hljs-type">Prod</span>.intro x y =&gt; x
 
-<span class="hljs-meta">#check @pr₁                   </span>
-<span class="hljs-comment">-- pr₁ : X × Y → X</span>
+<span class="hljs-meta">#check @pr₁                     -- pr₁ : X × Y → X</span>
 </code></pre>
 <p>Para un tipo inductivo con varios constructores, se hace <em>pattern matching</em> sobre cada constructor.</p>
 <footer>Coloquio Uniandes 2024</footer>
@@ -264,7 +263,7 @@ Universidad de Heidelberg</p>
 <h2 id="funciones-dependientes">Funciones dependientes</h2>
 <ul>
 <li>Si <code>P x</code> es una familia de proposiciones parametrizada por un término <code>x: X</code>, qué significa decir que <code>∀ x, P x</code>? Por ejemplo, <code>∀ x : ℝ, x ^ 2 ≥ 0</code>.</li>
-<li>Primero, caigamos en cuenta de que, para cada <code>x</code> en <code>X</code>, el término <code>P x</code> es una proposición, es decir un tipo que <em>depende</em> de x.</li>
+<li>Primero, caigamos en cuenta de que, para todo <code>x</code> de tipo <code>X</code>, el término <code>P x</code> es una proposición, es decir un tipo que <em>depende</em> de x.</li>
 <li>Segundo, lo que estamos tratando de construir es una función que envía <code>x : X</code> a una demostración de <code>P x</code>, es decir una función cuyo tipo de retorno depende del término de entrada.</li>
 </ul>
 <footer>Coloquio Uniandes 2024</footer>
@@ -347,13 +346,13 @@ Universidad de Heidelberg</p>
 <header>Una prueba formal en Lean</header>
 <h2 id="el-tipo-niseven">El tipo <code>n.isEven</code></h2>
 <p>Tenemos tipos bien definidos pero que no necesariamente tienen términos: un tipo puede <em>tener habitantes</em> o no.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-meta">#check isEven 2                -- isEven 2 : Type</span>
-<span class="hljs-meta">#check isEven 3                -- isEven 3 : Type</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-meta">#check isEven 2               -- Nat.isEven 2 : Type</span>
+<span class="hljs-meta">#check isEven 3               -- Nat.isEven 3 : Type</span>
 </code></pre>
 <p>Gracias a la manera como definimos el tipo <code>isEven</code>, también tenemos acceso a la siguiente notación:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">variable</span> (m : <span class="hljs-type">Nat</span>)
-<span class="hljs-meta">#check m.isEven                 -- isEven m : Type </span>
-<span class="hljs-meta">#check (2 : Nat).isEven         -- isEven 2 : Type </span>
+<span class="hljs-meta">#check m.isEven                -- Nat.isEven m : Type </span>
+<span class="hljs-meta">#check (2 : Nat).isEven        -- Nat.isEven 2 : Type </span>
 </code></pre>
 <footer>Coloquio Uniandes 2024</footer>
 </section>
@@ -361,12 +360,12 @@ Universidad de Heidelberg</p>
 <header>Una prueba formal en Lean</header>
 <h2 id="introducci%C3%B3n-de-t%C3%A9rminos">Introducción de términos</h2>
 <p>Podemos mostrar que el tipo <code>isEven 2</code> tiene habitantes:</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">def</span> two_is_even : isEven <span class="hljs-number">2</span> := isEven.intro <span class="hljs-number">1</span> (<span class="hljs-type">Eq</span>.refl <span class="hljs-number">2</span>)
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">def</span> two_is_even : <span class="hljs-type">Nat</span>.isEven <span class="hljs-number">2</span> := <span class="hljs-type">Nat</span>.isEven.intro <span class="hljs-number">1</span> rfl
 </code></pre>
-<p>Es decir que <code>two_is_even</code> es el par dependiente <code>(1, p)</code> donde <code>p : 2 = 2 * 1</code>. Más precisamente, la prueba <code>p</code> de que <code>2 = 2 * 1</code> es el término <code>Eq.refl 2</code>, el cual dice que <code>2 ≡ 1</code> en el compilador (por definición de <code>*</code> en <code>Nat</code>).</p>
+<p>Es decir que <code>two_is_even</code> es el par dependiente <code>(1, rfl)</code> donde <code>rfl : 2 = 2 * 1</code>. Más precisamente, la prueba <code>rfl</code> de que <code>2 = 2 * 1</code> es el término <code>Eq.refl 2</code>, el cual dice que <code>2 ≡ 2 * 1</code> en el compilador (por definición de <code>*</code> en <code>Nat</code>).</p>
 <p>De igual manera, los múltiplos de <code>2</code> son pares:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">def</span> mult_of_2_is_even (m : <span class="hljs-type">Nat</span>) : (<span class="hljs-number">2</span> * m).isEven := 
-  isEven.intro m (<span class="hljs-type">Eq</span>.refl (<span class="hljs-number">2</span> * m))
+  <span class="hljs-type">Nat</span>.isEven.intro m rfl
 </code></pre>
 <footer>Coloquio Uniandes 2024</footer>
 </section>

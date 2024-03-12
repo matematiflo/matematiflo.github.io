@@ -251,7 +251,7 @@ def pr₁ : X × Y → X :=
 fun (t : X × Y) => match t with
 | Prod.intro x y => x
 
-#check @pr₁                   -- pr₁ : X × Y → X
+#check @pr₁                     -- pr₁ : X × Y → X
 ````
 
 Para un tipo inductivo con varios constructores, se hace *pattern matching* sobre cada constructor.
@@ -295,7 +295,7 @@ Volviendo a la analogía entre el $\lambda$-cálculo y la deducción natural, po
 ## Funciones dependientes
 
 - Si `P x` es una familia de proposiciones parametrizada por un término `x: X`, qué significa decir que `∀ x, P x`? Por ejemplo, `∀ x : ℝ, x ^ 2 ≥ 0`.
-- Primero, caigamos en cuenta de que, para cada `x` en `X`, el término `P x` es una proposición, es decir un tipo que *depende* de x.
+- Primero, caigamos en cuenta de que, para todo `x` de tipo `X`, el término `P x` es una proposición, es decir un tipo que *depende* de x.
 - Segundo, lo que estamos tratando de construir es una función que envía `x : X` a una demostración de `P x`, es decir una función cuyo tipo de retorno depende del término de entrada.
 
 ---
@@ -411,16 +411,16 @@ Es decir que podemos pensar en un término `t : Nat.isEven n` como un *par depen
 Tenemos tipos bien definidos pero que no necesariamente tienen términos: un tipo puede *tener habitantes* o no.
 
 ```haskell
-#check isEven 2                -- isEven 2 : Type
-#check isEven 3                -- isEven 3 : Type
+#check isEven 2               -- Nat.isEven 2 : Type
+#check isEven 3               -- Nat.isEven 3 : Type
 ```
 
 Gracias a la manera como definimos el tipo `isEven`, también tenemos acceso a la siguiente notación:
 
 ```haskell
 variable (m : Nat)
-#check m.isEven                 -- isEven m : Type 
-#check (2 : Nat).isEven         -- isEven 2 : Type 
+#check m.isEven                -- Nat.isEven m : Type 
+#check (2 : Nat).isEven        -- Nat.isEven 2 : Type 
 ```
 
 ---
@@ -430,16 +430,16 @@ variable (m : Nat)
 Podemos mostrar que el tipo `isEven 2` tiene habitantes:
 
 ```haskell
-def two_is_even : isEven 2 := isEven.intro 1 (Eq.refl 2)
+def two_is_even : Nat.isEven 2 := Nat.isEven.intro 1 rfl
 ```
 
-Es decir que `two_is_even` es el par dependiente `(1, p)` donde `p : 2 = 2 * 1`. Más precisamente, la prueba `p` de que `2 = 2 * 1` es el término `Eq.refl 2`, el cual dice que `2 ≡ 1` en el compilador (por definición de `*` en `Nat`).
+Es decir que `two_is_even` es el par dependiente `(1, rfl)` donde `rfl : 2 = 2 * 1`. Más precisamente, la prueba `rfl` de que `2 = 2 * 1` es el término `Eq.refl 2`, el cual dice que `2 ≡ 2 * 1` en el compilador (por definición de `*` en `Nat`).
 
 De igual manera, los múltiplos de `2` son pares:
 
 ```haskell
 def mult_of_2_is_even (m : Nat) : (2 * m).isEven := 
-  isEven.intro m (Eq.refl (2 * m))
+  Nat.isEven.intro m rfl
 ```
 
 ---
