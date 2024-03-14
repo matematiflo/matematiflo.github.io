@@ -71,13 +71,13 @@ header: Matemáticas asistidas por computador
 
 - En lógica clásica, se trabaja con el [Principio del tercero excluido][WikiPTE] (PTE), el cual nos permite hacer demostraciones por contraposición o contradicción.
 - Las matemáticas usan las reglas de [deducción natural][WikiDeduccionNatural] y la **teoría de conjuntos** para representar conceptos matemáticos: un número, una función, una relación de equivalencia, *etc*, todos aquellos son *conjuntos*.
-- El [axioma de elección][AE] (AE) también es de un uso común tanto en álgebra como en análisis.
+- El [axioma de elección][AE] (AE) también es de un uso común tanto en álgebra como en análisis (e implica el PTE, por el [teorema de Diaconescu][Diaconescu]).
 
 ---
 
 ## Matemáticas constructivas
 
-- Se basan en la [lógica intuicionista][LogiIntu], sin el PTE ni el AE.
+- Se basan en la [lógica intuicionista][LogiIntu], sin el PTE (ni, por ende, el AE).
 - Las reglas de deducción natural resultan ser equivalentes a las reglas del [$\lambda$-cálculo][LambdaCalc].
 $$\frac{(\textcolor{red}{f :} P \to Q) \ \wedge \ (\textcolor{red}{x:}P)}{(\textcolor{red}{f(x) :} Q)}\,\small{\text{mp}}$$
 - De acuerdo a eso, es buena idea reemplazar la teoría de conjuntos por la **teoría de tipos** para hablar de fundamentos de las matemáticas ("*todo es una función*").
@@ -568,3 +568,4 @@ theorem Coloquio2024 : ∀ (n m : Nat),
 [Isabelle]: https://en.wikipedia.org/wiki/Isabelle_(proof_assistant)
 [Coq]: https://en.wikipedia.org/wiki/Coq_(software)
 [Agda]: https://en.wikipedia.org/wiki/Agda_(programming_language)
+[Diaconescu]: https://en.wikipedia.org/wiki/Diaconescu%27s_theorem
