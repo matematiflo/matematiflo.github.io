@@ -116,7 +116,7 @@ Hoy en día, los computadores son capaces de **representar** conceptos matemáti
 
 - De definir objetos matemáticos, enunciar teoremas y escribir demostraciones completas de los mismos.
 - De distinguir entre el aspecto mecánico (la compilación del programa) y el  conceptual (el escribir ese programa).
-- De escribir un código claro y leíble. puede variar mucho, en el cual se puede confiar con un alto grado de certeza.
+- De escribir un código claro y leíble, en el cual se puede confiar con un alto grado de certeza.
 
 ---
 
