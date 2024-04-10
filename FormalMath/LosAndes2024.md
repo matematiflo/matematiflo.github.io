@@ -292,6 +292,23 @@ Volviendo a la analogía entre el $\lambda$-cálculo y la deducción natural, po
 
 ---
 
+## Suma y disyunción
+
+Dado tipos `X` y `Y`, podemos construir un tipo inductivo llamado suma (o coproducto) de `X` y `Y`.
+
+```haskell
+inductive Sum (X Y : Type)
+| from_left (x : X)
+| from_right (y : Y)
+
+#check @Sum.from_left   -- @Sum.from_left : X → Sum X Y
+#check @Sum.from_right  -- @Sum.from_right : Y → Sum X Y
+```
+
+La interpretación en términos de proposiciones es la disyunción `P ∨ Q`. Y la implicación `P → P ∨ Q` es una tautología, porque tenemos la función `Sum.from_left : P → P ∨ Q`.
+
+---
+
 ## Funciones dependientes
 
 - Si `P x` es una familia de proposiciones parametrizada por un término `x: X`, qué significa decir que `∀ x, P x`? Por ejemplo, `∀ x : ℝ, x ^ 2 ≥ 0`.
@@ -340,24 +357,9 @@ The term `MyFirstProof 2` is recognised as a proof of the proposition `∃ k, 4 
 def EightIsEven : ∃ m : ℕ, 8 = 2 * m := MyFirstProof 2
 ```
 -->
----
-
-## Más tipos dependientes
-
-Dado tipos `X` y `Y`, podemos construir un tipo inductivo llamado suma (o coproducto) de `X` y `Y`.
-
-```haskell
-inductive Sum (X Y : Type)
-| from_left (x : X)
-| from_right (y : Y)
-
-#check @Sum.from_left   -- @Sum.from_left : X → Sum X Y
-#check @Sum.from_right  -- @Sum.from_right : Y → Sum X Y
-```
-
-La interpretación en términos de proposiciones es la disyunción `P ∨ Q`. Y la implicación `P → P ∨ Q` es una tautología, porque tenemos la función `Sum.from_left : P → P ∨ Q`.
 
 ---
+
 <!-- 
 _header: ""
 -->

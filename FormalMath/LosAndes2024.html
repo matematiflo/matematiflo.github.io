@@ -260,6 +260,20 @@ Universidad de Heidelberg</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="24" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="24" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
 <header>Introducción a la teoría de tipos</header>
+<h2 id="suma-y-disyunci%C3%B3n">Suma y disyunción</h2>
+<p>Dado tipos <code>X</code> y <code>Y</code>, podemos construir un tipo inductivo llamado suma (o coproducto) de <code>X</code> y <code>Y</code>.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">inductive</span> <span class="hljs-type">Sum</span> (<span class="hljs-type">X</span> <span class="hljs-type">Y</span> : <span class="hljs-type">Type</span>)
+| from_left (x : <span class="hljs-type">X</span>)
+| from_right (y : <span class="hljs-type">Y</span>)
+
+<span class="hljs-meta">#check @Sum.from_left   -- @Sum.from_left : X → Sum X Y</span>
+<span class="hljs-meta">#check @Sum.from_right  -- @Sum.from_right : Y → Sum X Y</span>
+</code></pre>
+<p>La interpretación en términos de proposiciones es la disyunción <code>P ∨ Q</code>. Y la implicación <code>P → P ∨ Q</code> es una tautología, porque tenemos la función <code>Sum.from_left : P → P ∨ Q</code>.</p>
+<footer>Coloquio Uniandes 2024</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="25" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="25" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
+<header>Introducción a la teoría de tipos</header>
 <h2 id="funciones-dependientes">Funciones dependientes</h2>
 <ul>
 <li>Si <code>P x</code> es una familia de proposiciones parametrizada por un término <code>x: X</code>, qué significa decir que <code>∀ x, P x</code>? Por ejemplo, <code>∀ x : ℝ, x ^ 2 ≥ 0</code>.</li>
@@ -268,7 +282,7 @@ Universidad de Heidelberg</p>
 </ul>
 <footer>Coloquio Uniandes 2024</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="25" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="25" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="26" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
 <header>Introducción a la teoría de tipos</header>
 <h2 id="el-cuantificador-universal">El cuantificador universal</h2>
 <ul>
@@ -280,7 +294,7 @@ Universidad de Heidelberg</p>
 </ul>
 <footer>Coloquio Uniandes 2024</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="26" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="27" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
 <header>Introducción a la teoría de tipos</header>
 <h2 id="pares-dependientes">Pares dependientes</h2>
 
@@ -289,20 +303,6 @@ Universidad de Heidelberg</p>
 | intro (x : <span class="hljs-type">X</span>) (y : <span class="hljs-type">P</span> x)
 </code></pre>
 <p>Si <code>P : X → Type</code> es constante, entonces volvemos a encontrar el producto <code>X × Y</code>. Nótese que un término de tipo <code>Σ X P</code> es de la forma <code>Σ.intro x y</code> donde <code>y : P x</code>. Tal término se interpreta como una demostración de la proposición <code>∃ x, P x</code>.</p>
-<footer>Coloquio Uniandes 2024</footer>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="27" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-header="Introducción a la teoría de tipos" data-theme="default" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--footer:Coloquio Uniandes 2024;--header:Introducción a la teoría de tipos;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
-<header>Introducción a la teoría de tipos</header>
-<h2 id="m%C3%A1s-tipos-dependientes">Más tipos dependientes</h2>
-<p>Dado tipos <code>X</code> y <code>Y</code>, podemos construir un tipo inductivo llamado suma (o coproducto) de <code>X</code> y <code>Y</code>.</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">inductive</span> <span class="hljs-type">Sum</span> (<span class="hljs-type">X</span> <span class="hljs-type">Y</span> : <span class="hljs-type">Type</span>)
-| from_left (x : <span class="hljs-type">X</span>)
-| from_right (y : <span class="hljs-type">Y</span>)
-
-<span class="hljs-meta">#check @Sum.from_left   -- @Sum.from_left : X → Sum X Y</span>
-<span class="hljs-meta">#check @Sum.from_right  -- @Sum.from_right : Y → Sum X Y</span>
-</code></pre>
-<p>La interpretación en términos de proposiciones es la disyunción <code>P ∨ Q</code>. Y la implicación <code>P → P ∨ Q</code> es una tautología, porque tenemos la función <code>Sum.from_left : P → P ∨ Q</code>.</p>
 <footer>Coloquio Uniandes 2024</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 960 720"><foreignObject width="960" height="720"><section id="28" data-paginate="true" data-footer="Coloquio Uniandes 2024" data-theme="default" lang="en-US" data-marpit-pagination="28" style="--paginate:true;--footer:Coloquio Uniandes 2024;--theme:default;" data-marpit-pagination-total="37" data-size="4:3">
@@ -474,7 +474,7 @@ Al ser declarado el tipo `Nat` como un tipo inductivo, el compilador genera *aut
   -- ∀ (t : ℕ), P t
 ```
 
-In the code above, `Nat.rec` is seen as a function that, in the presence of a *predicate* `P : ℕ → Prop`, sends a proof of `P 0` and a proof of the fact that, for all `n : ℕ`, `P n` implies `P (n + 1)`, to a proof of `P t` for all `t : ℕ`.</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>En teoría homotópica de tipos, se ve a una familia `P : X → Type` como una fibración sobre `X` y a `f : (x : X) → P x` como una sección de esa fibración. Más precisamente, se contruye un tipo inductivo `Fib X P`, llamado `Σ`-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.</p><p>Our term `MyFirstProof` is recognised as a *dependent function*: it sends a natural number `n` to a proof of a statement *that depends on* `n`.
+In the code above, `Nat.rec` is seen as a function that, in the presence of a *predicate* `P : ℕ → Prop`, sends a proof of `P 0` and a proof of the fact that, for all `n : ℕ`, `P n` implies `P (n + 1)`, to a proof of `P t` for all `t : ℕ`.</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>En teoría homotópica de tipos, se ve a una familia `P : X → Type` como una fibración sobre `X` y a `f : (x : X) → P x` como una sección de esa fibración. Más precisamente, se contruye un tipo inductivo `Fib X P`, llamado `Σ`-tipo, cuyos términos son los pares `(x, y)` donde `x: X` y `y : P x`.</p><p>Our term `MyFirstProof` is recognised as a *dependent function*: it sends a natural number `n` to a proof of a statement *that depends on* `n`.
 
 ```haskell
 #check @MyFirstProof  -- MyFirstProof : ∀ (n : ℕ), ∃ k, 4 * n = 2 * k
