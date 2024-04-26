@@ -457,7 +457,7 @@ Y la prueba formal es la siguiente:
 
 ```haskell
 def Lema1 : (n m : Nat) → n.isEven → (n * m).isEven :=
-fun n m (Nat.isEven.intro  (k : Nat) (p : n = 2 * k)) =>
+fun n m (Nat.isEven.intro (k : Nat) (p : n = 2 * k)) =>
   let q : (n * m) = 2 * (k * m) :=          -- definición local
     Eq.trans (congrArg (fun x => x * m) p) (Nat.mul_assoc 2 k m)
   Nat.isEven.intro (k * m) q
@@ -477,8 +477,8 @@ Podemos incorporar el cálculo en el programa, justificando cada paso:
 
 ```haskell
 def Lema2 : (n m : Nat) → m.isEven → (n * m).isEven :=
-fun n m (Nat.isEven.intro (k : Nat) (p : m = 2 * k) =>
-  let (q : n * m = 2 * (n * k)) :=
+fun n m (Nat.isEven.intro (k : Nat) (p : m = 2 * k)) =>
+  let q : n * m = 2 * (n * k) :=
     calc
       n * m = n * (2 * k) := congrArg (fun x => n * x) p 
       _     = (n * 2) * k := Eq.symm (Nat.mul_assoc n 2 k)

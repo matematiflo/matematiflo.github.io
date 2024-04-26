@@ -379,7 +379,7 @@ Universidad de Heidelberg</p>
 </blockquote>
 <p>Y la prueba formal es la siguiente:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">def</span> <span class="hljs-type">Lema1</span> : (n m : <span class="hljs-type">Nat</span>) → n.isEven → (n * m).isEven :=
-<span class="hljs-title">fun</span> n m (<span class="hljs-type">Nat</span>.isEven.intro  (k : <span class="hljs-type">Nat</span>) (p : n = <span class="hljs-number">2</span> * k)) =&gt;
+<span class="hljs-title">fun</span> n m (<span class="hljs-type">Nat</span>.isEven.intro (k : <span class="hljs-type">Nat</span>) (p : n = <span class="hljs-number">2</span> * k)) =&gt;
   <span class="hljs-keyword">let</span> q : (n * m) = <span class="hljs-number">2</span> * (k * m) :=          <span class="hljs-comment">-- definición local</span>
     <span class="hljs-type">Eq</span>.trans (congrArg (fun x =&gt; x * m) p) (<span class="hljs-type">Nat</span>.mul_assoc <span class="hljs-number">2</span> k m)
   <span class="hljs-type">Nat</span>.isEven.intro (k * m) q
@@ -396,8 +396,8 @@ Universidad de Heidelberg</p>
 </blockquote>
 <p>Podemos incorporar el cálculo en el programa, justificando cada paso:</p>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-haskell"><span class="hljs-title">def</span> <span class="hljs-type">Lema2</span> : (n m : <span class="hljs-type">Nat</span>) → m.isEven → (n * m).isEven :=
-<span class="hljs-title">fun</span> n m (<span class="hljs-type">Nat</span>.isEven.intro (k : <span class="hljs-type">Nat</span>) (p : m = <span class="hljs-number">2</span> * k) =&gt;
-  <span class="hljs-keyword">let</span> (q : n * m = <span class="hljs-number">2</span> * (n * k)) :=
+<span class="hljs-title">fun</span> n m (<span class="hljs-type">Nat</span>.isEven.intro (k : <span class="hljs-type">Nat</span>) (p : m = <span class="hljs-number">2</span> * k)) =&gt;
+  <span class="hljs-keyword">let</span> q : n * m = <span class="hljs-number">2</span> * (n * k) :=
     calc
       n * m = n * (<span class="hljs-number">2</span> * k) := congrArg (fun x =&gt; n * x) p 
       _     = (n * <span class="hljs-number">2</span>) * k := <span class="hljs-type">Eq</span>.symm (<span class="hljs-type">Nat</span>.mul_assoc n <span class="hljs-number">2</span> k)

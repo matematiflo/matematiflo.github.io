@@ -298,11 +298,11 @@ Here we temporarily exit the namespace `Tutorial`, in order for the `Exists` com
 -/
 
 inductive Nat.isEven (n : Nat) : Prop :=
-| intro (k : Nat) (p : 2 * k = n) : Nat.isEven n
+| intro (k : Nat) (p : n = 2 * k) : Nat.isEven n
 
 #check @Nat.isEven  -- Nat.isEven : Nat → Prop
 
-def P (n : Nat) : Nat → Prop := fun k => (2 * k = n)
+def P (n : Nat) : Nat → Prop := fun k => (n = 2 * k)
 
 def Nat.isEven' (n : Nat) : Prop := Exists (P n)
 
@@ -310,7 +310,7 @@ example : Nat.isEven 42 := Nat.isEven.intro 21 rfl
 
 example : Nat.isEven' 42 := Exists.intro 21 rfl
 
-def Nat.isEven'' (n : Nat) := exists k, 2 * k = n
+def Nat.isEven'' (n : Nat) := exists k, n = 2 * k
 
 example : Nat.isEven'' 42 := Exists.intro 21 rfl
 
@@ -338,3 +338,53 @@ Nat.isEven.intro n rfl
 
 theorem univ_mul_of_two_is_even : forall (n : Nat), (2 * n).isEven :=
 mul_of_two_is_even
+
+/-
+## Problem session
+
+### De Morgan's laws
+-/
+
+theorem DeMorgan1 (P Q : Prop) : ¬(P ∨ Q) ↔ ¬P ∧ ¬Q :=
+Iff.intro imp conv where
+imp : ¬(P ∨ Q) → ¬P ∧ ¬Q :=
+fun (f : ¬(P ∨ Q)) =>
+  have u : P → False := fun (p : P) => f (Or.inl p)
+  have v : Q → False := fun (q : Q) => f (Or.inr q)
+  And.intro u v
+conv : ¬P ∧ ¬Q → ¬(P ∨ Q) :=
+fun (h : ¬P ∧ ¬Q) => match h with
+| And.intro (u : P → False) (v : Q → False) =>
+  fun (t : P ∨ Q) => match t with
+  | Or.inl p => u p
+  | Or.inr q => v q
+
+theorem DeMorgan2 (P Q : Prop) : ¬(P ∧ Q) ↔ ¬P ∨ ¬Q :=
+Iff.intro imp conv where
+imp : ¬(P ∧ Q) → ¬P ∨ ¬Q := by sorry
+conv : ¬P ∨ ¬Q → ¬(P ∧ Q) := by sorry
+
+/-
+### Parity of a product
+-/
+
+theorem Lemma1 : (n m : Nat) → n.isEven → (n * m).isEven :=
+fun n m (Nat.isEven.intro (k : Nat) (p : n = 2 * k)) =>
+  have q : n * m = 2 * (k * m) :=
+    Eq.trans (congrArg (fun x => x * m) p) (Nat.mul_assoc 2 k m)
+  Nat.isEven.intro (k * m) q
+
+theorem Lemma2 : (n m : Nat) → m.isEven → (n * m).isEven :=
+fun n m (Nat.isEven.intro (k : Nat) (p : m = 2 * k)) =>
+  have q : n * m = 2 * (n * k) :=
+    calc
+      n * m = n * (2 * k) := congrArg (fun x => n * x) p
+      _     = (n * 2) * k := Eq.symm (Nat.mul_assoc n 2 k)
+      _     = (2 * n) * k := congrArg (fun x => x * k) (Eq.symm (Nat.mul_comm 2 n))
+      _     = 2 * (n * k) := Nat.mul_assoc 2 n k
+  Nat.isEven.intro (n * k) q
+
+theorem parity_of_product : (n m : Nat) → n.isEven ∨ m.isEven → (n * m).isEven :=
+fun n m t => match t with
+| Or.inl (t : n.isEven) => Lemma1 n m t
+| Or.inr (t : m.isEven) => Lemma2 n m t
