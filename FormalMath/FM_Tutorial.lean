@@ -6,11 +6,17 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Florent Schaffhauser.
 -/
 
+/-
+We open a namespace to avoid conflicts with names of functions already declared in Lean's Init library. As a consequence, commands such as `#check square''` will return the type signature of the function `Tutorial.square''`, not just `square''`.
+-/
+
 namespace Tutorial
 
-/- ## Simply-typed functions and curried functions -/
+/-
+## Simply-typed functions and curried functions
 
-/- ### The square function -/
+### The square function
+-/
 
 def square : Nat → Nat := fun (n : Nat) => n ^ 2
 
@@ -22,13 +28,15 @@ def square' := fun (n : Nat) => n ^ 2
 
 def square'' (n : Nat) : Nat := n ^ 2
 
-#check @square''  -- square'' : Nat → Nat
-#check square''   -- square'' (n : Nat) : Nat
+#check @square''  -- square''                    : Nat → Nat
+#check square''   -- Tutorial.square'' (n : Nat) : Nat
 
 #check square 3  -- square 3 : Nat
 #eval  square 3  -- 9
 
-/- ## The factorial of an integer -/
+/-
+## The factorial of an integer
+-/
 
 def fact (n : Nat) : Nat := match n with
 | 0     =>  1
@@ -41,7 +49,9 @@ def fact' (n : Nat) : Nat := match n with
 | Nat.zero   =>  1
 | Nat.succ k => (Nat.succ k) * fact' k
 
-/- ### The Fibonacci sequence -/
+/-
+### The Fibonacci sequence
+-/
 
 def Fib (n : Nat) : Nat := match n with
 | 0     => 0
@@ -68,7 +78,9 @@ def Fib_up_to (n : Nat) : List Nat := match n with
 
 #eval Fib_up_to 10  -- [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
-/- ### Higher functions -/
+/-
+### Higher functions
+-/
 
 def f (n : Int) (m : Int) : Int := n * m ^ 2 - n * m + 3
 
@@ -86,7 +98,9 @@ def const_fun {X Y : Type} (y : Y) : X → Y := fun (_ : X) => y
 
 #check @const_fun  -- @const_fun : {X Y : Type} → Y → X → Y
 
-/- ### Currying and composition of functions -/
+/-
+### Currying and composition of functions
+-/
 
 def u : Int → Int → Int → Int :=
 fun x1 x2 x3 => x1 + x2 ^ 2 + x1 * x3 - x3 ^ 3
@@ -98,9 +112,11 @@ fun x1 x2 x3 => x1 + x2 ^ 2 + x1 * x3 - x3 ^ 3
 example : u 2 (-1)   = (u 2) (-1)   := by rfl  -- No goals
 example : u 2 (-1) 3 = (u 2) (-1) 3 := by rfl  -- No goals
 
-/- ## Inductive types -/
+/-
+## Inductive types
 
-/- ### Products -/
+### Products
+-/
 
 structure Prod (X Y : Type) : Type :=
 mk :: (fst : X) (snd : Y)
@@ -122,10 +138,10 @@ deriving Repr
 def pair := Prod.mk 1 (-1)
 
 #check pair      -- Tutorial.pair : Prod Nat Int
-#check pair.1    -- pair.fst : Nat
-#check pair.2    -- pair.snd : Int
-#check pair.fst  -- pair.fst : Nat
-#check pair.snd  -- pair.snd : Int
+#check pair.1    -- pair.fst      : Nat
+#check pair.2    -- pair.snd      : Int
+#check pair.fst  -- pair.fst      : Nat
+#check pair.snd  -- pair.snd      : Int
 
 #eval pair      --  { fst := 1, snd := -1 }
 #eval pair.fst  --  1
@@ -138,7 +154,7 @@ def pair := Prod.mk 1 (-1)
 
 def v (t : Prod Int Int) : Int := t.fst + t.snd
 
-#check @v         -- v : Int × Int → Int
+#check @v         -- v : Prod Int Int → Int
 #eval  v ⟨1, -2⟩  -- -1
 
 def F : Int → Int → Int := fun n => fun m => n + m
@@ -149,16 +165,18 @@ def G : Int → Int → Int := fun n m => n + m
 
 theorem F_equal_G : F = G := by rfl
 
-/- ### Sums -/
+/-
+### Sums
+-/
 
 inductive Sum (X Y : Type) : Type :=
 | from_left (x : X) : Sum X Y
 | from_right (y : Y) : Sum X Y
 deriving Repr
 
-#check @Sum            -- Sum : Type → Type → Type
-#check Sum.from_left   -- Sum.from_left {X Y : Type} (x : X) : Sum X Y
-#check Sum.from_right  -- Sum.from_right {X Y : Type} (y : Y) : Sum X Y
+#check @Sum            -- Sum                                          : Type → Type → Type
+#check Sum.from_left   -- Tutorial.Sum.from_left {X Y : Type} (x : X)  : Sum X Y
+#check Tutorial.Sum.from_right  -- Sum.from_right {X Y : Type} (y : Y) : Sum X Y
 
 #check Sum.from_left (X := Nat) (Y := String) 37           -- Sum.from_left 37 : Sum Nat String
 #check Sum.from_right (X := Nat) (Y := String) "a string"  -- Sum.from_right "a string" : Sum Nat String
@@ -174,11 +192,15 @@ def g (t : Sum Int Int) : Int := match t with
 #check g (Sum.from_right 37)  --  g (Sum.from_right 3) : Int
 #eval  g (Sum.from_right 37)  -- 36
 
-/- ## Propositions-as-types and proofs-as-programs -/
+/-
+## Propositions-as-types and proofs-as-programs
+-/
 
 def modus_ponens {P Q : Prop} (f : P → Q) (p : P) : Q := f p
 
-/- ### Conjunction -/
+/-
+### Conjunction
+-/
 
 structure And (P Q : Prop) : Prop :=
 intro :: (left : P) (right : Q)
@@ -199,7 +221,9 @@ fun t => match t with
 | Or.from_left p => Or.from_right p
 | Or.from_right q => Or.from_left q
 
-/- ### Falsity and negation -/
+/-
+### Falsity and negation
+-/
 
 def ExFalsoQuodLibet (P : Prop) : False → P :=
 fun (p : False) => nomatch p
@@ -207,7 +231,9 @@ fun (p : False) => nomatch p
 theorem tauto3 (P : Prop) : ¬P ∧ P → False :=
 fun ⟨f, p⟩ => modus_ponens f p
 
-/- ### Equivalence -/
+/-
+### Equivalence
+-/
 
 structure Iff (P Q : Prop) : Prop :=
 intro :: (imp : P → Q) (conv : Q → P)
@@ -217,4 +243,98 @@ Iff.intro imp conv where
 imp : ¬¬False → False := fun (f : ¬False → False) => f id
 conv : False → ¬¬False := (ExFalsoQuodLibet ¬¬False)
 
+/-
+## Dependently-typed function
+
+### Type families
+-/
+
+inductive Vec (X : Type) : Nat → Type  :=
+| nil                                  : Vec X 0
+| cons {n : Nat} (v : Vec X n) (x : X) : Vec X (n + 1)
+deriving Repr
+
+#check @Vec       -- Vec       : Type → Nat → Type
+#check Vec Int    -- Vec Int   : Nat → Type
+#check Vec Int 3  -- Vec Int 3 : Type
+
+def zeroVector (n : Nat) : Vec Int n := match n with
+| 0     => Vec.nil
+| n + 1 => Vec.cons (zeroVector n) 0
+
+#check @zeroVector   -- zeroVector   : (n : Nat) → Vec Int n
+#check zeroVector 3  -- zeroVector 3 : Vec Int 3
+
+#eval zeroVector 3   -- Vec.cons (Vec.cons (Vec.cons (Vec.nil) 0) 0) 0
+
+/-
+### Dependent pairs
+-/
+structure Sigma {B : Type} (T : B → Type) : Type :=
+mk :: (base : B) (fibre : T base)
+
+#check Sigma (B := Nat) -- Sigma : (Nat → Type) → Type
+
+def Vectors (X : Type) : Type := Sigma (Vec X)
+
+#check @Vectors     -- Vectors     : Type → Type
+#check Vectors Int  -- Vectors Int : Type
+
+structure Tuples (X : Type) :=
+(n : Nat) (vec : Vec X n)
+
+#check @Tuples    -- Tuples     : Type → Type
+#check Tuples Int -- Tuples Int : Type
+
+inductive Exists {B : Type} (P : B → Prop) : Prop :=
+| intro (witness : B) (evidence : P witness) : Exists P
+
+#check Exists (B := Nat) -- Exists : (Nat → Prop) → Prop
+
 end Tutorial
+
+/-
+Here we temporarily exit the namespace `Tutorial`, in order for the `Exists` command used below to refer to Lean's natively implemented `Exists`. We also want the `Nat` in `Nat.even` to refer to Lean's natural numbers.
+-/
+
+inductive Nat.isEven (n : Nat) : Prop :=
+| intro (k : Nat) (p : 2 * k = n) : Nat.isEven n
+
+#check @Nat.isEven  -- Nat.isEven : Nat → Prop
+
+def P (n : Nat) : Nat → Prop := fun k => (2 * k = n)
+
+def Nat.isEven' (n : Nat) : Prop := Exists (P n)
+
+example : Nat.isEven 42 := Nat.isEven.intro 21 rfl
+
+example : Nat.isEven' 42 := Exists.intro 21 rfl
+
+def Nat.isEven'' (n : Nat) := exists k, 2 * k = n
+
+example : Nat.isEven'' 42 := Exists.intro 21 rfl
+
+/-
+### Dependent functions
+-/
+
+namespace Tutorial
+
+def sigma_function {B : Type} {T : B → Type} (f : (b : B) → T b) : B → Sigma T :=
+fun b => ⟨b, f b⟩
+
+#check @Sigma.base  -- @Sigma.base : {B : Type} → {T : B → Type} → Sigma T → B
+
+theorem sigma_function_is_a_section {B : Type} {T : B → Type} (f : (b : B) → T b) (b : B) : (sigma_function f b).base = b := rfl
+
+#check @Sigma.fibre  -- @Sigma.fibre : {B : Type} → {T : B → Type} → (self : Sigma T) → T self.base
+
+theorem proj_of_section {B : Type} {T : B → Type} (f : (b : B) → T b) (b : B) : (sigma_function f b).fibre = f b := rfl
+
+end Tutorial
+
+theorem mul_of_two_is_even (n : Nat) : (2 * n).isEven :=
+Nat.isEven.intro n rfl
+
+theorem univ_mul_of_two_is_even : forall (n : Nat), (2 * n).isEven :=
+mul_of_two_is_even
