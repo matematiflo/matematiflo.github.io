@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>intro_to_lean</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="07_intro_to_Lean_files/libs/clipboard/clipboard.min.js"></script>
+<script src="07_intro_to_Lean_files/libs/quarto-html/quarto.js"></script>
+<script src="07_intro_to_Lean_files/libs/quarto-html/popper.min.js"></script>
+<script src="07_intro_to_Lean_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="07_intro_to_Lean_files/libs/quarto-html/anchor.min.js"></script>
+<link href="07_intro_to_Lean_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="07_intro_to_Lean_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="07_intro_to_Lean_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="07_intro_to_Lean_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="07_intro_to_Lean_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="introduction-to-lean" class="level1">
+<h1>Introduction to Lean</h1>
+<p>By Judith Ludwig and Florent Schaffhauser<br>
+Proseminar on Computer-assisted mathematics, Heidelberg<br>
+Summer Semester 2024</p>
+<p>Lean is a <em>programming language</em> that can be used as a <em>proof assistant</em> (also called an <em>interactive theorem prover</em>). This means that Lean can be used to check and certify the correctness of certain computer programmes and formalised mathematical proofs.</p>
+<p>It was created and first implemented by <strong>Leonardo de Moura</strong> at Microsoft Research, where the first version was launched in 2013. The current version is Lean 4, dating back to 2021. It is not backwards-compatible wih <strong>Lean 3</strong>.</p>
+<section id="goals-for-today" class="level2">
+<h2 class="anchored" data-anchor-id="goals-for-today">Goals for today</h2>
+<ul>
+<li>Learn to read basic Lean syntax such <code>def t : T := sorry</code>.</li>
+<li>Learn to think about <em>propositions as types</em> and <em>terms as proofs</em>.</li>
+<li>Write simple equality proofs using the <code>reflexivity</code> tactic (or <code>refl</code>).</li>
+<li>See a first example of a function and of a proof that uses the <code>exact</code> tactic.</li>
+</ul>
+</section>
+<section id="types-and-terms" class="level2">
+<h2 class="anchored" data-anchor-id="types-and-terms">Types and terms</h2>
+<p>The command <code>#check</code> tells us the type of an expression, for instance <code>Char</code> for a character, <code>String</code> for a string of characters, and <code>Nat</code> for a natural number.</p>
+<p>If <code>#check t</code> returns <code>T</code>, one says that <code>t</code> is a term of type <code>T</code>*. This is abbreviated to <code>t : T</code>.</p>
+<pre class="lean"><code>#check 'H'              -- Char.ofNat Char
+#check "Hello, world!"  -- "Hello, world! : String"
+#check 42               -- 42 : Nat</code></pre>
+<p>The function <code>String.append</code> takes two string of characters and concatenates them. The notation <code>+</code> can be used to mean the sum of two natural numbers.</p>
+<pre class="lean"><code>#check @String.append             -- String.append : String → String → String
+#check "Hello, ".append "world!"  -- String.append "Hello, " "world!" : String
+#check 41 + 1                     -- 41 + 1 : Nat</code></pre>
+<p>The data types <code>string</code> and <code>Nat</code> are themselves terms, of type <code>Type</code>.</p>
+<pre class="lean"><code>#check String  -- String : Type
+#check Nat     -- Nat : Type</code></pre>
+<p>The notation <code>[ ]</code> is used to input lists of terms (separated by a comma).</p>
+<pre class="lean"><code>#check ["Hello, ", "world!"]  -- ["Hello, ", "world!"] : List String
+#check [1, 2, 3]              -- [1, 2, 3] : List Nat</code></pre>
+<p>If <code>T</code> is a type, <code>List T</code> is the type of lists of terms of type <code>T</code>.</p>
+<pre class="lean"><code>#check List String  -- List String : Type
+#check List Nat     -- List Nat : Type</code></pre>
+<p>Note that we cannot have a list containing terms of different types. Uncomment the following command to see that Lean does not accept it.</p>
+<pre class="lean"><code>-- #check [1, "a"]</code></pre>
+<p>A particularly important type for us will be the type <code>Prop</code>, which he used to denote the type whose terms are formal statements, <em>regardless of whether they are true or not</em>.</p>
+<pre class="lean"><code>#check 1 + 1 = 2  -- 1 + 1 = 2 : Prop
+#check 1 + 1 = 3  -- 1 + 1 = 3 : Prop</code></pre>
+<p>Note that a formal statement does <em>not</em> have to be a mathematical statement. And if it is a mathematical statement, it does not have to be correct.</p>
+<pre class="lean"><code>#check "Hello, ".append "world!" = "Hello, world!"  -- String.append "Hello, " "world!" = "Hello, world!" : Prop</code></pre>
+<p>If we typecheck <code>1 + 1</code>, Leans returns that it is a natural number but does not convert it to <code>2</code>.</p>
+<pre class="lean"><code>#check 1 + 1   -- 1 + 1 : Nat</code></pre>
+<p>However, we can <em>evaluate</em> certain expressions and see whether the result corresponds to what we think these expressions are.</p>
+<p>Not all expressions can be evaluated, though.</p>
+<pre class="lean"><code>#eval 1 + 1                      -- 2
+#eval "Hello, ".append "world!"  -- "Hello, world!"</code></pre>
+<p>Uncomment the next two lines to see that the proposed terms cannot be evaluated</p>
+<pre class="lean"><code>-- #eval 1 + 1 = 2
+-- #eval "Hello, ".append "world!" = "Hello, world!"</code></pre>
+<p>If we look at the term <code>1 + 1 = 2</code>, which is of type <code>Prop</code>, we see that it looks like something that should be <em>provable</em> in a formal sense. In fact it is so, and we will soon learn how to write a proof of it.</p>
+<p>But first, a word about the syntax. And expression of the form <code>def t : T</code>, where <code>t</code> is of type <code>T</code>, means that that we are about to <em>define</em> a term <code>t</code> that will be of type <code>T</code>.</p>
+<pre class="lean"><code>def my_first_sentence : String := "Hello, world!"
+def my_favourite_integer : Nat := 42
+
+#check my_first_sentence     -- my_first_sentence : String
+#check my_favourite_integer  -- my_favourite_integer : Nat
+
+
+def my_second_sentence : String := "Hello, ".append "world!"
+def my_brother_s_favourite_integer : Nat := 41 + 1
+
+#check my_second_sentence              -- my_second_sentence : String
+#check my_brother_s_favourite_integer  -- my_brother_s_favourite_integer : Nat</code></pre>
+<p>Now let us see a particularly important case, in which we define a term of type <code>P</code> for <code>P</code> a term of type <code>Prop</code>.</p>
+<blockquote class="blockquote">
+<p>If <code>P</code> is a term of type <code>Prop</code>, then defining a term of type <code>P</code> means proving <code>P</code>.</p>
+</blockquote>
+<p>As earlier, the actual definition of a term <code>p : P</code> comes after the <code>:=</code> symbol. So here, what comes after <code>:=</code> will be the proof of the proposition <code>P</code>. If we do not know what to put after that symbol, we can always write <code>sorry</code> and come back to it later.</p>
+<p>Seeing a proposition <code>P</code> as a type, and terms of type <code>P</code> as proofs of <code>P</code>, is known as the <em>Curry-Howard correspondence</em>.</p>
+<pre class="lean"><code>-- def one_plus_one_eq_two : 1 + 1 = 2 := sorry
+-- #check one_plus_one_eq_two
+
+-- def my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := sorry
+-- #check my_two_sentences_are_the_same
+
+-- def my_brother_and_I_agree : my_favourite_integer = my_brother_s_favourite_integer := sorry
+-- #check my_brother_and_I_agree</code></pre>
+<p>It is also possible to declare these as theorems, using the command <code>theorem</code>. Let us do it below but in a separate “environment”, so there is no conflict and we can use the same name for the <code>theorem</code> as we did for the <code>def</code>.</p>
+<p>We can enter a different environment by using the command <code>namespace</code>. The name <code>playground</code> is arbitrary. However, we cannot use it more than once in the entire document.</p>
+<pre class="lean"><code>namespace playground
+
+-- theorem one_plus_one_eq_two : 1 + 1 = 2 := sorry
+-- #check one_plus_one_eq_two
+
+-- theorem my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := sorry
+-- #check my_two_sentences_are_the_same
+
+-- theorem my_brother_and_I_agree : my_favourite_integer = my_brother_s_favourite_integer := sorry
+-- #check my_brother_and_I_agree
+
+end playground</code></pre>
+<p>Note that Theorems <code>my_two_sentences_are_the_same</code> and <code>my_brother_and_I_agree</code> can be written in a way that is more similar to Theorem <code>one_plus_one_eq_two</code>.</p>
+<pre class="lean"><code>namespace Spielplatz
+
+-- theorem my_two_sentences_are_the_same : "Hello, world!" = "Hello, ".append("world!") := sorry
+-- #check my_two_sentences_are_the_same
+
+-- theorem my_brother_and_I_agree : 42 = 41 + 1 := sorry
+-- #check my_brother_and_I_agree
+
+end Spielplatz</code></pre>
+</section>
+<section id="proving-equalities" class="level2">
+<h2 class="anchored" data-anchor-id="proving-equalities">Proving equalities</h2>
+<p>Let us now prove the results stated above. There at least two ways to write these proofs and we will present both.</p>
+<p>Note that what all our statement have in common is that they are <em>equalities</em>. In Lean, this is a strong requirement: an equality between terms in Lean means that the two terms are <em>definitionally</em> equal. It is difficult at this moment to explain what this means, but basically it says that <code>1 + 1 = 2</code> holds because the terms <code>1 + 1</code> and <code>2</code> <em>reduce to the same term</em> (in Lean’s compiler).</p>
+<p>The point is, if you have to prove an equality, you should first try to see if it holds <em>by definition</em>. This will indeed be the case for <code>1 + 1 = 2</code>.</p>
+<section id="first-way-of-writing-the-proof-tactic-mode" class="level3">
+<h3 class="anchored" data-anchor-id="first-way-of-writing-the-proof-tactic-mode">First way of writing the proof : tactic mode</h3>
+<p>Proofs are usually written using the <em>tactic mode</em>, which we enter using the <code>by</code> keyword.</p>
+<p>At the end of the proof, one should get a <code>No goals</code> message in the <em>local context</em>, visible in the <em>Infoview</em> tab (usually located to the right).</p>
+<p>The tactic that we use here is called <code>rfl</code> (for <em>reflexivity</em>).</p>
+<pre class="lean"><code>def one_plus_one_eq_two : 1 + 1 = 2 := by {
+  rfl
+}</code></pre>
+</section>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
+<p>Use the <code>rfl</code> tactic to prove the results below.</p>
+<pre class="lean"><code>-- def my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := by {
+--   sorry
+-- }
+
+-- def my_brother_and_I_agree : my_favourite_integer = my_brother_s_favourite_integer := by {
+--   sorry
+-- }</code></pre>
+</section>
+<section id="second-way-of-writing-the-proof-term-mode" class="level3">
+<h3 class="anchored" data-anchor-id="second-way-of-writing-the-proof-term-mode">Second way of writing the proof: term mode</h3>
+<p>A tactic proof is mostly useful when we reach a certain level of complexity, which requires that said proof be carried out in various steps (tactic mode is also the way proofs are usually constructed in the daily practice of mathematics).</p>
+<p>But in any case, what Lean does is <em>compile the tactic proof into a proof term</em>, which becomes accessible via the <code>#print</code> command. We can then use that proof term to provide a proof without entering tactic mode, simply by copying the proof term generated via the <code>#print</code> command (it will appear in the Infoview* tab if you put the keyboard cursor on the same line as the <code>#print</code> command) and pasting it after the <code>:=</code> symbol.</p>
+<p>We test this out below with the <code>my_brother_and_I_agree</code> proposition. Note that, in term mode, Lean does not generates a <code>No goals</code> message. If you use a proof term, the only way to know it worked is via the absence of an error message.</p>
+<pre class="lean"><code>-- #print my_two_sentences_are_the_same
+
+def my_two_sentences_are_the_same : my_first_sentence = my_second_sentence := Eq.refl my_first_sentence
+
+def my_brother_and_I_agree : my_favourite_integer = my_brother_s_favourite_integer := Eq.refl my_favourite_integer</code></pre>
+</section>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
+<p>Use term mode to write a proof of <code>1 + 1 = 2</code>. Note that <code>Eq.refl (1 + 1)</code> and <code>Eq.refl 2</code> work equally well and check that this is also the case for the definitions of the terms <code>my_two_sentences_are_the_same</code> and <code>my_brother_and_I_agree</code>.</p>
+<p>At this stage, it might be instructive to try out <code>#check Eq.refl 2</code> and <code>#check Eq.refl (1 + 1)</code>. Or even <code>#check Eq.refl my_favourite_integer</code> and <code>#check Eq.refl my_first_sentence</code>. See below for the corresponding code and a remark on the content of <code>Eq.refl 2</code>.</p>
+<p>Try also <code>#check Eq.refl</code> and <code>#check @Eq.refl</code>. Using <code>@</code> should produce something better-looking.</p>
+<pre class="lean"><code>def one_plus_one_eq_two_again : 1 + 1 = 2 := Eq.refl (1 + 1)</code></pre>
+<p>The following command <code>#check Eq.refl 2</code> returns <code>Eq.refl 2 : 2 = 2</code>, which means that <code>Eq.refl 2</code> is a term of type <code>2 = 2</code>. In other words, <code>Eq.refl 2</code> <em>is a proof of the Proposition</em> <code>2 = 2</code>. This is crucial in understanding how proof assistants work.</p>
+<pre class="lean"><code>#check Eq.refl 2  -- Eq.refl 2 : 2 = 2
+
+-- #check Eq.refl (1 + 1)
+-- #check Eq.refl my_favourite_integer
+-- #check Eq.refl my_first_sentence
+
+-- #check Eq.refl
+-- #check @Eq.refl</code></pre>
+<p>To conclude, let us see an example of a case when we do not get what we might expect. If we write to write fractions naively, we see that the types of those terms is not what we think it is.</p>
+<pre class="lean"><code>#check 42 / 21  -- 42 / 21 : Nat
+#check 1 / 3    -- 1 / 3 : Nat
+
+#eval 42 / 21   -- 2
+#eval 1 / 3     -- 0</code></pre>
+<p>The above fact comes from the <em>definition</em> of the operation <code>/</code>, which is not what we might expect. And since this is a definition, we can prove funny identities. To understand the following, note that 42 / 15 = 2.8 as decimal numbers.</p>
+<pre class="lean"><code>#check 42 / 15  -- 42 / 15 : Nat
+#eval 42 / 15   -- 2
+
+def fun_fact : 42 / 15 = 2 := Eq.refl (42 / 15)</code></pre>
+</section>
+</section>
+<section id="deductive-reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="deductive-reasoning">Deductive reasoning</h2>
+<p>Let us use tactic mode to write a proof of the rule of deductive reasoning known as <em>modus ponens</em>, which says that if we have a proof of the implication <code>P → Q</code> and a proof of the proposition <code>P</code>, then we have a proof of the proposition <code>Q</code>.</p>
+<pre class="lean"><code>def MP {P Q : Prop} (f : P → Q) (p : P) : Q := by {
+  apply f
+  exact p
+}</code></pre>
+<p>The proof we give can be understood as follows. First, let us make it clear that <code>P</code> and <code>Q</code> are propositions, that we have a proof <code>f</code> of <code>P → Q</code> a proof <code>p</code> of <code>P</code>, and that our goal is to prove <code>Q</code>.</p>
+<p>Since by assumption we have a proof of the implication <code>P → Q</code>, it suffices to prove <code>P</code>. This is what the <code>apply</code> tactic enables us to do. More precisely, the term <code>f</code> is a function from <code>P</code> to <code>Q</code>, so it sends a term of type <code>P</code> (i.e.&nbsp;a proof a <code>P</code>) to a term of type <code>Q</code>, i.e.&nbsp;a proof of <code>Q</code>. Now, after the <code>apply</code> tactic, the goal is changed to <code>P</code>. And since, again by assumption, we have a proof of <code>P</code>, we can close the goal using the <code>exact</code> tactic.</p>
+<p>Alternately, we can write the proof using just the <code>exact</code> tactic, because <code>f p</code> is the result of applying the function <code>f : P → Q</code> to the term <code>p</code>, and the latter is a term of type <code>Q</code>.</p>
+<pre class="lean"><code>def MP_bis {P Q : Prop} (f : P → Q) (p : P) : Q := by {
+  exact f p
+}</code></pre>
+<p>Finally, in term mode, <code>MP</code> can be defined (or proven) as follows.</p>
+<pre class="lean"><code>def MP_ter {P Q : Prop} (f : P → Q) (p : P)  : Q := f p</code></pre>
+<p>Note that in tactic mode, <em>one works on the goal to reduce it to the assumptions</em>. One can then <em>close the goal</em> using the <code>exact</code> tactic.</p>
+<p>We now check that <code>MP</code> is indeed a function that, in the presence of Propositions <code>P</code> and <code>Q</code>, sends a proof of the propositions <code>P → Q</code> and <code>P</code> to a proof of <code>Q</code>.</p>
+<pre class="lean"><code>#check @MP  -- @MP : ∀ {P Q : Prop}, (P → Q) → P → Q</code></pre>
+<p>Here we use the <code>@</code> because <code>MP</code> has implicit arguments (namely <code>P</code> and <code>Q</code>). The result of <code>#check @MP</code> then looks as follows.</p>
+<p>MP : ∀ {P Q : Prop}, P → (P → Q) → Q</p>
+<p>It is instructive to check that the three definitions we have given are identical.</p>
+<pre class="lean"><code>-- #print MP
+-- #print MP_bis
+-- #print MP_ter</code></pre>
+<p>Next, by using the command <code>variable</code>, we add to our context the Propositions <code>P</code> and <code>Q</code>, as well as a proof of the implication <code>P → Q</code> and a proof of <code>P</code>. This is just for convenience in our code below.</p>
+<pre class="lean"><code>variable {P Q : Prop} (f : P → Q) (p : P)</code></pre>
+<p>And now, using the function MP and the variables <code>f</code> and <code>p</code>, we can give a proof of Proposition <code>Q</code>: we simply apply the <em>modus ponens</em> function to the proofs of the propositions <code>P</code> and <code>P → Q</code>. Note that <code>proof_of_Q</code> is a term of type <code>Q</code> and that we are <em>defining</em> it.</p>
+<pre class="lean"><code>def proof_of_Q : Q := MP f p</code></pre>
+<p>Let us check that the term MP p f is indeed of type <code>Q</code>, i.e.&nbsp;that it is a proof of the Proposition <code>Q</code>.</p>
+<pre class="lean"><code>#check MP f p  -- MP f p : Q</code></pre>
+<p>Alternately, we can write the following (but in the compiler it reduces to <code>MP f p</code>):</p>
+<pre class="lean"><code>#check @MP P Q f p  -- MP f p : Q</code></pre>
+<p>The two terms <code>MP f p</code> and <code>@MP P Q f p</code> are in fact identical, but in the second notation we include the <em>implicit parameters</em> <code>P</code> and <code>Q</code>. These implicit parameters were declared with curly brackets <code>{ }</code> (see the definition of <code>MP</code>), as opposed to <code>f</code> and <code>p</code>, which were defined using round brackets <code>( )</code>.</p>
+<p>We now give the tactic mode version of our proof of <code>Q</code>, using only the <code>exact</code> tactic.</p>
+<pre class="lean"><code>def proof_of_Q_bis : Q := by {
+  exact MP f p
+}</code></pre>
+<p>We can check that the proof terms of <code>proof_of_Q</code> and <code>proof_of_Q_bis</code> are identical.</p>
+<pre class="lean"><code>-- #print proof_of_Q
+-- #print proof_of_Q_bis</code></pre>
+<p>To conclude, we give an alternate formulation for the definition of the <em>modus ponens</em>, where the terms <code>f : P → Q</code> and <code>p : P</code> do not appear explicitly, making the definition more compact. The tactic proof, however, is longer, as we must now introduce the variables ourselves, using the <code>intro</code> tactic.</p>
+<pre class="lean"><code>def MP_no_var {P Q : Prop} : (P → Q) → P → Q := by {
+  intro f
+  intro p
+  apply f
+  exact p
+}</code></pre>
+<p>Equivalently, we can write <code>(P → Q) ∧ P → Q</code>, instead of <code>(P → Q) → P → Q</code>. The symbol <code>∧</code> is read <em>and</em> and can be obtained by typing in the command <code>\and</code> or <code>\we</code> (as in <em>wedge</em>). In that case, the proof is slightly longer, because we wust apply the <code>rcases</code> tactic in order to replace the hypothesis <code>h : (P → Q) ∧ P</code> by the two hypotheses <code>f : (P → Q)</code> and <code>p : P</code>.</p>
+<p>Here, the names <code>h</code>, <code>f</code> and <code>p</code> are chosen arbitrarily by the user. If we simply write <code>rcases h</code> instead of <code>rcases h with ⟨f, p⟩</code>, <em>Lean</em> will assign names automatically but they will not be directly usable.</p>
+<pre class="lean"><code>def MP_no_var_bis {P Q : Prop}: P ∧ (P → Q) → Q := by {
+  intro h
+  rcases h with ⟨p, f⟩
+  apply f
+  exact p
+}</code></pre>
+<section id="exercise-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
+<p>Formalise the following statement and write a proof of it: given propositions <code>P</code>, <code>Q</code> and <code>R</code>, if <code>P → Q</code> and <code>Q → R</code>, then <code>P → R</code>.</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
