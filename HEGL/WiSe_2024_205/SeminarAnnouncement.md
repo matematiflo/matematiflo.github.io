@@ -9,13 +9,13 @@
 
 In this digital age, computers provide new and original ways to visualize mathematical proofs. As the emphasis is placed on *computability*, we are encouraged to re-examine our daily mathematical practice and pay more attention to *constructive methods*.
 
-In this seminar, we explore how to *represent* mathematical proofs using computer programs. We will focus on basic results of commutative algebra, which we will prove without assuming previous knowledge in the field. Then we will experiment with visualization tools for some of the proofs that we have encountered.
+In this seminar, we explore how to *represent* mathematical proofs using computer programs. We focus on basic results of commutative algebra, which we prove without assuming previous knowledge in the field. Then we experiment with visualization tools for some of the proofs that we have encountered.
 
 The expected output is an introductory tutorial program that can be run online. It will be designed collectively using existing infrastructure and no programmation skills are required to participate in the seminar.
 
 ## Constructive mathematics
 
-The constructive approach to mathematics is often reduced (quite misleadingly) to mathematics *without* the law of excluded middle (LEM), or without the axiom of choice (AC). It should instead be thought as a sum of algorithmic procedures for deriving proofs, which *may or may not* use LEM or AC.
+The constructive approach to mathematics is often reduced (quite misleadingly) to mathematics *without* the law of excluded middle (LEM), or without the axiom of choice (AC). It should instead be thought of as a sum of algorithmic procedures for deriving proofs, which *may or may not* use LEM or AC.
 
 Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer. Existential statements, in particular, should be formally interpreted in a constructive manner.
 
@@ -23,11 +23,11 @@ To illustrate the constructive point of view, take for instance the following st
 
 > Let $F$ be a field and let $I$ be an ideal in $F$. Then $I = 0$ or $I = F$.
 
-The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0$ or $I \neq 0$. This is of course correct but it uses the LEM in a non-essential way. Indeed, the statement that we want to prove is *classically equivalent* to the following:
+The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0$ or $I \neq 0$. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is *classically equivalent* to the following one, which can be proved constructively.
 
 > Let $F$ be a field and let $I$ be an ideal in $F$. If $I \neq 0$, then $I = F$.
 
-The point is that this statement can now be proved constructively. In the seminar, we will learn what it means that the two statements above are classically equivalent and how to write a constructive proof of the second statement.
+In the seminar, we will learn what it means that the two statements above are classically equivalent and how to write a constructive proof of the second statement.
 
 ## List of topics
 
