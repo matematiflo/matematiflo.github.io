@@ -17,7 +17,7 @@ The expected output is an introductory tutorial program that can be run online. 
 
 The constructive approach to mathematics is often reduced (quite misleadingly) to mathematics *without* the law of excluded middle (LEM), or without the axiom of choice (AC). It should instead be thought as a sum of algorithmic procedures for deriving proofs, which *may or may not* use LEM or AC.
 
-Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer (the famous *Curry-Howard correspondence* between propositions and types). Existential statements, in particular, should be formally interpreted in a constructive manner.
+Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer. Existential statements, in particular, should be formally interpreted in a constructive manner.
 
 To illustrate the constructive point of view, take for instance the following statement:
 
