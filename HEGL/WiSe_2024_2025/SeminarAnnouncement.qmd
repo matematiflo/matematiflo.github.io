@@ -7,6 +7,12 @@ format:
     number-sections: false
     toc: true
     toc-location: right
+  pdf:
+    author: Florent Schaffhauser
+    toc: false
+    colorlinks: true
+    number-sections: true
+format-links: false
 ---
 
 ![](lambdaPi.svg){width="75%" fig-align="center"}
@@ -42,11 +48,11 @@ In the seminar, we will learn what it means that the two statements above are cl
 
 ## List of topics for the talks
 
-1. Principal ideal domains and finitely generated modules on these rings
-1. Factorization problems
-1. Noetherian rings, primary decompositions and the principal ideal theorem
-1. Wedderburn structure theorem for finite dimensional algebras over a field
-1. Dedekind domains
+1. Principal ideal domains and finitely generated modules on these rings.
+1. Factorization problems.
+1. Noetherian rings, primary decompositions and the principal ideal theorem.
+1. Wedderburn structure theorem for finite dimensional algebras over a field.
+1. Dedekind domains.
 
 ## References
 
