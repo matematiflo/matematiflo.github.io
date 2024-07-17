@@ -7,22 +7,23 @@ format:
     number-sections: false
     toc: true
     toc-location: right
-  pdf:
-    toc: true
-    number-sections: true
-    colorlinks: true
+fig-align: center
+other-links:
+  - text: test
 ---
+
+![](lambdaPi.svg){width="35%" fig-align="center"}
 
 - Target audience: Bachelor students.
 - Language of instruction: English.
 - Introductory meeting: 24.07.2024 (SR 3, 2:15 PM).
 - Contact: [Florent Schaffhauser](https://matematiflo.github.io).
 
-## Commutative algebra and proof visualization
+## Logic, algebra and proof visualization
 
-In this digital age, computers provide new and original ways to visualize mathematical proofs. As the emphasis is placed on *computability*, we are encouraged to re-examine our daily mathematical practice and pay more attention to *constructive methods*.
+In this digital age, computers provide new and original ways to visualize mathematical proofs. As the emphasis is placed on **computability**, we are encouraged to re-examine our daily mathematical practice and pay more attention to **constructive methods**.
 
-In this seminar, we explore how to *represent* mathematical proofs using computer programs. We focus on basic results of commutative algebra, which we prove without assuming previous knowledge in the field. Then we experiment with visualization tools for some of the proofs that we have encountered.
+In this seminar, we explore how to **represent mathematical objects and proofs** using computer programs. We focus on basic results of first-order logic and commutative algebra, which we prove without assuming previous knowledge in the field. Then we experiment with visualization tools for some of the proofs that we have encountered.
 
 The expected output is an introductory tutorial program that can be run online. It will be designed collectively using existing infrastructure and no programmation skills are required to participate in the seminar.
 
@@ -56,4 +57,4 @@ In the seminar, we will learn what it means that the two statements above are cl
 - *Commutative algebra: constructive methods* (2015), by Lombardi and Quitté.
 - *Varieties of constructive mathematics* (1987), by Bridges and Richman.
 
-![](TheLab.png)
+![](TheLab.png){width="50%" fig-align="center"}
