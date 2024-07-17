@@ -8,7 +8,6 @@ format:
     toc: true
     toc-location: right
   pdf:
-    author: Florent Schaffhauser
     toc: false
     colorlinks: true
     number-sections: true
