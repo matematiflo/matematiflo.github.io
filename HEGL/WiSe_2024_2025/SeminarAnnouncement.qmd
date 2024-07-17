@@ -9,12 +9,12 @@ format:
     toc-location: right
 ---
 
+![](lambdaPi.svg){width="75%" fig-align="center"}
+
 - Target audience: Bachelor students.
 - Language of instruction: English.
 - Introductory meeting: 24.07.2024 (SR 3, 2:15 PM).
 - Contact: [Florent Schaffhauser](https://matematiflo.github.io).
-
-![](lambdaPi.svg){width="75%" fig-align="center"}
 
 ## Logic, algebra and proof visualization
 
