@@ -8,9 +8,8 @@ format:
     toc: true
     toc-location: right
   pdf:
-    toc: false
-    colorlinks: true
     number-sections: true
+    colorlinks: false
 format-links: false
 ---
 
@@ -27,7 +26,7 @@ In our digital age, computers provide new and original ways to **visualize mathe
 
 In this seminar, we explore how to **represent mathematical objects and proofs using computer programs**. We focus on basic results of first-order logic and commutative algebra, which we prove without assuming previous knowledge in the field. Then we experiment with visualization tools for some of the proofs that we have encountered.
 
-The expected output is an introductory tutorial program that can be run online. It will be designed collectively using existing infrastructure and no programmation skills are required to participate in the seminar.
+The expected output is an introductory tutorial program that can be run online. It will be designed collectively, using existing infrastructure, and no programmimg skills are required to participate in the seminar.
 
 ## Constructive mathematics
 
