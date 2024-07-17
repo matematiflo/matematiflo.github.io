@@ -54,4 +54,4 @@ In the seminar, we will learn what it means that the two statements above are cl
 - *Commutative algebra: constructive methods* (2015), by Lombardi and Quitté.
 - *Varieties of constructive mathematics* (1987), by Bridges and Richman.
 
-![](TheLab.png){width="50%" fig-align="center"}
+![](TheLab.png){width="75%" fig-align="center"}
