@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>HEGL Illustrating Mathematics Seminar</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="SeminarAnnouncement_files/libs/clipboard/clipboard.min.js"></script>
+<script src="SeminarAnnouncement_files/libs/quarto-html/quarto.js"></script>
+<script src="SeminarAnnouncement_files/libs/quarto-html/popper.min.js"></script>
+<script src="SeminarAnnouncement_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="SeminarAnnouncement_files/libs/quarto-html/anchor.min.js"></script>
+<link href="SeminarAnnouncement_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="SeminarAnnouncement_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="SeminarAnnouncement_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="SeminarAnnouncement_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="SeminarAnnouncement_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#commutative-algebra-and-proof-visualization" id="toc-commutative-algebra-and-proof-visualization" class="nav-link active" data-scroll-target="#commutative-algebra-and-proof-visualization">Commutative algebra and proof visualization</a></li>
+  <li><a href="#constructive-mathematics" id="toc-constructive-mathematics" class="nav-link" data-scroll-target="#constructive-mathematics">Constructive mathematics</a></li>
+  <li><a href="#list-of-topics-for-the-talks" id="toc-list-of-topics-for-the-talks" class="nav-link" data-scroll-target="#list-of-topics-for-the-talks">List of topics for the talks</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="../../SeminarAnnouncement.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">HEGL Illustrating Mathematics Seminar</h1>
+<p class="subtitle lead">Winter semester 2024-2025</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<ul>
+<li>Target audience: Bachelor students.</li>
+<li>Language of instruction: English.</li>
+<li>Introductory meeting: 24.07.2024 (SR 3, 2:15 PM).</li>
+<li>Contact: <a href="https://matematiflo.github.io">Florent Schaffhauser</a>.</li>
+</ul>
+<section id="commutative-algebra-and-proof-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="commutative-algebra-and-proof-visualization">Commutative algebra and proof visualization</h2>
+<p>In this digital age, computers provide new and original ways to visualize mathematical proofs. As the emphasis is placed on <em>computability</em>, we are encouraged to re-examine our daily mathematical practice and pay more attention to <em>constructive methods</em>.</p>
+<p>In this seminar, we explore how to <em>represent</em> mathematical proofs using computer programs. We focus on basic results of commutative algebra, which we prove without assuming previous knowledge in the field. Then we experiment with visualization tools for some of the proofs that we have encountered.</p>
+<p>The expected output is an introductory tutorial program that can be run online. It will be designed collectively using existing infrastructure and no programmation skills are required to participate in the seminar.</p>
+</section>
+<section id="constructive-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="constructive-mathematics">Constructive mathematics</h2>
+<p>The constructive approach to mathematics is often reduced (quite misleadingly) to mathematics <em>without</em> the law of excluded middle (LEM), or without the axiom of choice (AC). It should instead be thought of as a sum of algorithmic procedures for deriving proofs, which <em>may or may not</em> use LEM or AC.</p>
+<p>Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer. Existential statements, in particular, should be formally interpreted in a constructive manner.</p>
+<p>To illustrate the constructive point of view, take for instance the following statement:</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>. Then <span class="math inline">\(I = 0\)</span> or <span class="math inline">\(I = F\)</span>.</p>
+</blockquote>
+<p>The usual proof starts by saying: let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>, then either <span class="math inline">\(I = 0\)</span> or <span class="math inline">\(I \neq 0\)</span>. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is <em>classically equivalent</em> to the following one, which can be proved constructively.</p>
+<blockquote class="blockquote">
+<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>. If <span class="math inline">\(I \neq 0\)</span>, then <span class="math inline">\(I = F\)</span>.</p>
+</blockquote>
+<p>In the seminar, we will learn what it means that the two statements above are classically equivalent and how to write a constructive proof of the second statement.</p>
+</section>
+<section id="list-of-topics-for-the-talks" class="level2">
+<h2 class="anchored" data-anchor-id="list-of-topics-for-the-talks">List of topics for the talks</h2>
+<ol type="1">
+<li>Principal ideal domains and finitely generated modules on these rings</li>
+<li>Factorization problems</li>
+<li>Noetherian rings, primary decompositions and the principal ideal theorem</li>
+<li>Wedderburn structure theorem for finite dimensional algebras over a field</li>
+<li>Dedekind domains</li>
+</ol>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><em>A course in constructive algebra</em> (1988), by Mines, Richman and Ruitenburg.</li>
+<li><em>Commutative algebra: constructive methods</em> (2015), by Lombardi and Quitté.</li>
+<li><em>Varieties of constructive mathematics</em> (1987), by Bridges and Richman.</li>
+</ul>
+<p><img src="TheLab.png" class="img-fluid"></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

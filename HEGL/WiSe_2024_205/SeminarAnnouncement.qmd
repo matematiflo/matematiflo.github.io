@@ -1,4 +1,17 @@
-# HEGL Illustrating Mathematics Seminar (Winter semester 2024-2025)
+---
+title: "HEGL Illustrating Mathematics Seminar"
+subtitle: "Winter semester 2024-2025"
+format:
+  html:
+    theme: cerulean
+    number-sections: false
+    toc: true
+    toc-location: right
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
 
 - Target audience: Bachelor students.
 - Language of instruction: English.
@@ -29,7 +42,7 @@ The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0
 
 In the seminar, we will learn what it means that the two statements above are classically equivalent and how to write a constructive proof of the second statement.
 
-## List of topics
+## List of topics for the talks
 
 1. Principal ideal domains and finitely generated modules on these rings
 1. Factorization problems
@@ -42,3 +55,5 @@ In the seminar, we will learn what it means that the two statements above are cl
 - *A course in constructive algebra* (1988), by Mines, Richman and Ruitenburg.
 - *Commutative algebra: constructive methods* (2015), by Lombardi and Quitté.
 - *Varieties of constructive mathematics* (1987), by Bridges and Richman.
+
+![](TheLab.png)
