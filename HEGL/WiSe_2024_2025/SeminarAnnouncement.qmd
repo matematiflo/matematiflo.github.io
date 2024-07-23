@@ -7,6 +7,10 @@ format:
     number-sections: false
     toc: true
     toc-location: right
+    other-links:
+      - text: Introductory announcement
+        icon: file-pdf
+        href: Announcement-WiSe-2024-2025.pdf
   pdf:
     number-sections: true
     colorlinks: false
