@@ -1,4 +1,3 @@
-
 # Florent Schaffhauser
 
 HEGL Managing Director  
