@@ -18,6 +18,8 @@ nocite: |
 
 [![By Tazerenix - Own work, CC BY-SA 4.0](Vector_bundle.png){width=66%}](https://commons.wikimedia.org/w/index.php?curid=110091116)
 
+This series of 6 lectures is part of the [RTG Days](https://www.groups-and-spaces.kit.edu/115.php) between Heidelberg and Kalrsruhe. The official announcement of the lectures is available [here](https://www.groups-and-spaces.kit.edu/115_810.php).
+
 ## Vector bundles on Riemann surfaces
 
 Vector bundles on compact Riemann surfaces are of interest for at least two reasons:
@@ -31,9 +33,7 @@ The first three lectures will focus on the general theory of *holomorphic vector
 
 ## Outline of the lectures[^1]
 
-> Note that there will be *no lecture on 10.12.2024* but *two lectures on 14.01.2025*.
-
-[^1]: Still subject to modifications (17.09.2024)
+[^1]: Note that there is *no lecture on 10.12.2024*, but *two lectures on 14.01.2025*.
 
 - **Lecture 1** (29.10.2024, Heidelberg). *The Riemann-Roch formula.*
     a. Vector bundles, sections, degree.
