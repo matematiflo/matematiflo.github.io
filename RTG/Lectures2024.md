@@ -35,7 +35,7 @@ The first three lectures will focus on the general theory of *holomorphic vector
 
 [^1]: Still subject to modifications (17.09.2024)
 
-- **Lecture 1** (29.10.2024, Heidelberg. *The Riemann-Roch formula.*
+- **Lecture 1** (29.10.2024, Heidelberg). *The Riemann-Roch formula.*
     a. Vector bundles, sections, degree.
     a. The Riemann-Roch formula, Serre duality.
 - **Lecture 2** (12.11.2024, Karlsruhe). *Vector bundles on the Riemann sphere.*
@@ -50,7 +50,7 @@ The first three lectures will focus on the general theory of *holomorphic vector
 - **Lecture 5** (14.01.2025, Heidelberg). *Moduli spaces of vector bundles.*
     a. The Yang-Mills flow.
     a. The Shatz stratification.
-- **Lecture 6** (28.01.2025). *Betti numbers of the moduli space.*
+- **Lecture 6** (28.01.2025, Karlsruhe). *Betti numbers of the moduli space.*
     a. The classifying space of the gauge group.
     a. Recursive and closed formulas for the Betti numbers.
 
