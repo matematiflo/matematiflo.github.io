@@ -21,7 +21,7 @@ format-links: false
 
 - Target audience: Bachelor students.
 - Language of instruction: English.
-- Introductory meeting: Wednesday 08.10.2024 (SR 3, 2:15 PM).
+- Introductory meeting: Tuesday 08.10.2024 (SR 3, 2:15 PM).
 - Contact: [Florent Schaffhauser](https://matematiflo.github.io).
 
 ## Logic, algebra and proof visualization
