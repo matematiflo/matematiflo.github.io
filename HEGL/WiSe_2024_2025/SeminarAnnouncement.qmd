@@ -42,19 +42,36 @@ To illustrate the constructive point of view, take for instance the following st
 
 > Let $F$ be a field and let $I$ be an ideal in $F$. Then $I = 0$ or $I = F$.
 
-The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0$ or $I \neq 0$. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is *classically equivalent* to the following one, which can be proved constructively.
+The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0$ or $I \neq 0$. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is *classically equivalent* to the following one.
 
 > Let $F$ be a field and let $I$ be an ideal in $F$. If $I \neq 0$, then $I = F$.
 
-In the seminar, we will learn what it means that the two statements above are classically equivalent and how to write a constructive proof of the second statement.
+In the seminar, we will learn what it means that the two statements above are classically but not constructively equivalent.
 
-## List of topics for the talks
+<!-- ## List of topics for the talks
 
 1. Principal ideal domains and finitely generated modules on these rings.
 1. Factorization problems.
 1. Noetherian rings, primary decompositions and the principal ideal theorem.
 1. Wedderburn structure theorem for finite dimensional algebras over a field.
-1. Dedekind domains.
+1. Dedekind domains. -->
+
+## Schedule
+
+| Date      | Topic                                        |     |
+| :-:       | :--                                          | :-- |
+| 16.10     | Sets and logic                               |     |
+| 30.10     | Basic algebra                                |     |
+| 06.11     | Rings and modules                            |     |
+| 13.11     | Divisibility in discrete domains             |     |
+| 27.11     | Principal ideal domains                      |     |
+| 18.12     | *Status meeting*                             |     |
+| 15.01     | Design of final presentations                |     |
+| 22.01     | Design of final presentations                |     |
+| 29.01     | *Status meeting*                             |     |
+| **03.02** | Final presentations (HEGL Community Seminar) |     |
+
+<!-- : List of topics for the talks -->
 
 ## References
 
