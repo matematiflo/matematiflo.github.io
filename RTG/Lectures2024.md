@@ -39,7 +39,7 @@ The first three lectures will focus on the general theory of *holomorphic vector
     a. Vector bundles, sections, degree.
     a. The Riemann-Roch formula, Serre duality.
 - **Lecture 2** (12.11.2024, Karlsruhe). *Vector bundles on the Riemann sphere.*
-    a. Sub-bundles, filtrations, filtrations.
+    a. Sub-bundles, filtrations, direct sums.
     a. Grothendieck-Birkhoff decomposition.
 - **Lecture 3** (26.11.2024, Heidelberg). *The Harder-Narasimhan filtration.*
     a. Slope semistability.
