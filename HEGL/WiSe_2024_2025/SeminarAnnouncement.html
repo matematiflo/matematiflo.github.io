@@ -34,35 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="SeminarAnnouncement_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="SeminarAnnouncement_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -124,22 +95,6 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="constructive-mathematics">Constructive mathematics</h2>
 <p>The constructive approach to mathematics is often reduced (quite misleadingly) to mathematics <em>without</em> the law of excluded middle (LEM), or without the axiom of choice (AC). It should instead be thought of as a sum of algorithmic procedures for deriving proofs, which <em>may or may not</em> use LEM or AC.</p>
 <p>Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer. Existential statements, in particular, should be formally interpreted in a constructive manner.</p>
-<p>To illustrate the constructive point of view, take for instance the following statement:</p>
-<blockquote class="blockquote">
-<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>. Then <span class="math inline">\(I = 0\)</span> or <span class="math inline">\(I = F\)</span>.</p>
-</blockquote>
-<p>The usual proof starts by saying: let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>, then either <span class="math inline">\(I = 0\)</span> or <span class="math inline">\(I \neq 0\)</span>. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is <em>classically equivalent</em> to the following one.</p>
-<blockquote class="blockquote">
-<p>Let <span class="math inline">\(F\)</span> be a field and let <span class="math inline">\(I\)</span> be an ideal in <span class="math inline">\(F\)</span>. If <span class="math inline">\(I \neq 0\)</span>, then <span class="math inline">\(I = F\)</span>.</p>
-</blockquote>
-<p>In the seminar, we will learn what it means that the two statements above are classically but not constructively equivalent.</p>
-<!-- ## List of topics for the talks
-
-1. Principal ideal domains and finitely generated modules on these rings.
-1. Factorization problems.
-1. Noetherian rings, primary decompositions and the principal ideal theorem.
-1. Wedderburn structure theorem for finite dimensional algebras over a field.
-1. Dedekind domains. -->
 </section>
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>

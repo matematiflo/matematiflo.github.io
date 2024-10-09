@@ -38,24 +38,6 @@ The constructive approach to mathematics is often reduced (quite misleadingly) t
 
 Conceptually, this is made possible by an interpretation of mathematical statements in a way that can be encoded on a computer. Existential statements, in particular, should be formally interpreted in a constructive manner.
 
-To illustrate the constructive point of view, take for instance the following statement:
-
-> Let $F$ be a field and let $I$ be an ideal in $F$. Then $I = 0$ or $I = F$.
-
-The usual proof starts by saying: let $I$ be an ideal in $F$, then either $I = 0$ or $I \neq 0$. This is correct but uses the LEM in a non-essential way. Indeed, the statement that we want to prove is *classically equivalent* to the following one.
-
-> Let $F$ be a field and let $I$ be an ideal in $F$. If $I \neq 0$, then $I = F$.
-
-In the seminar, we will learn what it means that the two statements above are classically but not constructively equivalent.
-
-<!-- ## List of topics for the talks
-
-1. Principal ideal domains and finitely generated modules on these rings.
-1. Factorization problems.
-1. Noetherian rings, primary decompositions and the principal ideal theorem.
-1. Wedderburn structure theorem for finite dimensional algebras over a field.
-1. Dedekind domains. -->
-
 ## Schedule
 
 | Date      | Topic                                        |     |
