@@ -40,7 +40,15 @@ Conceptually, this is made possible by an interpretation of mathematical stateme
 
 Additionally, logic is not a pre-requisite in this approach. Instead, logical connectives and quantifiers are introduced formally in constructive mathematics, using the same language used to introduce mathematical objects.
 
-## Schedule
+## List of topics for the talks
+
+- Sets and logic.
+- Basic algebra.
+- Rings and modules.
+- Divisibility in discrete domains.
+- Principal ideal domains.
+
+<!-- ## Schedule
 
 | Date      | Topic                                        |     |
 | :-:       | :--                                          | :-- |
@@ -54,7 +62,7 @@ Additionally, logic is not a pre-requisite in this approach. Instead, logical co
 | 22.01     | Design of final presentations                |     |
 | 29.01     | *Status meeting*                             |     |
 | **03.02** | Final presentations (HEGL Community Seminar) |     |
-
+ -->
 <!-- : List of topics for the talks -->
 
 ## References
