@@ -8,7 +8,7 @@ format:
     toc: true
     toc-location: right
     # other-links:
-    #   - text: Introductory announcement
+    #   - text: Introductory slides
     #     icon: file-pdf
     #     href: Announcement-WiSe-2024-2025.pdf
   # pdf:
